@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Dylan\\Desktop\\Object-Oriented Design\\alpharelease\\NMahjong_sugad21_morana21\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ja\\values-ja.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Dylan\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\0e1104c0336a2f51be0352e66c4603f9\\res\\values-ja\\values-ja.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}
