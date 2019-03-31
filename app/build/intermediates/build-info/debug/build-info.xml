@@ -5,11 +5,10 @@
     build-mode="FULL"
     density="hdpi"
     format="10"
-    ir-eligibility="R_CLASS_CHANGE"
     plugin-version="3.1.3"
-    timestamp="1554023320144"
-    token="7349049207844421335"
-    verifier="COLD_SWAP_REQUESTED" >
+    timestamp="1554059734743"
+    token="-9197641180732221248"
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
@@ -19,88 +18,87 @@
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="60" />
+        duration="488" />
     <task
         name="verifier"
-        duration="434" />
+        duration="862" />
 
     <artifact
-        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+        location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1554023320144"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="1554059734743"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\CounterGame-master\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            location="C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
 

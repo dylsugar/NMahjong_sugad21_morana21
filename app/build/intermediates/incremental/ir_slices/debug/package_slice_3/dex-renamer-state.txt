@@ -1,4 +1,4 @@
-#Sun Mar 31 02:08:45 PDT 2019
-base.0=C\:\\Users\\Dylan\\Desktop\\Object-Oriented Design\\alpharelease\\CounterGame-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\23
+#Sun Mar 31 12:15:42 PDT 2019
+base.0=C\:\\Users\\Dylan\\Desktop\\Object-Oriented Design\\alpharelease\\NMahjong_sugad21_morana21\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\4
 path.0=classes.dex
 renamed.0=classes.dex
