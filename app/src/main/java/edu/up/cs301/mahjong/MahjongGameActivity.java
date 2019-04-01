@@ -27,6 +27,7 @@ public class MahjongGameActivity extends Activity implements View.OnClickListene
     private ImageButton slot13;
     private ImageButton slot14;
     private ImageButton wallDraw;
+    private int playerIndex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,37 +87,36 @@ public class MahjongGameActivity extends Activity implements View.OnClickListene
         }
     }
 
-        public void updateTiles() {
-            int i = instance.getGamePlayers().get(playerIndex).getHand().size();
-            if (i > 1) {
-                slot1.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(1).getCardName(), "drawable", getPackageName()));
-                if (i > 2) {
-                    slot2.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(2).getCardName(), "drawable", getPackageName()));
-                    if (i > 3) {
-                        slot3.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(3).getCardName(), "drawable", getPackageName()));
-                        if (i > 4) {
-                            slot4.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(4).getCardName(), "drawable", getPackageName()));
-                            if (i > 5) {
-                                slot5.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(5).getCardName(), "drawable", getPackageName()));
-                                if (i > 6) {
-                                    slot6.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(6).getCardName(), "drawable", getPackageName()));
-                                    if (i > 7) {
-                                        slot7.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(7).getCardName(), "drawable", getPackageName()));
-                                        if (i > 8) {
-                                            slot8.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(8).getCardName(), "drawable", getPackageName()));
-                                            if (i > 9) {
-                                                slot9.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(9).getCardName(), "drawable", getPackageName()));
-                                                if (i > 10) {
-                                                    slot10.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(10).getCardName(), "drawable", getPackageName()));
-                                                    if (i > 11) {
-                                                        slot11.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(11).getCardName(), "drawable", getPackageName()));
+    public void updateTiles() {
+        int i = instance.getGamePlayers().get(playerIndex).getHand().size();
+        if (i > 1) {
+            slot1.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(1).getCardName(), "drawable", getPackageName()));
+            if (i > 2) {
+                slot2.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(2).getCardName(), "drawable", getPackageName()));
+                if (i > 3) {
+                    slot3.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(3).getCardName(), "drawable", getPackageName()));
+                    if (i > 4) {
+                        slot4.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(4).getCardName(), "drawable", getPackageName()));
+                        if (i > 5) {
+                            slot5.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(5).getCardName(), "drawable", getPackageName()));
+                            if (i > 6) {
+                                slot6.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(6).getCardName(), "drawable", getPackageName()));
+                                if (i > 7) {
+                                    slot7.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(7).getCardName(), "drawable", getPackageName()));
+                                    if (i > 8) {
+                                        slot8.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(8).getCardName(), "drawable", getPackageName()));
+                                        if (i > 9) {
+                                            slot9.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(9).getCardName(), "drawable", getPackageName()));
+                                            if (i > 10) {
+                                                slot10.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(10).getCardName(), "drawable", getPackageName()));
+                                                if (i > 11) {
+                                                    slot11.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(11).getCardName(), "drawable", getPackageName()));
 
-                                                        if (i > 12) {
-                                                            slot12.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(12).getCardName(), "drawable", getPackageName()));
+                                                    if (i > 12) {
+                                                        slot12.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(12).getCardName(), "drawable", getPackageName()));
 
-                                                            if (i > 13) {
-                                                                slot13.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand).get(13).getCardName(), "drawable", getPackageName());
-                                                            }
+                                                        if (i > 13) {
+                                                            slot13.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(13).getCardName(), "drawable", getPackageName()));
                                                         }
                                                     }
                                                 }
@@ -129,33 +129,33 @@ public class MahjongGameActivity extends Activity implements View.OnClickListene
                     }
                 }
             }
-            if (i < 14) {
-                slot13.setVisibility(View.INVISIBLE);
-                if (i < 13) {
-                    slot12.setVisibility(View.INVISIBLE);
-                    if (i < 12) {
-                        slot11.setVisibility(View.INVISIBLE);
-                        if (i < 11) {
-                            slot10.setVisibility(View.INVISIBLE);
-                            if (i < 10) {
-                                slot9.setVisibility(View.INVISIBLE);
-                                if (i < 9) {
-                                    slot8.setVisibility(View.INVISIBLE);
-                                    if (i < 8) {
-                                        slot7.setVisibility(View.INVISIBLE);
-                                        if (i < 7) {
-                                            slot6.setVisibility(View.INVISIBLE);
-                                            if (i < 6) {
-                                                slot5.setVisibility(View.INVISIBLE);
-                                                if (i < 5) {
-                                                    slot4.setVisibility(View.INVISIBLE);
-                                                    if (i < 4) {
-                                                        slot3.setVisibility(View.INVISIBLE);
-                                                        if (i < 3) {
-                                                            slot2.setVisibility(View.INVISIBLE);
-                                                            if (i < 2) {
-                                                                slot1.setVisibility(View.INVISIBLE);
-                                                            }
+        }
+        if (i < 14) {
+            slot13.setVisibility(View.INVISIBLE);
+            if (i < 13) {
+                slot12.setVisibility(View.INVISIBLE);
+                if (i < 12) {
+                    slot11.setVisibility(View.INVISIBLE);
+                    if (i < 11) {
+                        slot10.setVisibility(View.INVISIBLE);
+                        if (i < 10) {
+                            slot9.setVisibility(View.INVISIBLE);
+                            if (i < 9) {
+                                slot8.setVisibility(View.INVISIBLE);
+                                if (i < 8) {
+                                    slot7.setVisibility(View.INVISIBLE);
+                                    if (i < 7) {
+                                        slot6.setVisibility(View.INVISIBLE);
+                                        if (i < 6) {
+                                            slot5.setVisibility(View.INVISIBLE);
+                                            if (i < 5) {
+                                                slot4.setVisibility(View.INVISIBLE);
+                                                if (i < 4) {
+                                                    slot3.setVisibility(View.INVISIBLE);
+                                                    if (i < 3) {
+                                                        slot2.setVisibility(View.INVISIBLE);
+                                                        if (i < 2) {
+                                                            slot1.setVisibility(View.INVISIBLE);
                                                         }
                                                     }
                                                 }
@@ -168,14 +168,9 @@ public class MahjongGameActivity extends Activity implements View.OnClickListene
                     }
                 }
             }
-
-
         }
 
-        public void updateDiscardTile {
-            if(instance.)
 
-
-        }
     }
+
 }

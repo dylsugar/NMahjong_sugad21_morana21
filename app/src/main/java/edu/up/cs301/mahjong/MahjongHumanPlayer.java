@@ -29,7 +29,7 @@ import java.util.ArrayList;
 public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListener {
 
 	/* instance variables */
-	private ArrayList<mTile> hand;
+	private ArrayList<mTiles> hand;
 
 	
 	// The TextView the displays the current counter value
@@ -71,25 +71,6 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 	 * 		the button that was clicked
 	 */
 	public void onClick(View button) {
-		// if we are not yet connected to a game, ignore
-		if (game == null) return;
-
-		// Construct the action and send it to the game
-		GameAction action = null;
-		if (button.getId() == R.id.drawButton) {
-			// plus button: create "increment" action
-			action = new MahjongDrawMethod(this, true);
-		}
-		else if () {
-			// minus button: create "decrement" action
-			action = new MahjongDrawMethod(this, false);
-		}
-		else {
-			// something else was pressed: ignore
-			return;
-		}
-		
-		game.sendAction(action); // send action to the game
 	}// onClick
 	
 	/**
@@ -100,12 +81,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 	 */
 	@Override
 	public void receiveInfo(GameInfo info) {
-		// ignore the message if it's not a MahjongState message
-		if (!(info instanceof MahjongState)) return;
-		
-		// update our state; then update the display
-		this.state = (MahjongState)info;
-		updateDisplay();
+
 	}
 	
 	/**
@@ -126,9 +102,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 
 		// if we have a game state, "simulate" that we have just received
 		// the state from the game so that the GUI values are updated
-		if (state != null) {
-			receiveInfo(state);
-		}
+
 	}
 
 }// class MahjongHumanPlayer
