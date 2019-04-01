@@ -87,35 +87,35 @@ public class MahjongGameActivity extends Activity implements View.OnClickListene
     }
 
         public void updateTiles() {
-            int i = instance.getPlayers().get(playerIndex).getHand().size();
+            int i = instance.getGamePlayers().get(playerIndex).getHand().size();
             if (i > 1) {
-                slot1.setImageResource(getResources().getIdentifier(instance.getPlayers().get(playerIndex).getHand().get(1).getCardName(), "drawable", getPackageName()));
+                slot1.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(1).getCardName(), "drawable", getPackageName()));
                 if (i > 2) {
-                    slot2.setImageResource(getResources().getIdentifier(instance.getPlayers().get(playerIndex).getHand().get(2).getCardName(), "drawable", getPackageName()));
+                    slot2.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(2).getCardName(), "drawable", getPackageName()));
                     if (i > 3) {
-                        slot3.setImageResource(getResources().getIdentifier(instance.getPlayers().get(playerIndex).getHand().get(3).getCardName(), "drawable", getPackageName()));
+                        slot3.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(3).getCardName(), "drawable", getPackageName()));
                         if (i > 4) {
-                            slot4.setImageResource(getResources().getIdentifier(instance.getPlayers().get(playerIndex).getHand().get(4).getCardName(), "drawable", getPackageName()));
+                            slot4.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(4).getCardName(), "drawable", getPackageName()));
                             if (i > 5) {
-                                slot5.setImageResource(getResources().getIdentifier(instance.getPlayers().get(playerIndex).getHand().get(5).getCardName(), "drawable", getPackageName()));
+                                slot5.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(5).getCardName(), "drawable", getPackageName()));
                                 if (i > 6) {
-                                    slot6.setImageResource(getResources().getIdentifier(instance.getPlayers().get(playerIndex).getHand().get(6).getCardName(), "drawable", getPackageName()));
+                                    slot6.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(6).getCardName(), "drawable", getPackageName()));
                                     if (i > 7) {
-                                        slot7.setImageResource(getResources().getIdentifier(instance.getPlayers().get(playerIndex).getHand().get(7).getCardName(), "drawable", getPackageName()));
+                                        slot7.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(7).getCardName(), "drawable", getPackageName()));
                                         if (i > 8) {
-                                            slot8.setImageResource(getResources().getIdentifier(instance.getPlayers().get(playerIndex).getHand().get(8).getCardName(), "drawable", getPackageName()));
+                                            slot8.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(8).getCardName(), "drawable", getPackageName()));
                                             if (i > 9) {
-                                                slot9.setImageResource(getResources().getIdentifier(instance.getPlayers().get(playerIndex).getHand().get(9).getCardName(), "drawable", getPackageName()));
+                                                slot9.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(9).getCardName(), "drawable", getPackageName()));
                                                 if (i > 10) {
-                                                    slot10.setImageResource(getResources().getIdentifier(instance.getPlayers().get(playerIndex).getHand().get(10).getCardName(), "drawable", getPackageName()));
+                                                    slot10.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(10).getCardName(), "drawable", getPackageName()));
                                                     if (i > 11) {
-                                                        slot11.setImageResource(getResources().getIdentifier(instance.getPlayers().get(playerIndex).getHand().get(11).getCardName(), "drawable", getPackageName()));
+                                                        slot11.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(11).getCardName(), "drawable", getPackageName()));
 
                                                         if (i > 12) {
-                                                            slot12.setImageResource(getResources().getIdentifier(instance.getPlayers().get(playerIndex).getHand().get(12).getCardName(), "drawable", getPackageName()));
+                                                            slot12.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(12).getCardName(), "drawable", getPackageName()));
 
                                                             if (i > 13) {
-                                                                slot13.setImageResource(getResources().getIdentifier(instance.getPlayers().get(playerIndex).getHand).get(13).getCardName(), "drawable", getPackageName());
+                                                                slot13.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand).get(13).getCardName(), "drawable", getPackageName());
                                                             }
                                                         }
                                                     }

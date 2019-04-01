@@ -71,18 +71,20 @@ public class MahjongComputerPlayer2 extends MahjongComputerPlayer1 {
 		if (game == null) {
 			return;
 		}
+		/*
 		else if (info instanceof MahjongState) {
 			// if we indeed have a counter-state, update the GUI
 			currentGameState = (MahjongState)info;
 			updateDisplay();
 		}
+		*/
 	}
 	
 	
 	/** 
 	 * sets the counter value in the text view
 	 *  */
-	private void updateTiles() {
+	private void updateDisplay() {
 
 	}
 	
@@ -111,19 +113,6 @@ public class MahjongComputerPlayer2 extends MahjongComputerPlayer1 {
 
 		// remember the handler for the GUI thread
 		this.guiHandler = new Handler();
-
-		// Load the layout resource for the our GUI's configuration
-		activityForGui.setContentView(R.layout.counter_human_player);
-
-		// remember who our text view is, for updating the counter value
-		this.counterValueTextView =
-				(TextView) activityForGui.findViewById(R.id.counterValueTextView);
-
-		// disable the buttons, since they will have no effect anyway
-		Button plusButton = (Button)activityForGui.findViewById(R.id.plusButton);
-		plusButton.setEnabled(false);
-		Button minusButton = (Button)activityForGui.findViewById(R.id.minusButton);
-		minusButton.setEnabled(false);
 
 		// if the state is non=null, update the display
 		if (currentGameState != null) {

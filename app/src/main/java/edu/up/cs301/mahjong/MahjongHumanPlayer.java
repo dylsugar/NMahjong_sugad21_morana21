@@ -123,10 +123,6 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 	    // Load the layout resource for our GUI
 		activity.setContentView(R.layout.play_screen);
 
-		// make this object the listener for both the '+' and '-' 'button
-		// remember the field that we update to display the counter's value
-		this.counterValueTextView =
-				(TextView) activity.findViewById(R.id.counterValueTextView);
 
 		// if we have a game state, "simulate" that we have just received
 		// the state from the game so that the GUI values are updated

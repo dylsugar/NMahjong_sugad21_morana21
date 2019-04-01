@@ -1,116 +1,151 @@
 package edu.up.cs301.mahjong;
 
+import edu.up.cs301.game.R;
+
 public class mTiles {
     private int value;
     private String suit;
 
-    public mTiles(int inValue, String inSuit) {
+    public mTiles(){
+        value = 6;
+        suit = "hearts";
+    }
+
+    public mTiles(int inValue, String inSuit){
         value = inValue;
         suit = inSuit;
     }
 
-    //make each tile hold a value between 0 & 9
-    public String getSuit() {
-        return this.suit;
-    }
-
     public int getValue() {
-        return this.value;
+        return value;
     }
 
+    public String getSuit() {
+        return suit;
+    }
 
-    public String totalHand(){
+    //sets value of each value to a number 0-12 so it can be accessed as such
 
-        if(getValue() == 1){
-            switch(getSuit()){
-                case "Bamboo":
-                    return "b1";
-                case "Character":
-                    return  "c2";
-                case "Dots":
-                    return "d3";
-            }
+    public int getFace(){
+        int temp = this.value;
+        if(temp == 0){
+            return 0;
+        } else if(temp == 1){
+            return 1;
+        } else if(temp == 2){
+            return 2;
+        } else if(temp == 3){
+            return 3;
+        } else if(temp == 4){
+            return 4;
+        } else if(temp == 5){
+            return 5;
+        } else if(temp == 6){
+            return 6;
+        } else if(temp == 7){
+            return 7;
+        } else if(temp == 8){
+            return 8;
+        } else if(temp == 9) {
+            return 9;
         }
-        else if(getValue() == 2){
-            switch(getSuit()){
-                case "Bamboo":
-                    return "b2";
-                case "Character":
-                    return "c2";
-                case "Dots":
-                    return "d2";
-            }
+        return 0;
+    }
+
+    public String getCardName(){
+        return this.getFace() +"_" +this.getSuit();
+    }
+
+    //draws card from hand based parameters
+    //if it is certain suit
+    //checks 7-ace then 3-6 b/c bombs and wilds
+    public int getDrawable() {
+        switch (this.getFace()) {
+            case 1:
+                if (this.getSuit() == "Bamboo") {
+                    return R.drawable.bamboo1;
+                } else if (this.getSuit() == "Dots") {
+                    return R.drawable.dot1;
+                } else if (this.getSuit() == "Character") {
+                    return R.drawable.character1;
+                }
+                break;
+            case 2:
+                if (this.getSuit() == "Bamboo") {
+                    return R.drawable.bamboo2;
+                } else if (this.getSuit() == "Dots") {
+                    return R.drawable.dot2;
+                } else if (this.getSuit() == "Character") {
+                    return R.drawable.character2;
+                }
+                break;
+            case 3:
+                if (this.getSuit() == "Bamboo") {
+                    return R.drawable.bamboo3;
+                } else if (this.getSuit() == "Dots") {
+                    return R.drawable.dot3;
+                } else if (this.getSuit() == "Character") {
+                    return R.drawable.character3;
+                }
+                break;
+            case 4:
+                if (this.getSuit() == "Bamboo") {
+                    return R.drawable.bamboo4;
+                } else if (this.getSuit() == "Dots") {
+                    return R.drawable.dot4;
+                } else if (this.getSuit() == "Character") {
+                    return R.drawable.character4;
+                }
+                break;
+            case 5:
+                if (this.getSuit() == "Bamboo") {
+                    return R.drawable.bamboo5;
+                } else if (this.getSuit() == "Dots") {
+                    return R.drawable.dot5;
+                } else if (this.getSuit() == "Character") {
+                    return R.drawable.character5;
+                }
+                break;
+            case 6:
+                if (this.getSuit() == "Bamboo") {
+                    return R.drawable.bamboo6;
+                } else if (this.getSuit() == "Dots") {
+                    return R.drawable.dot6;
+                } else if (this.getSuit() == "Character") {
+                    return R.drawable.character6;
+                }
+                break;
+            case 7:
+                if (this.getSuit() == "Bamboo") {
+                    return R.drawable.bamboo7;
+                } else if (this.getSuit() == "Dots") {
+                    return R.drawable.dot7;
+                } else if (this.getSuit() == "Character") {
+                    return R.drawable.character7;
+                }
+                break;
+            case 8:
+                if (this.getSuit() == "Bamboo") {
+                    return R.drawable.bamboo8;
+                } else if (this.getSuit() == "Dots") {
+                    return R.drawable.dot6;
+                } else if (this.getSuit() == "Character") {
+                    return R.drawable.character6;
+                }
+                break;
+            case 9:
+                if (this.getSuit() == "Bamboo") {
+                    return R.drawable.bamboo7;
+                } else if (this.getSuit() == "Dots") {
+                    return R.drawable.dot7;
+                } else if (this.getSuit() == "Character") {
+                    return R.drawable.character7;
+                }
+                break;
+            default:
+                break;
         }
-        else if(getValue() == 3){
-            switch(getSuit()){
-                case "Bamboo":
-                    return "b3";
-                case "Character":
-                    return"c3";
-                case "Dots":
-                    return "d3";
-            }
-        }
-        else if(getValue() == 4){
-            switch(getSuit()){
-                case "Bamboo":
-                    return"b4";
-                case "Character":
-                    return "c4";
-                case "Dots":
-                    return"d4";
-            }
-        }
-        else if(getValue() == 5){
-            switch(getSuit()){
-                case "Bamboo":
-                    return "b5";
-                case "Character":
-                    return "c5";
-                case "Dots":
-                    return "d5";
-            }
-        }
-        else if(getValue() == 6){
-            switch(getSuit()){
-                case "Bamboo":
-                    return "b6";
-                case "Character":
-                    return "c6";
-                case "Dots":
-                    return "d6";
-            }
-        }
-        else if(getValue() == 7){
-            switch(getSuit()){
-                case "Bamboo":
-                    return "b7";
-                case "Character":
-                    return "c7";
-                case "Dots":
-                    return "d7";
-            }
-        }
-        else if(getValue() == 8){
-            switch(getSuit()){
-                case "Bamboo":
-                    return"b8";
-                case "Character":
-                    return "c8";
-                case "Dots":
-                    return"d8";
-            }
-        }
-        else if(getValue() == 9){
-            switch(getSuit()){
-                case "Bamboo":
-                    return "b9";
-                case "Character":
-                    return "c9";
-                case "Dots":
-                    return "d9";
-            }
-        }
-        return "not valid";
+
+        return 0;
     }
 }

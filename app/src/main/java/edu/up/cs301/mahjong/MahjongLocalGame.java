@@ -43,7 +43,7 @@ public class MahjongLocalGame extends LocalGame {
 	 */
 	public MahjongLocalGame() {
 		// initialize the game state, with the counter value starting at 0
-		this.gameState = new MahjongState(0);
+		this.gameState = new MahjongState();
 	}
 
 	/**
@@ -61,7 +61,7 @@ public class MahjongLocalGame extends LocalGame {
 	protected void sendUpdatedStateTo(GamePlayer p) {
 		// this is a perfect-information game, so we'll make a
 		// complete copy of the state to send to the player
-		p.sendInfo(new MahjongState(gameState));
+
 		
 	}//sendUpdatedSate
 	
@@ -75,7 +75,7 @@ public class MahjongLocalGame extends LocalGame {
 	 */
 	@Override
 	protected String checkIfGameOver() {
-
+		return null;
 	}
 
 }// class MahjongLocalGame
