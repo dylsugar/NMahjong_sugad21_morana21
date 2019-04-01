@@ -52,13 +52,16 @@ public class MahjongMenuActivity extends GameMainActivity {
 			public GamePlayer createPlayer(String name) {
 				return new MahjongComputerPlayer2(name);
 			}});
+		playerTypes.add(new GamePlayerType("Computer Player "){
+			public GamePlayer createPlayer(String name){return new MahjongComputerPlayer2(name);}
+		});
 
 		// Create a game configuration class for Counter:
 		// - player types as given above
 		// - from 1 to nothertile players
 		// - name of game is "Counter Game"
 		// - port number as defined above
-		GameConfig defaultConfig = new GameConfig(playerTypes, 1, 2, "Counter Game",
+		GameConfig defaultConfig = new GameConfig(playerTypes, 4, 4, "Mahjong",
 				PORT_NUMBER);
 
 		// Add the default players to the configuration

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/top_layer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/guipic1"
     android:orientation="vertical">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/drawButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="4"
@@ -27,7 +28,7 @@
         android:gravity="center_horizontal">
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/slot1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -35,7 +36,7 @@
             android:src="@drawable/plaintile" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/slot2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -43,7 +44,7 @@
             android:src="@drawable/plaintile" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/slot3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -51,7 +52,7 @@
             android:src="@drawable/plaintile" />
 
         <ImageButton
-            android:id="@+id/imageButton6"
+            android:id="@+id/slot4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -59,7 +60,7 @@
             android:src="@drawable/plaintile" />
 
         <ImageButton
-            android:id="@+id/imageButton7"
+            android:id="@+id/slot5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -67,7 +68,7 @@
             android:src="@drawable/plaintile" />
 
         <ImageButton
-            android:id="@+id/imageButton8"
+            android:id="@+id/slot6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -75,7 +76,7 @@
             android:src="@drawable/plaintile" />
 
         <ImageButton
-            android:id="@+id/imageButton9"
+            android:id="@+id/slot7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -83,7 +84,7 @@
             android:src="@drawable/plaintile" />
 
         <ImageButton
-            android:id="@+id/imageButton10"
+            android:id="@+id/slot8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -91,7 +92,7 @@
             android:src="@drawable/plaintile" />
 
         <ImageButton
-            android:id="@+id/imageButton11"
+            android:id="@+id/slot9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -99,7 +100,7 @@
             android:src="@drawable/plaintile" />
 
         <ImageButton
-            android:id="@+id/imageButton12"
+            android:id="@+id/slot10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -107,7 +108,7 @@
             android:src="@drawable/plaintile" />
 
         <ImageButton
-            android:id="@+id/imageButton13"
+            android:id="@+id/slot11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -115,7 +116,7 @@
             android:src="@drawable/plaintile" />
 
         <ImageButton
-            android:id="@+id/imageButton14"
+            android:id="@+id/slot12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -123,7 +124,7 @@
             android:src="@drawable/plaintile" />
 
         <ImageButton
-            android:id="@+id/imageButton15"
+            android:id="@+id/slot13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -131,7 +132,7 @@
             android:src="@drawable/plaintile" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/slot14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:cropToPadding="false"

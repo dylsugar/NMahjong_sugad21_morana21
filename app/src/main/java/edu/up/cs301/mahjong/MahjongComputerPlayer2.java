@@ -27,7 +27,8 @@ public class MahjongComputerPlayer2 extends MahjongComputerPlayer1 {
 	/*
 	 * instance variables
 	 */
-	
+
+
 	// the most recent game state, as given to us by the MahjongLocalGame
 	private MahjongState currentGameState = null;
 	
@@ -81,19 +82,8 @@ public class MahjongComputerPlayer2 extends MahjongComputerPlayer1 {
 	/** 
 	 * sets the counter value in the text view
 	 *  */
-	private void updateDisplay() {
-		// if the guiHandler is available, set the new counter value
-		// in the counter-display widget, doing it in the Activity's
-		// thread.
-		if (guiHandler != null) {
-			guiHandler.post(
-					new Runnable() {
-						public void run() {
-						if (counterValueTextView != null && currentGameState != null) {
-							counterValueTextView.setText("" + currentGameState.getCounter());
-						}
-					}});
-		}
+	private void updateTiles() {
+
 	}
 	
 	/**

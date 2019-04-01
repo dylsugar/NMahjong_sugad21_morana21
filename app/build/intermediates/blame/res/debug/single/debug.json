@@ -4,10 +4,6 @@
         "source": "C:\\Users\\Dylan\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\0e1104c0336a2f51be0352e66c4603f9\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "C:\\Users\\Dylan\\Desktop\\Object-Oriented Design\\alpharelease\\NMahjong_sugad21_morana21\\app\\build\\intermediates\\res\\merged\\debug\\layout_counter_human_player.xml.flat",
-        "source": "C:\\Users\\Dylan\\Desktop\\Object-Oriented Design\\alpharelease\\NMahjong_sugad21_morana21\\app\\src\\main\\res\\layout\\counter_human_player.xml"
-    },
-    {
         "merged": "C:\\Users\\Dylan\\Desktop\\Object-Oriented Design\\alpharelease\\NMahjong_sugad21_morana21\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_bamboo3.png.flat",
         "source": "C:\\Users\\Dylan\\Desktop\\Object-Oriented Design\\alpharelease\\NMahjong_sugad21_morana21\\app\\src\\main\\res\\drawable-hdpi\\bamboo3.png"
     },
@@ -274,10 +270,6 @@
     {
         "merged": "C:\\Users\\Dylan\\Desktop\\Object-Oriented Design\\alpharelease\\NMahjong_sugad21_morana21\\app\\build\\intermediates\\res\\merged\\debug\\layout_game_player_list_row.xml.flat",
         "source": "C:\\Users\\Dylan\\Desktop\\Object-Oriented Design\\alpharelease\\NMahjong_sugad21_morana21\\app\\src\\main\\res\\layout\\game_player_list_row.xml"
-    },
-    {
-        "merged": "C:\\Users\\Dylan\\Desktop\\Object-Oriented Design\\alpharelease\\NMahjong_sugad21_morana21\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_counter_human_player.xml.flat",
-        "source": "C:\\Users\\Dylan\\Desktop\\Object-Oriented Design\\alpharelease\\NMahjong_sugad21_morana21\\app\\src\\main\\res\\layout-land\\counter_human_player.xml"
     },
     {
         "merged": "C:\\Users\\Dylan\\Desktop\\Object-Oriented Design\\alpharelease\\NMahjong_sugad21_morana21\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_purple_delete_button.png.flat",

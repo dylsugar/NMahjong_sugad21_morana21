@@ -5,10 +5,13 @@ import edu.up.cs301.game.GameMainActivity;
 import edu.up.cs301.game.R;
 import edu.up.cs301.game.actionMsg.GameAction;
 import edu.up.cs301.game.infoMsg.GameInfo;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
+
+import java.util.ArrayList;
 
 /**
  * A GUI of a counter-player. The GUI displays the current value of the counter,
@@ -26,6 +29,8 @@ import android.view.View.OnClickListener;
 public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListener {
 
 	/* instance variables */
+	private ArrayList<mTile> hand;
+
 	
 	// The TextView the displays the current counter value
 	private TextView counterValueTextView;
@@ -41,6 +46,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 	 * @param name
 	 * 		the player's name
 	 */
+
 	public MahjongHumanPlayer(String name) {
 		super(name);
 	}
@@ -52,20 +58,14 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 	 * 		the top object in the GUI's view heirarchy
 	 */
 	public View getTopView() {
-		return myActivity.findViewById(R.id.top_gui_layout);
+		return myActivity.findViewById(R.id.top_layer);
 	}
 	
-	/**
-	 * sets the counter value in the text view
-	 */
-	protected void updateDisplay() {
-		// set the text in the appropriate widget
-		counterValueTextView.setText("" + state.getCounter());
-	}
+
 
 	/**
 	 * this method gets called when the user clicks the '+' or '-' button. It
-	 * creates a new MahjongMoveAction to return to the parent activity.
+	 * creates a new MahjongDrawMethod to return to the parent activity.
 	 * 
 	 * @param button
 	 * 		the button that was clicked
@@ -76,13 +76,13 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 
 		// Construct the action and send it to the game
 		GameAction action = null;
-		if (button.getId() == R.id.) {
+		if (button.getId() == R.id.drawButton) {
 			// plus button: create "increment" action
-			action = new MahjongMoveAction(this, true);
+			action = new MahjongDrawMethod(this, true);
 		}
-		else if (button.getId() == R.id.minusButton) {
+		else if () {
 			// minus button: create "decrement" action
-			action = new MahjongMoveAction(this, false);
+			action = new MahjongDrawMethod(this, false);
 		}
 		else {
 			// something else was pressed: ignore
@@ -122,17 +122,12 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 		
 	    // Load the layout resource for our GUI
 		activity.setContentView(R.layout.play_screen);
-		
-		// make this object the listener for both the '+' and '-' 'buttons
-		Button plusButton = (Button) activity.findViewById(R.id.);
-		plusButton.setOnClickListener(this);
-		Button minusButton = (Button) activity.findViewById(R.id.minusButton);
-		minusButton.setOnClickListener(this);
 
+		// make this object the listener for both the '+' and '-' 'button
 		// remember the field that we update to display the counter's value
 		this.counterValueTextView =
 				(TextView) activity.findViewById(R.id.counterValueTextView);
-		
+
 		// if we have a game state, "simulate" that we have just received
 		// the state from the game so that the GUI values are updated
 		if (state != null) {
