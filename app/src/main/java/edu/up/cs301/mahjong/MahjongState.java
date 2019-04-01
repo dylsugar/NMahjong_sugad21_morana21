@@ -8,7 +8,7 @@ import java.util.Collections;
 public class MahjongState {
 
     private ArrayList<mPlayer> gamePlayers;
-    private ArrayList<mTiles> wall;
+    private mWall wall;
     private ArrayList<mTiles> playerTiles;
     private ArrayList<mTiles> discardTiles;
     private mTiles recentDiscard;
@@ -19,39 +19,30 @@ public class MahjongState {
 
         //initialize values for each instance variable
         gamePlayers =new ArrayList<mPlayer>();
-        wall =new ArrayList<mTiles>();
+        wall =new mWall();
+        Collections.shuffle(wall.getWall());
         playerTiles =new ArrayList<mTiles>();
         discardTiles =new ArrayList<mTiles>();
         turn =0;
         lastTurn =0;
-        recentDiscard =
+        recentDiscard = getRecentDiscard();
 
-        getRecentDiscard();
+        gamePlayers = new ArrayList<mPlayer>();
+        for (int i = 0; i < gamePlayers.size(); i++) {
+            gamePlayers.add(gamePlayers.get(i));
+        }
 
-        initTiles();
 
-        mPlayer EastPlayer = new mPlayer(0, playerTiles);
-        mPlayer NorthPlayer = new mPlayer(1, playerTiles);
-        mPlayer WestPlayer = new mPlayer(2, playerTiles);
-        mPlayer SouthPlayer = new mPlayer(3, playerTiles);
-
-        gamePlayers.add(EastPlayer);
-        gamePlayers.add(NorthPlayer);
-        gamePlayers.add(WestPlayer);
-        gamePlayers.add(SouthPlayer);
-
-        EastPlayer.setHand(
-
-        initHand0());
-        NorthPlayer.setHand(
-
-        initHand1());
-        WestPlayer.setHand(
-
-        initHand2());
-        SouthPlayer.setHand(
-
-        initHand3());
+        int j = 0;
+        int size = wall.size();
+        for (int i = 0; i < size; i++) {
+            gamePlayers.get(j).addTiletoHand(wall.remove(0));
+            if (j < gamePlayers.size() - 1) {
+                j++;
+            } else {
+                j = 0;
+            }
+        }
 
 
     }
@@ -73,148 +64,21 @@ public class MahjongState {
             gamePlayers.add(in.gamePlayers.get(i));
         }
 
-
-        wall = new ArrayList<mTiles>();
-        for (int m = 0; m < in.getWall().size(); m++) {
-            wall.add(in.wall.get(m));
-        }
-
         playerTiles = new ArrayList<mTiles>();
-
+        for(int m = 0; m < in.getPlayerTiles().size(); m++){
+            playerTiles.add(in.playerTiles.get(m));
+        }
 
         discardTiles = new ArrayList<mTiles>();
         for (int l = 0; l < in.getDiscardTiles().size(); l++) {
             discardTiles.add(in.discardTiles.get(l));
         }
 
-        in.initTiles();
-        mPlayer EastPlayer = new mPlayer(0, in.playerTiles);
-        mPlayer NorthPlayer = new mPlayer(1, in.playerTiles);
-        mPlayer WestPlayer = new mPlayer(2, in.playerTiles);
-        mPlayer SouthPlayer = new mPlayer(3, in.playerTiles);
-
-        in.gamePlayers.set(0, EastPlayer);
-        in.gamePlayers.set(1, NorthPlayer);
-        in.gamePlayers.set(2, WestPlayer);
-        in.gamePlayers.set(3, SouthPlayer);
-
-        EastPlayer.setHand(in.initHand0());
-        NorthPlayer.setHand(in.initHand1());
-        WestPlayer.setHand(in.initHand2());
-        SouthPlayer.setHand(in.initHand3());
-
-
         turn = in.getTurn();
         lastTurn = in.getLastTurn();
         recentDiscard = in.getRecentDiscard();
     }
 
-    public void initTiles() {
-        wall = new ArrayList<mTiles>();
-        for (int i = 0; i < 9; i++) {
-            //Bamboo suit 4 of one value made at a time 1-9 (mTiles[0-31])
-            wall.add(4 * i, new mTiles(i + 1, "Bamboo"));
-            wall.add(4 * i + 1, new mTiles(i + 1, "Bamboo"));
-            wall.add(4 * i + 2, new mTiles(i + 1, "Bamboo"));
-            wall.add(4 * i + 3, new mTiles(i + 1, "Bamboo"));
-            //Characters suit 4 of one value made at a time 1-9 (mTiles[36-71])
-        }
-        for (int i = 0; i < 9; i++) {
-            wall.add(4 * i + 36, new mTiles(i + 1, "Characters"));
-            wall.add(4 * i + 37, new mTiles(i + 1, "Characters"));
-            wall.add(4 * i + 38, new mTiles(i + 1, "Characters"));
-            wall.add(4 * i + 39, new mTiles(i + 1, "Characters"));
-        }
-        for (int i = 0; i < 9; i++) {
-            //Dots suit 4 of one value made at a time 1-9 (mTiles[72-107])
-            wall.add(4 * i + 72, new mTiles(i + 1, "Dots"));
-            wall.add(4 * i + 73, new mTiles(i + 1, "Dots"));
-            wall.add(4 * i + 74, new mTiles(i + 1, "Dots"));
-            wall.add(4 * i + 75, new mTiles(i + 1, "Dots"));
-        }
-        //initialized the first 108 tiles, 4 of each tile of each suit
-
-
-        //Values of wind : 0 - west, 1 - south, 2 - east, 3 - north
-        //Winds suit 4 of one wind made on each loop (mTiles[108-123])
-        for (int j = 0; j < 4; j++) {
-            wall.add(4 * j + 108, new mTiles(j + 1, "Winds"));
-            wall.add(4 * j + 109, new mTiles(j + 1, "Winds"));
-            wall.add(4 * j + 110, new mTiles(j + 1, "Winds"));
-            wall.add(4 * j + 111, new mTiles(j + 1, "Winds"));
-        }
-        for (int j = 0; j < 4; j++) {
-            if (j != 3) {
-                //value of dragon : 0 - red dragon, 1 - green dragon, 2 - white dragon
-                //Dragons suit 4 of one dragon made on each loop (mTiles[124-135])
-                wall.add(4 * j + 124, new mTiles(j + 1, "Dragon"));
-                wall.add(4 * j + 125, new mTiles(j + 1, "Dragon"));
-                wall.add(4 * j + 126, new mTiles(j + 1, "Dragon"));
-                wall.add(4 * j + 127, new mTiles(j + 1, "Dragon"));
-            }
-        }
-        /*
-        for (int j = 0; j < 4; j++) {
-            //Flower and season tiles one of each value and suit made (mTiles[136-143])
-            wall.add(j + 136, new mTiles(j + 1, "Flower"));
-            wall.add(j + 140, new mTiles(j + 1, "Season"));
-        }
-        */
-
-        /*
-        External Citation:
-        Problem: Shuffling and randomizing the Wall
-        Source: https://www.geeksforgeeks.org/collections-shuffle-java-examples/
-        Solution: use Collection.shuffle(object);
-         */
-        Collections.shuffle(wall);
-    }
-
-    public ArrayList<mTiles> initHand0() {
-
-        for (int i = 0; i < 14; i++) {
-            gamePlayers.get(0).addTiletoHand(getWall().get(i));
-            getWall().remove(getWall().get(i));
-            setWall(getWall());
-            gamePlayers.get(0).setHand(gamePlayers.get(0).getHand());
-        }
-        return gamePlayers.get(0).getHand();
-    }
-
-    public ArrayList<mTiles> initHand1() {
-        for (int j = 14; j < 27; j++) {
-            gamePlayers.get(1).addTiletoHand(getWall().get(j));
-            getWall().remove(getWall().get(j));
-            setWall(getWall());
-            gamePlayers.get(1).setHand(gamePlayers.get(1).getHand());
-
-        }
-        return gamePlayers.get(1).getHand();
-    }
-
-
-    public ArrayList<mTiles> initHand2() {
-        for (int k = 27; k < 40; k++) {
-            gamePlayers.get(2).addTiletoHand(getWall().get(k));
-            getWall().remove(getWall().get(k));
-            setWall(getWall());
-            gamePlayers.get(2).setHand(gamePlayers.get(2).getHand());
-
-        }
-        return gamePlayers.get(2).getHand();
-    }
-
-    public ArrayList<mTiles> initHand3() {
-        for (int l = 40; l < 53; l++) {
-            gamePlayers.get(3).addTiletoHand(getWall().get(l));
-            getWall().remove(getWall().get(l));
-            setWall(getWall());
-            gamePlayers.get(3).setHand(gamePlayers.get(3).getHand());
-
-        }
-        setWall(getWall());
-        return gamePlayers.get(3).getHand();
-    }
 
     public mTiles getRecentDiscard() {
         return recentDiscard;
@@ -222,10 +86,6 @@ public class MahjongState {
 
     public ArrayList<mPlayer> getGamePlayers() {
         return gamePlayers;
-    }
-
-    public ArrayList<mTiles> getWall() {
-        return wall;
     }
 
     public ArrayList<mTiles> getPlayerTiles() {
@@ -243,10 +103,6 @@ public class MahjongState {
 
     public int getLastTurn() {
         return lastTurn;
-    }
-
-    public void setWall(ArrayList<mTiles> inWall) {
-        this.wall = inWall;
     }
 
     public void setPlayerTiles(ArrayList<mTiles> inPTiles) {

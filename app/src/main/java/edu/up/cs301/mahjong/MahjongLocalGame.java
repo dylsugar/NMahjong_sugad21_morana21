@@ -47,7 +47,7 @@ public class MahjongLocalGame extends LocalGame {
 	}
 
 	/**
-	 * The only type of GameAction that should be sent is MahjongDrawMethod
+	 * The only type of GameAction that should be sent is MahjongoDrawAction
 	 */
 	@Override
 	protected boolean makeMove(GameAction action) {

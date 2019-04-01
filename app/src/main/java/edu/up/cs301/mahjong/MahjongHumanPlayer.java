@@ -65,7 +65,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 
 	/**
 	 * this method gets called when the user clicks the '+' or '-' button. It
-	 * creates a new MahjongDrawMethod to return to the parent activity.
+	 * creates a new MahjongoDrawAction to return to the parent activity.
 	 * 
 	 * @param button
 	 * 		the button that was clicked
