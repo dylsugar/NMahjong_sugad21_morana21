@@ -82,6 +82,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 	@Override
 	public void receiveInfo(GameInfo info) {
 
+
 	}
 	
 	/**

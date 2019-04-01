@@ -71,19 +71,35 @@ public class MahjongGameActivity extends Activity implements View.OnClickListene
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.slot1:
+                instance.discardTile(instance.getGamePlayers().get(playerIndex).getHand().get(0),playerIndex);
             case R.id.slot2:
+                instance.discardTile(instance.getGamePlayers().get(playerIndex).getHand().get(1),playerIndex);
             case R.id.slot3:
+                instance.discardTile(instance.getGamePlayers().get(playerIndex).getHand().get(2),playerIndex);
             case R.id.slot4:
+                instance.discardTile(instance.getGamePlayers().get(playerIndex).getHand().get(3),playerIndex);
             case R.id.slot5:
+                instance.discardTile(instance.getGamePlayers().get(playerIndex).getHand().get(4),playerIndex);
             case R.id.slot6:
+                instance.discardTile(instance.getGamePlayers().get(playerIndex).getHand().get(5),playerIndex);
             case R.id.slot7:
+                instance.discardTile(instance.getGamePlayers().get(playerIndex).getHand().get(6),playerIndex);
             case R.id.slot8:
+                instance.discardTile(instance.getGamePlayers().get(playerIndex).getHand().get(7),playerIndex);
             case R.id.slot9:
+                instance.discardTile(instance.getGamePlayers().get(playerIndex).getHand().get(8),playerIndex);
             case R.id.slot10:
+                instance.discardTile(instance.getGamePlayers().get(playerIndex).getHand().get(9),playerIndex);
             case R.id.slot11:
+                instance.discardTile(instance.getGamePlayers().get(playerIndex).getHand().get(10),playerIndex);
             case R.id.slot12:
+                instance.discardTile(instance.getGamePlayers().get(playerIndex).getHand().get(11),playerIndex);
             case R.id.slot13:
+                instance.discardTile(instance.getGamePlayers().get(playerIndex).getHand().get(12),playerIndex);
             case R.id.drawButton:
+                if(instance.drawFromWall(instance.getWall().getWall().get(0),playerIndex)){
+                    instance.getWall().getWall().get(0).getDrawable();
+                }
         }
     }
 

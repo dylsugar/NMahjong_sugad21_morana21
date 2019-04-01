@@ -1,11 +1,14 @@
 package edu.up.cs301.mahjong;
 
-
+import edu.up.cs301.game.infoMsg.GameState;
 import java.util.ArrayList;
 import java.util.Collections;
 
 
 public class MahjongState {
+
+    private static final long serialVersionUID = 7737393762469851826L;
+
 
     private ArrayList<mPlayer> gamePlayers;
     private mWall wall;
@@ -17,6 +20,7 @@ public class MahjongState {
 
     public MahjongState() {
 
+
         //initialize values for each instance variable
         gamePlayers =new ArrayList<mPlayer>();
         wall =new mWall();
@@ -25,7 +29,7 @@ public class MahjongState {
         discardTiles =new ArrayList<mTiles>();
         turn =0;
         lastTurn =0;
-        recentDiscard = getRecentDiscard();
+        recentDiscard = null;
 
         gamePlayers = new ArrayList<mPlayer>();
         for (int i = 0; i < gamePlayers.size(); i++) {
@@ -33,6 +37,8 @@ public class MahjongState {
         }
 
 
+        //initializes a players hand via the size of the wall
+        // the wall is initialized above and in the wall class
         int j = 0;
         int size = wall.size();
         for (int i = 0; i < size; i++) {
@@ -79,7 +85,13 @@ public class MahjongState {
         recentDiscard = in.getRecentDiscard();
     }
 
+    public mWall getWall(){
+        return this.wall;
+    }
 
+    public void setWall(mWall in){
+        this.wall = in;
+    }
     public mTiles getRecentDiscard() {
         return recentDiscard;
     }
@@ -132,9 +144,9 @@ public class MahjongState {
             return false;
         }
         newPlayer.addTiletoHand(drawnTile);
-        getWall().remove(drawnTile);
+        wall.getWall().remove(drawnTile);
         setPlayerTiles(getPlayerTiles());
-        setWall(getWall());
+        wall.setWall(wall.getWall());
         nextTurn(newPlayer);
         return true;
     }
@@ -207,70 +219,6 @@ public class MahjongState {
             return true;
         }
         return false;
-    }
-
-
-    /*
-    All Methods below will be implemented during Alpha Release and will check during hands of
-    each player and check winning conditions
-     */
-    public void handCheck(ArrayList<mTiles> pHand) {
-        /*
-        Checks hand of currentTurnPlayer and if there is a mahjong, then gameOver method is
-        called. But if player picked up a discarded tile and completes a set, that is not mahjong.
-        Toast appears for 5 seconds showing the current set completed.(One can only get mahjong if
-        one draw from wall or discarded tile.
-         */
-    }
-
-    public boolean gameOver() {
-        /*
-        Returns T/F if a player has mahjong and ends game
-         */
-        return true;
-    }
-
-    public boolean pungSet(ArrayList<mTiles> pHand) {
-        /*
-        returns true if there is a pung in a players hand
-         */
-        return true;
-    }
-
-    public boolean kongSet(ArrayList<mTiles> pHand) {
-        /*
-        returns true if there is a kong in a players hand
-         */
-        return true;
-    }
-
-    public boolean quintSet(ArrayList<mTiles> pHand) {
-        /*
-        returns true if there is a quint
-         */
-        return true;
-    }
-
-    public boolean sextetSet(ArrayList<mTiles> pHand) {
-        /*
-        returns true if sextet
-         */
-        return true;
-    }
-
-    public boolean pairSet(ArrayList<mTiles> pHand) {
-        /*
-        returns true if pair in hand
-         */
-        return true;
-    }
-
-    public boolean winningHands(ArrayList<mTiles> pHand) {
-        /*
-        This method will check the current players hand once picked up a discarded tile
-        or wall tile to see all the different combinations of winning hands. So
-         */
-        return true;
     }
 
     public boolean mahjongCheck(ArrayList<mTiles> pHand) {

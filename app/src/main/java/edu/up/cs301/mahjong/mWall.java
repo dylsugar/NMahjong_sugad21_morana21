@@ -40,6 +40,10 @@ public class mWall {
         return wall;
     }
 
+    public void setWall(ArrayList<mTiles>in){
+        this.wall = in;
+    }
+
     public int size(){
         return wall.size();
     }
