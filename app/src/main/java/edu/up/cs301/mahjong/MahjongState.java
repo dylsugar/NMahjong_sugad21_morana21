@@ -78,7 +78,9 @@ public class MahjongState extends GameState {
         wall = new mWall(in.getWall());
 
         for (int m = 0; m < in.getWall().size(); m++) {
-            wall.getWall(add(in.wall.get(m).getValue()));
+            wall.getWall().add(new mTiles (
+                    in.wall.getWall().get(m).getValue(),
+                    in.wall.getWall().get(m).getSuit()));
         }
 
         playerTiles = new ArrayList<mTiles>();
@@ -89,7 +91,7 @@ public class MahjongState extends GameState {
             discardTiles.add(in.discardTiles.get(l));
         }
 
-        in.initTiles();
+
         mPlayer EastPlayer = new mPlayer(0, in.playerTiles);
         mPlayer NorthPlayer = new mPlayer(1, in.playerTiles);
         mPlayer WestPlayer = new mPlayer(2, in.playerTiles);
@@ -177,9 +179,9 @@ public class MahjongState extends GameState {
     public ArrayList<mTiles> initHand0() {
 
         for (int i = 0; i < 14; i++) {
-            gamePlayers.get(0).addTiletoHand(getWall().get(i));
-            getWall().remove(getWall().get(i));
-            setWall(getWall());
+            gamePlayers.get(0).addTiletoHand(wall.getWall().get(i));
+            wall.getWall().remove(wall.getWall().get(i));
+            wall.setWall(wall.getWall());
             gamePlayers.get(0).setHand(gamePlayers.get(0).getHand());
         }
         return gamePlayers.get(0).getHand();
@@ -187,9 +189,9 @@ public class MahjongState extends GameState {
 
     public ArrayList<mTiles> initHand1() {
         for (int j = 14; j < 27; j++) {
-            gamePlayers.get(1).addTiletoHand(getWall().get(j));
-            getWall().remove(getWall().get(j));
-            setWall(getWall());
+            gamePlayers.get(1).addTiletoHand(wall.getWall().get(j));
+            wall.getWall().remove(wall.getWall().get(j));
+            wall.setWall(wall.getWall());
             gamePlayers.get(1).setHand(gamePlayers.get(1).getHand());
 
         }
@@ -199,9 +201,9 @@ public class MahjongState extends GameState {
 
     public ArrayList<mTiles> initHand2() {
         for (int k = 27; k < 40; k++) {
-            gamePlayers.get(2).addTiletoHand(getWall().get(k));
-            getWall().remove(getWall().get(k));
-            setWall(getWall());
+            gamePlayers.get(2).addTiletoHand(wall.getWall().get(k));
+            wall.getWall().remove(wall.getWall().get(k));
+            wall.setWall(wall.getWall());
             gamePlayers.get(2).setHand(gamePlayers.get(2).getHand());
 
         }
@@ -210,9 +212,9 @@ public class MahjongState extends GameState {
 
     public ArrayList<mTiles> initHand3() {
         for (int l = 40; l < 53; l++) {
-            gamePlayers.get(3).addTiletoHand(getWall().get(l));
-            getWall().remove(getWall().get(l));
-            setWall(getWall());
+            gamePlayers.get(3).addTiletoHand(wall.getWall().get(l));
+            wall.getWall().remove(wall.getWall().get(l));
+            wall.setWall(wall.getWall());
             gamePlayers.get(3).setHand(gamePlayers.get(3).getHand());
 
         }
@@ -249,7 +251,7 @@ public class MahjongState extends GameState {
         return lastTurn;
     }
 
-    public void setWall(ArrayList<mTiles> inWall) {
+    public void setWall(mWall inWall) {
         this.wall = inWall;
     }
 
@@ -280,7 +282,7 @@ public class MahjongState extends GameState {
             return false;
         }
         newPlayer.addTiletoHand(drawnTile);
-        getWall().remove(drawnTile);
+        wall.getWall().remove(drawnTile);
         setPlayerTiles(getPlayerTiles());
         setWall(getWall());
         nextTurn(newPlayer);
