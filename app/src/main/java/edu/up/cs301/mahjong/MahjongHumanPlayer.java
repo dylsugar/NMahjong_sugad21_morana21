@@ -6,6 +6,7 @@ import edu.up.cs301.game.R;
 import edu.up.cs301.game.actionMsg.GameAction;
 import edu.up.cs301.game.infoMsg.GameInfo;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -41,22 +42,23 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 	
 	// the android activity that we are running
 	private GameMainActivity myActivity;
-
-	private ImageButton slot1;
-	private ImageButton slot2;
-	private ImageButton slot3;
-	private ImageButton slot4;
-	private ImageButton slot5;
-	private ImageButton slot6;
-	private ImageButton slot7;
-	private ImageButton slot8;
-	private ImageButton slot9;
-	private ImageButton slot10;
-	private ImageButton slot11;
-	private ImageButton slot12;
-	private ImageButton slot13;
-	private ImageButton slot14;
-	private ImageButton wallDraw;
+    private ImageButton slot1;
+    private ImageButton slot2;
+    private ImageButton slot3;
+    private ImageButton slot4;
+    private ImageButton slot5;
+    private ImageButton slot6;
+    private ImageButton slot7;
+    private ImageButton slot8;
+    private ImageButton slot9;
+    private ImageButton slot10;
+    private ImageButton slot11;
+    private ImageButton slot12;
+    private ImageButton slot13;
+    private ImageButton slot14;
+    private ImageButton wallDraw;
+	private ImageButton ibutton;
+	
 	/**
 	 * constructor
 	 * @param name
@@ -81,76 +83,11 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 
 	/**
 	 * this method gets called when the user clicks the '+' or '-' button. It
-	 * creates a new MahjongDrawMethod to return to the parent activity.
+	 * creates a new MahjongoDrawAction to return to the parent activity.
 	 * 
 	 * @param button
 	 * 		the button that was clicked
 	 */
-	public void onClick(View button) {
-
-		if(button == slot1)
-		{
-			game.sendAction(new MahjongSelectAction(this, 1));
-		}
-		else if( button == slot2)
-		{
-			game.sendAction(new MahjongSelectAction(this, 2));
-		}
-		else if( button == slot3)
-		{
-			game.sendAction(new MahjongSelectAction(this, 3));
-		}
-		else if( button == slot4)
-		{
-			game.sendAction(new MahjongSelectAction(this, 4));
-		}
-		else if( button == slot5)
-		{
-			game.sendAction(new MahjongSelectAction(this, 5));
-		}
-		else if( button == slot6)
-		{
-			game.sendAction(new MahjongSelectAction(this, 6));
-		}
-		else if( button == slot7)
-		{
-			game.sendAction(new MahjongSelectAction(this, 7));
-		}
-		else if( button == slot8)
-		{
-			game.sendAction(new MahjongSelectAction(this, 8));
-		}
-		else if( button == slot9)
-		{
-			game.sendAction(new MahjongSelectAction(this, 9));
-		}
-		else if( button == slot10)
-		{
-			game.sendAction(new MahjongSelectAction(this, 10));
-		}
-		else if( button == slot11)
-		{
-			game.sendAction(new MahjongSelectAction(this, 11));
-		}
-		else if( button == slot12)
-		{
-			game.sendAction(new MahjongSelectAction(this, 12));
-		}
-		else if( button == slot13)
-		{
-			game.sendAction(new MahjongSelectAction(this, 13));
-		}
-		else if( button == slot14)
-		{
-			game.sendAction(new MahjongSelectAction(this, 14));
-		}
-		else if(button == wallDraw)
-		{
-			game.sendAction(new MahjongoDrawAction (this));
-		}
-
-	}// onClick
-	
 	/**
 	 * callback method when we get a message (e.g., from the game)
 	 * 
@@ -159,7 +96,103 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 	 */
 	@Override
 	public void receiveInfo(GameInfo info) {
-	}
+        if ((info instanceof MahjongState)) {
+            MahjongState temp = (MahjongState) info;
+
+            if (playerNum == 0) {
+                temp.setPlayerTiles(temp.getGamePlayers().get(0).getHand());
+                temp.mahjongCheck(temp.getGamePlayers().get(0).getHand());
+
+            } else if (playerNum == 1) {
+
+            } else if (playerNum == 2) {
+
+            } else if (playerNum == 3) {
+
+            }
+            int i = state.getGamePlayers().get(playerNum).getHand().size();
+            if (i > 1) {
+                slot1.setImageResource(state.getWall().getWall().` `);
+                if (i > 2) {
+                    slot2.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(2).getCardName(), "drawable", getPackageName()));
+                    if (i > 3) {
+                        slot3.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(3).getCardName(), "drawable", getPackageName()));
+                        if (i > 4) {
+                            slot4.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(4).getCardName(), "drawable", getPackageName()));
+                            if (i > 5) {
+                                slot5.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(5).getCardName(), "drawable", getPackageName()));
+                                if (i > 6) {
+                                    slot6.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(6).getCardName(), "drawable", getPackageName()));
+                                    if (i > 7) {
+                                        slot7.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(7).getCardName(), "drawable", getPackageName()));
+                                        if (i > 8) {
+                                            slot8.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(8).getCardName(), "drawable", getPackageName()));
+                                            if (i > 9) {
+                                                slot9.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(9).getCardName(), "drawable", getPackageName()));
+                                                if (i > 10) {
+                                                    slot10.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(10).getCardName(), "drawable", getPackageName()));
+                                                    if (i > 11) {
+                                                        slot11.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(11).getCardName(), "drawable", getPackageName()));
+
+                                                        if (i > 12) {
+                                                            slot12.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(12).getCardName(), "drawable", getPackageName()));
+
+                                                            if (i > 13) {
+                                                                slot13.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(13).getCardName(), "drawable", getPackageName()));
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            if (i < 14) {
+                slot13.setVisibility(View.INVISIBLE);
+                if (i < 13) {
+                    slot12.setVisibility(View.INVISIBLE);
+                    if (i < 12) {
+                        slot11.setVisibility(View.INVISIBLE);
+                        if (i < 11) {
+                            slot10.setVisibility(View.INVISIBLE);
+                            if (i < 10) {
+                                slot9.setVisibility(View.INVISIBLE);
+                                if (i < 9) {
+                                    slot8.setVisibility(View.INVISIBLE);
+                                    if (i < 8) {
+                                        slot7.setVisibility(View.INVISIBLE);
+                                        if (i < 7) {
+                                            slot6.setVisibility(View.INVISIBLE);
+                                            if (i < 6) {
+                                                slot5.setVisibility(View.INVISIBLE);
+                                                if (i < 5) {
+                                                    slot4.setVisibility(View.INVISIBLE);
+                                                    if (i < 4) {
+                                                        slot3.setVisibility(View.INVISIBLE);
+                                                        if (i < 3) {
+                                                            slot2.setVisibility(View.INVISIBLE);
+                                                            if (i < 2) {
+                                                                slot1.setVisibility(View.INVISIBLE);
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 	
 	/**
 	 * callback method--our game has been chosen/rechosen to be the GUI,
@@ -176,11 +209,15 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 	    // Load the layout resource for our GUI
 		activity.setContentView(R.layout.play_screen);
 
-
-		// if we have a game state, "simulate" that we have just received
-		// the state from the game so that the GUI values are updated
-
 	}
+
+        @Override
+        public void onClick(View v) {
+
+        }
+
+
+
 
 }// class MahjongHumanPlayer
 
