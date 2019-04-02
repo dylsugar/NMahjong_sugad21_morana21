@@ -8,6 +8,7 @@ import edu.up.cs301.game.infoMsg.GameInfo;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
 
@@ -40,7 +41,22 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 	
 	// the android activity that we are running
 	private GameMainActivity myActivity;
-	
+
+	private ImageButton slot1;
+	private ImageButton slot2;
+	private ImageButton slot3;
+	private ImageButton slot4;
+	private ImageButton slot5;
+	private ImageButton slot6;
+	private ImageButton slot7;
+	private ImageButton slot8;
+	private ImageButton slot9;
+	private ImageButton slot10;
+	private ImageButton slot11;
+	private ImageButton slot12;
+	private ImageButton slot13;
+	private ImageButton slot14;
+	private ImageButton wallDraw;
 	/**
 	 * constructor
 	 * @param name
@@ -65,12 +81,74 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 
 	/**
 	 * this method gets called when the user clicks the '+' or '-' button. It
-	 * creates a new MahjongoDrawAction to return to the parent activity.
+	 * creates a new MahjongDrawMethod to return to the parent activity.
 	 * 
 	 * @param button
 	 * 		the button that was clicked
 	 */
 	public void onClick(View button) {
+
+		if(button == slot1)
+		{
+			game.sendAction(new MahjongSelectAction(this, 1));
+		}
+		else if( button == slot2)
+		{
+			game.sendAction(new MahjongSelectAction(this, 2));
+		}
+		else if( button == slot3)
+		{
+			game.sendAction(new MahjongSelectAction(this, 3));
+		}
+		else if( button == slot4)
+		{
+			game.sendAction(new MahjongSelectAction(this, 4));
+		}
+		else if( button == slot5)
+		{
+			game.sendAction(new MahjongSelectAction(this, 5));
+		}
+		else if( button == slot6)
+		{
+			game.sendAction(new MahjongSelectAction(this, 6));
+		}
+		else if( button == slot7)
+		{
+			game.sendAction(new MahjongSelectAction(this, 7));
+		}
+		else if( button == slot8)
+		{
+			game.sendAction(new MahjongSelectAction(this, 8));
+		}
+		else if( button == slot9)
+		{
+			game.sendAction(new MahjongSelectAction(this, 9));
+		}
+		else if( button == slot10)
+		{
+			game.sendAction(new MahjongSelectAction(this, 10));
+		}
+		else if( button == slot11)
+		{
+			game.sendAction(new MahjongSelectAction(this, 11));
+		}
+		else if( button == slot12)
+		{
+			game.sendAction(new MahjongSelectAction(this, 12));
+		}
+		else if( button == slot13)
+		{
+			game.sendAction(new MahjongSelectAction(this, 13));
+		}
+		else if( button == slot14)
+		{
+			game.sendAction(new MahjongSelectAction(this, 14));
+		}
+		else if(button == wallDraw)
+		{
+			game.sendAction(new MahjongoDrawAction (this));
+		}
+
 	}// onClick
 	
 	/**
@@ -81,8 +159,6 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 	 */
 	@Override
 	public void receiveInfo(GameInfo info) {
-
-
 	}
 	
 	/**

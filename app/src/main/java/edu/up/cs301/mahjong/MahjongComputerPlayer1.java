@@ -40,5 +40,15 @@ public class MahjongComputerPlayer1 extends GameComputerPlayer implements Tickab
 	protected void receiveInfo(GameInfo info) {
 		// Do nothing, as we ignore all state in deciding our next move. It
 		// depends totally on the timer and random numbers.
+        if(info instanceof MahjongState)
+        {
+            MahjongState temp = (MahjongState) info;
+            if(temp.getTurn() != playerNum) return;
+
+            else
+            {
+
+            }
+        }
 	}
 }

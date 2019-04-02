@@ -51,7 +51,47 @@ public class MahjongLocalGame extends LocalGame {
 	 */
 	@Override
 	protected boolean makeMove(GameAction action) {
-	return true;
+
+		if(action instanceof MahjongoDrawAction)
+		{
+
+		}
+		else if(action instanceof MahjongSelectAction)
+		{
+			int tileToDiscard = ((MahjongSelectAction) action).getTile();
+			switch (tileToDiscard)
+			{
+				case 1:
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				case 4:
+					break;
+				case 5:
+					break;
+				case 6:
+					break;
+				case 7:
+					break;
+				case 8:
+					break;
+				case 9:
+					break;
+				case 10:
+					break;
+				case 11:
+					break;
+				case 12:
+					break;
+				case 13:
+					break;
+				case 14:
+					break;
+			}
+		}
+		return true;
 	}//makeMove
 	
 	/**
@@ -61,7 +101,7 @@ public class MahjongLocalGame extends LocalGame {
 	protected void sendUpdatedStateTo(GamePlayer p) {
 		// this is a perfect-information game, so we'll make a
 		// complete copy of the state to send to the player
-
+		p.sendInfo(gameState);
 		
 	}//sendUpdatedSate
 	
@@ -75,7 +115,26 @@ public class MahjongLocalGame extends LocalGame {
 	 */
 	@Override
 	protected String checkIfGameOver() {
-		return null;
+		if(gameState.mahjongCheck(gameState.getGamePlayers().get(0).getHand()))
+		{
+			return "Player " + playerNames[0] + " has won!";
+		}
+		else if(gameState.mahjongCheck(gameState.getGamePlayers().get(1).getHand()))
+		{
+			return "Player " + playerNames[1] + " has won!";
+		}
+		else if(gameState.mahjongCheck(gameState.getGamePlayers().get(2).getHand()))
+		{
+			return "Player " + playerNames[2] + " has won!";
+		}
+		else if(gameState.mahjongCheck(gameState.getGamePlayers().get(3).getHand()))
+		{
+			return "Player " + playerNames[3] + " has won!";
+		}
+		else
+		{
+			return "No winner yet";
+		}
 	}
 
 }// class MahjongLocalGame

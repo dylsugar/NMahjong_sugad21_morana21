@@ -11,7 +11,6 @@ public class mPlayer {
         private ArrayList<mTiles> discardHand;
 
 
-
         public mPlayer(int inPosition, ArrayList<mTiles> ownTiles) {
 
             position = inPosition;

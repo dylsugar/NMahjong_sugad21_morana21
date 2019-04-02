@@ -17,19 +17,16 @@ public class MahjongoDrawAction extends GameAction {
 	private static final long serialVersionUID = 28062013L;
 
 	//whether this move is a plus (true) or minus (false)
-	private boolean isPlus;
+
 	
 	/**
 	 * Constructor for the MahjongoDrawAction class.
 	 * 
 	 * @param player
 	 *            the player making the move
-	 * @param isPlus
-	 *            value to initialize this.isPlus
 	 */
-	public MahjongoDrawAction(GamePlayer player, boolean selectTile) {
+	public MahjongoDrawAction(GamePlayer player) {
 		super(player);
-		this.isPlus = isPlus;
 	}
 	
 

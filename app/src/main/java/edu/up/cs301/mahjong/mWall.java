@@ -34,6 +34,17 @@ public class mWall {
         Collections.shuffle(wall);
         }
 
+        public mWall(mWall in)
+        {
+            wall = new ArrayList<mTiles> ();
+            for(int i = 0; i < in.wall.size(); i++)
+            {
+                int val = in.getWall().get(i).getValue();
+                String str = in.getWall().get(i).getSuit();
+                wall.add(i, new mTiles (val, str));
+            }
+        }
+
 
 
     public ArrayList<mTiles> getWall() {

@@ -97,8 +97,8 @@ public class MahjongGameActivity extends Activity implements View.OnClickListene
             case R.id.slot13:
                 instance.discardTile(instance.getGamePlayers().get(playerIndex).getHand().get(12),playerIndex);
             case R.id.drawButton:
-                if(instance.drawFromWall(instance.getWall().getWall().get(0),playerIndex)){
-                    instance.getWall().getWall().get(0).getDrawable();
+                if(instance.drawFromWall(instance.getWall().get(0),playerIndex)){
+                    instance.getWall().get(0).getDrawable();
                 }
         }
     }
