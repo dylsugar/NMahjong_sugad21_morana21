@@ -123,7 +123,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
         } else if (button == slot14) {
             game.sendAction(new MahjongSelectAction(this, 14, getPosition()));
         } else if (button == wallDraw) {
-            game.sendAction(new MahjongoDrawAction(this));
+            game.sendAction(new MahjongoDrawAction(this, getPosition()));
         } else if (button == discardDraw) {
             game.sendAction(new MahjongDrawDiscardAction(this, getPosition()));
         }
@@ -138,10 +138,18 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
     @Override
     public void receiveInfo(GameInfo info) {
         if (!(info instanceof MahjongState)) {
-            flash(Color.RED, 50);
+            return;
         }
         state = (MahjongState) info;
         int i = state.getGamePlayers().get(playerNum).getHand().size();
+        if(state.getRecentDiscard() != null)
+        {
+            discardDraw.setImageResource(state.getRecentDiscard().getDrawable());
+        }
+        else
+        {
+            discardDraw.setImageResource(R.drawable.plaintile);
+        }
         if (i > 0) {
             slot1.setImageResource(state.getWall().getWall().get(0).getDrawable());
             if (i > 1) {
@@ -186,7 +194,6 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
                             }
                         }
                     }
-
                 }
             }
         }

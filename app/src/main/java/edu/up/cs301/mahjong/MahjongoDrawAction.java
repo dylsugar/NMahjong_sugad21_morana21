@@ -17,7 +17,7 @@ public class MahjongoDrawAction extends GameAction {
 	private static final long serialVersionUID = 28062013L;
 
 	//whether this move is a plus (true) or minus (false)
-
+	private int playerNum;
 	
 	/**
 	 * Constructor for the MahjongoDrawAction class.
@@ -25,9 +25,14 @@ public class MahjongoDrawAction extends GameAction {
 	 * @param player
 	 *            the player making the move
 	 */
-	public MahjongoDrawAction(GamePlayer player) {
+	public MahjongoDrawAction(GamePlayer player, int pos) {
 		super(player);
+		playerNum = pos;
 	}
-	
+
+	public int getPlayerNum()
+	{
+		return playerNum;
+	}
 
 }//class MahjongoDrawAction

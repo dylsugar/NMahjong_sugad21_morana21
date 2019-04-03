@@ -293,11 +293,11 @@ public class MahjongState extends GameState {
         to take in order of clockwise.
          */
         mPlayer newPlayer = this.gamePlayers.get(position);
-        if (!(currentTurn(newPlayer))) {
+        if (!(currentTurn(this.gamePlayers.get(position)))) {
             return false;
         }
 
-        newPlayer.removeTile(discardTile);
+        this.gamePlayers.get(position).removeTile(discardTile);
         //newPlayer.setHand(newPlayer.getHand());
 
         return true;
