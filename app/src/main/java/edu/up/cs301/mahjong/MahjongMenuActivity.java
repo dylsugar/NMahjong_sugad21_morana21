@@ -46,7 +46,7 @@ public class MahjongMenuActivity extends GameMainActivity {
 			public GamePlayer createPlayer(String name) {
 				return new MahjongComputerPlayer1(name);
 			}});
-		
+
 		// a computer player type (player type nothertile)
 		playerTypes.add(new GamePlayerType("Computer Player (GUI)") {
 			public GamePlayer createPlayer(String name) {
@@ -66,7 +66,9 @@ public class MahjongMenuActivity extends GameMainActivity {
 
 		// Add the default players to the configuration
 		defaultConfig.addPlayer("Human", 0); // player 1: a human player
-		defaultConfig.addPlayer("Computer", 1); // player nothertile: a computer player
+		defaultConfig.addPlayer("Computer", 1); // player nothertile: a computer
+		defaultConfig.addPlayer("Computer 1",2);
+		defaultConfig.addPlayer("Computer 2",3);
 		
 		// Set the default remote-player setup:
 		// - player name: "Remote Player"
