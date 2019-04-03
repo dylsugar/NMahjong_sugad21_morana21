@@ -26,9 +26,7 @@ public class MahjongState extends GameState {
         discardTiles =new ArrayList<mTiles>();
         turn =0;
         lastTurn =0;
-        recentDiscard =
-
-        getRecentDiscard();
+        recentDiscard = null;
 
 
         mPlayer EastPlayer = new mPlayer(0, playerTiles);
