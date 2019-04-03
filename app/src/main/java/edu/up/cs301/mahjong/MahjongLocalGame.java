@@ -55,6 +55,7 @@ public class MahjongLocalGame extends LocalGame {
 		if(action instanceof MahjongoDrawAction)
 		{
 
+
 		}
 		else if(action instanceof MahjongSelectAction)
 		{

@@ -112,35 +112,33 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
             }
             int i = state.getGamePlayers().get(playerNum).getHand().size();
             if (i > 1) {
-                slot1.setImageResource(state.getWall().getWall().` `);
+                slot1.setImageResource(state.getGamePlayers().get(playerNum).getHand().get(0).getDrawable());
                 if (i > 2) {
-                    slot2.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(2).getCardName(), "drawable", getPackageName()));
-                    if (i > 3) {
-                        slot3.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(3).getCardName(), "drawable", getPackageName()));
+                    slot2.setImageResource(state.getGamePlayers().get(playerNum).getHand().get(1).getDrawable());
+                    if(i>3){
+                        slot3.setImageResource(state.getGamePlayers().get(playerNum).getHand().get(2).getDrawable());
                         if (i > 4) {
-                            slot4.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(4).getCardName(), "drawable", getPackageName()));
+                            slot4.setImageResource(state.getGamePlayers().get(playerNum).getHand().get(3).getDrawable());
                             if (i > 5) {
-                                slot5.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(5).getCardName(), "drawable", getPackageName()));
+                                slot5.setImageResource(state.getGamePlayers().get(playerNum).getHand().get(4).getDrawable());
                                 if (i > 6) {
-                                    slot6.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(6).getCardName(), "drawable", getPackageName()));
+                                    slot6.setImageResource(state.getGamePlayers().get(playerNum).getHand().get(5).getDrawable());
                                     if (i > 7) {
-                                        slot7.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(7).getCardName(), "drawable", getPackageName()));
+                                        slot7.setImageResource(state.getGamePlayers().get(playerNum).getHand().get(0).getDrawable());
                                         if (i > 8) {
-                                            slot8.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(8).getCardName(), "drawable", getPackageName()));
+                                            slot8.setImageResource(state.getGamePlayers().get(playerNum).getHand().get(0).getDrawable());
                                             if (i > 9) {
-                                                slot9.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(9).getCardName(), "drawable", getPackageName()));
+                                                slot9.setImageResource(state.getGamePlayers().get(playerNum).getHand().get(0).getDrawable());
                                                 if (i > 10) {
-                                                    slot10.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(10).getCardName(), "drawable", getPackageName()));
+                                                    slot10.setImageResource(state.getGamePlayers().get(playerNum).getHand().get(0).getDrawable());
                                                     if (i > 11) {
-                                                        slot11.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(11).getCardName(), "drawable", getPackageName()));
+                                                        slot11.setImageResource(state.getGamePlayers().get(playerNum).getHand().get(0).getDrawable());
 
                                                         if (i > 12) {
-                                                            slot12.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(12).getCardName(), "drawable", getPackageName()));
+                                                            slot12.setImageResource(state.getGamePlayers().get(playerNum).getHand().get(0).getDrawable());
 
                                                             if (i > 13) {
-                                                                slot13.setImageResource(getResources().getIdentifier(instance.getGamePlayers().get(playerIndex).getHand().get(13).getCardName(), "drawable", getPackageName()));
-                                                            }
-                                                        }
+                                                                slot13.setImageResource(state.getGamePlayers().get(playerNum).getHand().get(0).getDrawable());
                                                     }
                                                 }
                                             }
@@ -152,43 +150,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
                     }
                 }
             }
-            if (i < 14) {
-                slot13.setVisibility(View.INVISIBLE);
-                if (i < 13) {
-                    slot12.setVisibility(View.INVISIBLE);
-                    if (i < 12) {
-                        slot11.setVisibility(View.INVISIBLE);
-                        if (i < 11) {
-                            slot10.setVisibility(View.INVISIBLE);
-                            if (i < 10) {
-                                slot9.setVisibility(View.INVISIBLE);
-                                if (i < 9) {
-                                    slot8.setVisibility(View.INVISIBLE);
-                                    if (i < 8) {
-                                        slot7.setVisibility(View.INVISIBLE);
-                                        if (i < 7) {
-                                            slot6.setVisibility(View.INVISIBLE);
-                                            if (i < 6) {
-                                                slot5.setVisibility(View.INVISIBLE);
-                                                if (i < 5) {
-                                                    slot4.setVisibility(View.INVISIBLE);
-                                                    if (i < 4) {
-                                                        slot3.setVisibility(View.INVISIBLE);
-                                                        if (i < 3) {
-                                                            slot2.setVisibility(View.INVISIBLE);
-                                                            if (i < 2) {
-                                                                slot1.setVisibility(View.INVISIBLE);
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+
                 }
             }
         }
@@ -212,7 +174,49 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 	}
 
         @Override
-        public void onClick(View v) {
+        public void onClick(View button) {
+	        if(button == slot1){
+	            game.sendAction(new MahjongSelectAction());
+            }
+            else if(button == slot2){
+                game.sendAction(new MahjongSelectAction());
+            }
+            else if(button == slot3){
+                game.sendAction(new MahjongSelectAction());
+            }
+            else if(button == slot4){
+                game.sendAction(new MahjongSelectAction());
+            }
+            else if(button == slot5){
+                game.sendAction(new MahjongSelectAction());
+            }
+            else if(button == slot6){
+                game.sendAction(new MahjongSelectAction());
+            }
+            else if(button == slot7){
+                game.sendAction(new MahjongSelectAction());
+            }
+            else if(button == slot8){
+                game.sendAction(new MahjongSelectAction());
+            }
+            else if(button == slot9){
+                game.sendAction(new MahjongSelectAction());
+            }
+            else if(button == slot10){
+                game.sendAction(new MahjongSelectAction());
+            }
+            else if(button == slot11){
+                game.sendAction(new MahjongSelectAction());
+            }
+            else if(button == slot12){
+                game.sendAction(new MahjongSelectAction());
+            }
+            else if(button == slot13){
+                game.sendAction(new MahjongSelectAction());
+            }else if(button == wallDraw){
+                game.sendAction(new MahjongoDrawAction());
+            }
+
 
         }
 
