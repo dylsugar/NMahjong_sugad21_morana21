@@ -496,8 +496,6 @@ public class MahjongState extends GameState {
             }
         }
         */
-
-        prevSize = 1000;
         ArrayList<Integer> temp1 = new ArrayList<> ();
         temp1 = findLowestMatching(suitList);
         /*

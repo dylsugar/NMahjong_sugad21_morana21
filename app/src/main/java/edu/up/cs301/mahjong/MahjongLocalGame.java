@@ -54,43 +54,31 @@ public class MahjongLocalGame extends LocalGame {
 
 		if(action instanceof MahjongoDrawAction)
 		{
-
+            //If there is no discard, do not allow actions besides discard
+            if(gameState.getRecentDiscard() == null) return false;
 		}
 		else if(action instanceof MahjongSelectAction)
 		{
-			int tileToDiscard = ((MahjongSelectAction) action).getTile();
-			switch (tileToDiscard)
-			{
-				case 1:
-					break;
-				case 2:
-					break;
-				case 3:
-					break;
-				case 4:
-					break;
-				case 5:
-					break;
-				case 6:
-					break;
-				case 7:
-					break;
-				case 8:
-					break;
-				case 9:
-					break;
-				case 10:
-					break;
-				case 11:
-					break;
-				case 12:
-					break;
-				case 13:
-					break;
-				case 14:
-					break;
-			}
+
+		    //Checks to see if the player has enough tiles to discard one
+            if(gameState.getGamePlayers().get(((MahjongSelectAction) action).getPlayerNum()).getHand().size() < 14)
+            {
+
+            }
+            //If the players hand is of size 14, allow them to discard the one they selected
+            else {
+                int tileToDiscard = ((MahjongSelectAction) action).getTile();
+
+                gameState.discardTile(gameState.getGamePlayers().get(
+                        ((MahjongSelectAction) action).getPlayerNum()).getHand().get(tileToDiscard - 1),
+                        ((MahjongSelectAction) action).getPlayerNum());
+            }
+
 		}
+		else if(action instanceof MahjongDrawDiscardAction)
+        {
+
+        }
 		return true;
 	}//makeMove
 	

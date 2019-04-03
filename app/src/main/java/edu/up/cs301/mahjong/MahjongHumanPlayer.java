@@ -19,11 +19,11 @@ import java.util.ArrayList;
  * A GUI of a counter-player. The GUI displays the current value of the counter,
  * and allows the human player to press the '+' and '-' buttons in order to
  * send moves to the game.
- * 
+ *
  * Just for fun, the GUI is implemented so that if the player presses either button
  * when the counter-value is zero, the screen flashes briefly, with the flash-color
  * being dependent on whether the player is player 0 or player 1.
- * 
+ *
  * @author Steven R. Vegdahl
  * @author Andrew M. Nuxoll
  * @version July 2013
@@ -32,14 +32,15 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 
 	/* instance variables */
 	private ArrayList<mTiles> hand;
+	private int position;
 
-	
+
 	// The TextView the displays the current counter value
 	private TextView counterValueTextView;
-	
+
 	// the most recent game state, as given to us by the MahjongLocalGame
 	private MahjongState state;
-	
+
 	// the android activity that we are running
 	private GameMainActivity myActivity;
     private ImageButton slot1;
@@ -58,7 +59,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
     private ImageButton slot14;
     private ImageButton wallDraw;
 	private ImageButton ibutton;
-	
+
 	/**
 	 * constructor
 	 * @param name
@@ -69,28 +70,94 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 		super(name);
 	}
 
+	public int getPosition() { return position; }
 	/**
 	 * Returns the GUI's top view object
-	 * 
+	 *
 	 * @return
 	 * 		the top object in the GUI's view heirarchy
 	 */
 	public View getTopView() {
 		return myActivity.findViewById(R.id.top_layer);
 	}
-	
+
 
 
 	/**
 	 * this method gets called when the user clicks the '+' or '-' button. It
 	 * creates a new MahjongoDrawAction to return to the parent activity.
-	 * 
+	 *
 	 * @param button
 	 * 		the button that was clicked
 	 */
+	public void onClick(View button) {
+
+		if(button == slot1)
+		{
+			game.sendAction(new MahjongSelectAction(this, 1, getPosition()));
+		}
+		else if( button == slot2)
+		{
+			game.sendAction(new MahjongSelectAction(this, 2, getPosition()));
+		}
+		else if( button == slot3)
+		{
+			game.sendAction(new MahjongSelectAction(this, 3, getPosition()));
+		}
+		else if( button == slot4)
+		{
+			game.sendAction(new MahjongSelectAction(this, 4, getPosition()));
+		}
+		else if( button == slot5)
+		{
+			game.sendAction(new MahjongSelectAction(this, 5, getPosition()));
+		}
+		else if( button == slot6)
+		{
+			game.sendAction(new MahjongSelectAction(this, 6, getPosition()));
+		}
+		else if( button == slot7)
+		{
+			game.sendAction(new MahjongSelectAction(this, 7, getPosition()));
+		}
+		else if( button == slot8)
+		{
+			game.sendAction(new MahjongSelectAction(this, , getPosition()));
+		}
+		else if( button == slot9)
+		{
+			game.sendAction(new MahjongSelectAction(this, 9, getPosition()));
+		}
+		else if( button == slot10)
+		{
+			game.sendAction(new MahjongSelectAction(this, 10, getPosition()));
+		}
+		else if( button == slot11)
+		{
+			game.sendAction(new MahjongSelectAction(this, 11, getPosition()));
+		}
+		else if( button == slot12)
+		{
+			game.sendAction(new MahjongSelectAction(this, 12, getPosition()));
+		}
+		else if( button == slot13)
+		{
+			game.sendAction(new MahjongSelectAction(this, 13, getPosition()));
+		}
+		else if( button == slot14)
+		{
+			game.sendAction(new MahjongSelectAction(this, 14, getPosition()));
+		}
+		else if(button == wallDraw)
+		{
+			game.sendAction(new MahjongoDrawAction (this));
+		}
+
+	}// onClick
+
 	/**
 	 * callback method when we get a message (e.g., from the game)
-	 * 
+	 *
 	 * @param info
 	 * 		the message
 	 */
@@ -193,29 +260,23 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
             }
         }
     }
-	
+
 	/**
 	 * callback method--our game has been chosen/rechosen to be the GUI,
 	 * called from the GUI thread
-	 * 
+	 *
 	 * @param activity
 	 * 		the activity under which we are running
 	 */
 	public void setAsGui(GameMainActivity activity) {
-		
+
 		// remember the activity
 		myActivity = activity;
-		
+
 	    // Load the layout resource for our GUI
 		activity.setContentView(R.layout.play_screen);
 
 	}
-
-        @Override
-        public void onClick(View v) {
-
-        }
-
 
 
 
