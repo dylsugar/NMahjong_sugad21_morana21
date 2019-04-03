@@ -707,7 +707,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -770,93 +770,94 @@ public final class R {
     public static final int table_row_vert_pad=0x7f040019;
   }
   public static final class drawable {
-    public static final int bamboo1=0x7f050000;
-    public static final int bamboo2=0x7f050001;
-    public static final int bamboo3=0x7f050002;
-    public static final int bamboo4=0x7f050003;
-    public static final int bamboo5=0x7f050004;
-    public static final int bamboo6=0x7f050005;
-    public static final int bamboo7=0x7f050006;
-    public static final int bamboo8=0x7f050007;
-    public static final int bamboo9=0x7f050008;
-    public static final int character1=0x7f050009;
-    public static final int character2=0x7f05000a;
-    public static final int character3=0x7f05000b;
-    public static final int character4=0x7f05000c;
-    public static final int character5=0x7f05000d;
-    public static final int character6=0x7f05000e;
-    public static final int character7=0x7f05000f;
-    public static final int character8=0x7f050010;
-    public static final int character9=0x7f050011;
-    public static final int dot1=0x7f050012;
-    public static final int dot2=0x7f050013;
-    public static final int dot3=0x7f050014;
-    public static final int dot4=0x7f050015;
-    public static final int dot5=0x7f050016;
-    public static final int dot6=0x7f050017;
-    public static final int dot7=0x7f050018;
-    public static final int dot8=0x7f050019;
-    public static final int dot9=0x7f05001a;
-    public static final int drawtile=0x7f05001b;
-    public static final int guipic1=0x7f05001c;
-    public static final int ic_action_search=0x7f05001d;
-    public static final int ic_launcher=0x7f05001e;
-    public static final int logo=0x7f05001f;
-    public static final int md2=0x7f050020;
-    public static final int md3=0x7f050021;
-    public static final int mf1=0x7f050022;
-    public static final int mf2=0x7f050023;
-    public static final int mf3=0x7f050024;
-    public static final int mf4=0x7f050025;
-    public static final int mh1=0x7f050026;
-    public static final int mh2=0x7f050027;
-    public static final int mh3=0x7f050028;
-    public static final int mh4=0x7f050029;
-    public static final int mh5=0x7f05002a;
-    public static final int mh6=0x7f05002b;
-    public static final int mh7=0x7f05002c;
-    public static final int mh8=0x7f05002d;
-    public static final int ms1=0x7f05002e;
-    public static final int ms2=0x7f05002f;
-    public static final int ms3=0x7f050030;
-    public static final int ms4=0x7f050031;
-    public static final int ms5=0x7f050032;
-    public static final int ms6=0x7f050033;
-    public static final int ms7=0x7f050034;
-    public static final int ms8=0x7f050035;
-    public static final int ms9=0x7f050036;
-    public static final int mt1=0x7f050037;
-    public static final int mt2=0x7f050038;
-    public static final int mt3=0x7f050039;
-    public static final int mt4=0x7f05003a;
-    public static final int mt5=0x7f05003b;
-    public static final int mt6=0x7f05003c;
-    public static final int mt7=0x7f05003d;
-    public static final int mt8=0x7f05003e;
-    public static final int mt9=0x7f05003f;
-    public static final int mw1=0x7f050040;
-    public static final int mw2=0x7f050041;
-    public static final int mw3=0x7f050042;
-    public static final int mw4=0x7f050043;
-    public static final int mw5=0x7f050044;
-    public static final int mw6=0x7f050045;
-    public static final int mw7=0x7f050046;
-    public static final int mw8=0x7f050047;
-    public static final int mw9=0x7f050048;
-    public static final int notification_action_background=0x7f050049;
-    public static final int notification_bg=0x7f05004a;
-    public static final int notification_bg_low=0x7f05004b;
-    public static final int notification_bg_low_normal=0x7f05004c;
-    public static final int notification_bg_low_pressed=0x7f05004d;
-    public static final int notification_bg_normal=0x7f05004e;
-    public static final int notification_bg_normal_pressed=0x7f05004f;
-    public static final int notification_icon_background=0x7f050050;
-    public static final int notification_template_icon_bg=0x7f050051;
-    public static final int notification_template_icon_low_bg=0x7f050052;
-    public static final int notification_tile_bg=0x7f050053;
-    public static final int notify_panel_notification_icon_bg=0x7f050054;
-    public static final int plaintile=0x7f050055;
-    public static final int purple_delete_button=0x7f050056;
+    public static final int appcover=0x7f050000;
+    public static final int bamboo1=0x7f050001;
+    public static final int bamboo2=0x7f050002;
+    public static final int bamboo3=0x7f050003;
+    public static final int bamboo4=0x7f050004;
+    public static final int bamboo5=0x7f050005;
+    public static final int bamboo6=0x7f050006;
+    public static final int bamboo7=0x7f050007;
+    public static final int bamboo8=0x7f050008;
+    public static final int bamboo9=0x7f050009;
+    public static final int character1=0x7f05000a;
+    public static final int character2=0x7f05000b;
+    public static final int character3=0x7f05000c;
+    public static final int character4=0x7f05000d;
+    public static final int character5=0x7f05000e;
+    public static final int character6=0x7f05000f;
+    public static final int character7=0x7f050010;
+    public static final int character8=0x7f050011;
+    public static final int character9=0x7f050012;
+    public static final int dot1=0x7f050013;
+    public static final int dot2=0x7f050014;
+    public static final int dot3=0x7f050015;
+    public static final int dot4=0x7f050016;
+    public static final int dot5=0x7f050017;
+    public static final int dot6=0x7f050018;
+    public static final int dot7=0x7f050019;
+    public static final int dot8=0x7f05001a;
+    public static final int dot9=0x7f05001b;
+    public static final int drawtile=0x7f05001c;
+    public static final int guipic1=0x7f05001d;
+    public static final int ic_action_search=0x7f05001e;
+    public static final int ic_launcher=0x7f05001f;
+    public static final int logo=0x7f050020;
+    public static final int md2=0x7f050021;
+    public static final int md3=0x7f050022;
+    public static final int mf1=0x7f050023;
+    public static final int mf2=0x7f050024;
+    public static final int mf3=0x7f050025;
+    public static final int mf4=0x7f050026;
+    public static final int mh1=0x7f050027;
+    public static final int mh2=0x7f050028;
+    public static final int mh3=0x7f050029;
+    public static final int mh4=0x7f05002a;
+    public static final int mh5=0x7f05002b;
+    public static final int mh6=0x7f05002c;
+    public static final int mh7=0x7f05002d;
+    public static final int mh8=0x7f05002e;
+    public static final int ms1=0x7f05002f;
+    public static final int ms2=0x7f050030;
+    public static final int ms3=0x7f050031;
+    public static final int ms4=0x7f050032;
+    public static final int ms5=0x7f050033;
+    public static final int ms6=0x7f050034;
+    public static final int ms7=0x7f050035;
+    public static final int ms8=0x7f050036;
+    public static final int ms9=0x7f050037;
+    public static final int mt1=0x7f050038;
+    public static final int mt2=0x7f050039;
+    public static final int mt3=0x7f05003a;
+    public static final int mt4=0x7f05003b;
+    public static final int mt5=0x7f05003c;
+    public static final int mt6=0x7f05003d;
+    public static final int mt7=0x7f05003e;
+    public static final int mt8=0x7f05003f;
+    public static final int mt9=0x7f050040;
+    public static final int mw1=0x7f050041;
+    public static final int mw2=0x7f050042;
+    public static final int mw3=0x7f050043;
+    public static final int mw4=0x7f050044;
+    public static final int mw5=0x7f050045;
+    public static final int mw6=0x7f050046;
+    public static final int mw7=0x7f050047;
+    public static final int mw8=0x7f050048;
+    public static final int mw9=0x7f050049;
+    public static final int notification_action_background=0x7f05004a;
+    public static final int notification_bg=0x7f05004b;
+    public static final int notification_bg_low=0x7f05004c;
+    public static final int notification_bg_low_normal=0x7f05004d;
+    public static final int notification_bg_low_pressed=0x7f05004e;
+    public static final int notification_bg_normal=0x7f05004f;
+    public static final int notification_bg_normal_pressed=0x7f050050;
+    public static final int notification_icon_background=0x7f050051;
+    public static final int notification_template_icon_bg=0x7f050052;
+    public static final int notification_template_icon_low_bg=0x7f050053;
+    public static final int notification_tile_bg=0x7f050054;
+    public static final int notify_panel_notification_icon_bg=0x7f050055;
+    public static final int plaintile=0x7f050056;
+    public static final int purple_delete_button=0x7f050057;
   }
   public static final class id {
     public static final int action0=0x7f060000;
@@ -2041,7 +2042,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>

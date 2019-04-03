@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
 
@@ -153,37 +154,52 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
         if (i > 0) {
             slot1.setImageResource(state.getWall().getWall().get(0).getDrawable());
             slot1.setAdjustViewBounds(true);
+
             if (i > 1) {
                 slot2.setImageResource(state.getWall().getWall().get(1).getDrawable());
+                slot2.setAdjustViewBounds(true);
                 if (i > 2) {
                     slot3.setImageResource(state.getWall().getWall().get(2).getDrawable());
+                    slot3.setAdjustViewBounds(true);
                     if (i > 3) {
                         slot4.setImageResource(state.getWall().getWall().get(3).getDrawable());
+                        slot4.setAdjustViewBounds(true);
                         if (i > 4) {
                             slot5.setImageResource(state.getWall().getWall().get(4).getDrawable());
+                            slot5.setAdjustViewBounds(true);
                             if (i > 5) {
                                 slot6.setImageResource(state.getWall().getWall().get(5).getDrawable());
+                                slot6.setAdjustViewBounds(true);
                                 if (i > 6) {
                                     slot7.setImageResource(state.getWall().getWall().get(6).getDrawable());
+                                    slot7.setAdjustViewBounds(true);
                                     if (i > 7) {
                                         slot8.setImageResource(state.getWall().getWall().get(7).getDrawable());
+                                        slot8.setAdjustViewBounds(true);
                                         if (i > 8) {
                                             slot9.setImageResource(state.getWall().getWall().get(8).getDrawable());
+                                            slot9.setAdjustViewBounds(true);
                                             if (i > 9) {
                                                 slot10.setImageResource(state.getWall().getWall().get(9).getDrawable());
+                                                slot10.setAdjustViewBounds(true);
                                                 if (i > 10) {
                                                     slot11.setImageResource(state.getWall().getWall().get(10).getDrawable());
+                                                    slot11.setAdjustViewBounds(true);
                                                     if (i > 11) {
                                                         slot12.setImageResource(state.getWall().getWall().get(11).getDrawable());
+                                                        slot12.setAdjustViewBounds(true);
                                                         if (i > 12) {
                                                             slot13.setImageResource(state.getGamePlayers().get(playerNum).getHand().get(12).getDrawable());
+                                                            slot13.setAdjustViewBounds(true);
                                                             if (i > 13) {
                                                                 slot14.setImageResource(state.getGamePlayers().get(playerNum).getHand().get(13).getDrawable());
+                                                                slot14.setAdjustViewBounds(true);
 
                                                             }
                                                             else
                                                             {
                                                                 slot14.setImageResource(R.drawable.plaintile);
+                                                                slot1.setAdjustViewBounds(true);
                                                             }
                                                         }
                                                     }

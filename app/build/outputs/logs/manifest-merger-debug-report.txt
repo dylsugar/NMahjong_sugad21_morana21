@@ -83,7 +83,7 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Dy
 	android:label
 		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:15:9-41
 	android:icon
-		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:14:9-45
+		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:14:9-42
 	android:theme
 		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:16:9-40
 activity#edu.up.cs301.mahjong.MahjongMenuActivity
