@@ -12,7 +12,7 @@ public class mWall {
         wall = new ArrayList<mTiles>();
         for (int i = 0; i < 9; i++) {
             //Bamboo suit 4 of one value made at a time 1-9 (mTiles[0-31])
-            wall.add(4 * i, new mTiles(i + 1, "Bamboo"));
+            wall.add(4 * i,new mTiles(i + 1, "Bamboo"));
             wall.add(4 * i + 1, new mTiles(i + 1, "Bamboo"));
             wall.add(4 * i + 2, new mTiles(i + 1, "Bamboo"));
             wall.add(4 * i + 3, new mTiles(i + 1, "Bamboo"));

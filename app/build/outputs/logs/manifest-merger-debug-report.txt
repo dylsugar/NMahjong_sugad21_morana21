@@ -1,104 +1,104 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-28:12
-INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-28:12
-INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-28:12
-INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-28:12
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\f75214f91b87424cfe232a4b449100b4\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\4e674e63e179d913d5477d4fe19d2eaa\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\38ff0d75ffe96eff6e1072f291339743\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\3039ffe20a3bfdf141a80e972723c1e9\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\2868b4b5c46262ce7f8c42ab4b09051e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\bae106c151880096898dce257c6ec59a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\4669449230fa9e39566acd3c4b90c60c\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d1cf8e2cf5d83f30a150daffaf3c0ee5\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\c662ab212005123e9caaefc61733db8f\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\e9541465850ce6a8b111cc69d8fe2d77\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\4b75b3d3658ca5d79a654b6bbca070cf\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-28:12
-INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-28:12
-INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-28:12
+ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-28:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\471342331443d03738fe9ad5d6ebde78\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\0a221d46ff7244b6c14799b9e868a53f\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\795c20b714c334b48fc716f6cf3b8754\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\72a75f2546c4d85cedfb1d113fca49dc\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\df290818ff8479036e7ed172c7c654e5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\79af40ecca6f011db79b7e50bc5b9349\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\0e1104c0336a2f51be0352e66c4603f9\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\10cf5689ec2faa74ee27121f629df941\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\0af26e92804e6c04952971d1b6b050ad\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\4f7f7cc069df4a640131923a233aedcf\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0c88e253f29e9d81d1eb65c45bd9d96a\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-28:12
+INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-28:12
 	package
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:2:5-32
-		INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
-		INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:2:5-32
+		INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:4:5-30
-		INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
-		INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:4:5-30
+		INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:11-69
 	android:versionCode
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:3:5-28
-		INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
-		INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:3:5-28
+		INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
 uses-sdk
-ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:6:5-8:41
-INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:6:5-8:41
-INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:6:5-8:41
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\f75214f91b87424cfe232a4b449100b4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\f75214f91b87424cfe232a4b449100b4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\4e674e63e179d913d5477d4fe19d2eaa\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\4e674e63e179d913d5477d4fe19d2eaa\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\38ff0d75ffe96eff6e1072f291339743\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\38ff0d75ffe96eff6e1072f291339743\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\3039ffe20a3bfdf141a80e972723c1e9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\3039ffe20a3bfdf141a80e972723c1e9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\2868b4b5c46262ce7f8c42ab4b09051e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\2868b4b5c46262ce7f8c42ab4b09051e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\bae106c151880096898dce257c6ec59a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\bae106c151880096898dce257c6ec59a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\4669449230fa9e39566acd3c4b90c60c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\4669449230fa9e39566acd3c4b90c60c\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d1cf8e2cf5d83f30a150daffaf3c0ee5\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d1cf8e2cf5d83f30a150daffaf3c0ee5\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\c662ab212005123e9caaefc61733db8f\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\c662ab212005123e9caaefc61733db8f\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\e9541465850ce6a8b111cc69d8fe2d77\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\e9541465850ce6a8b111cc69d8fe2d77\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\4b75b3d3658ca5d79a654b6bbca070cf\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\4b75b3d3658ca5d79a654b6bbca070cf\AndroidManifest.xml:20:5-44
-INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:6:5-8:41
-INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:6:5-8:41
+ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:6:5-8:41
+INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:6:5-8:41
+INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\471342331443d03738fe9ad5d6ebde78\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\471342331443d03738fe9ad5d6ebde78\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\0a221d46ff7244b6c14799b9e868a53f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\0a221d46ff7244b6c14799b9e868a53f\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\795c20b714c334b48fc716f6cf3b8754\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\795c20b714c334b48fc716f6cf3b8754\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\72a75f2546c4d85cedfb1d113fca49dc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\72a75f2546c4d85cedfb1d113fca49dc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\df290818ff8479036e7ed172c7c654e5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\df290818ff8479036e7ed172c7c654e5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\79af40ecca6f011db79b7e50bc5b9349\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\79af40ecca6f011db79b7e50bc5b9349\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\0e1104c0336a2f51be0352e66c4603f9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\0e1104c0336a2f51be0352e66c4603f9\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\10cf5689ec2faa74ee27121f629df941\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\10cf5689ec2faa74ee27121f629df941\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\0af26e92804e6c04952971d1b6b050ad\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\0af26e92804e6c04952971d1b6b050ad\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\4f7f7cc069df4a640131923a233aedcf\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\4f7f7cc069df4a640131923a233aedcf\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0c88e253f29e9d81d1eb65c45bd9d96a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0c88e253f29e9d81d1eb65c45bd9d96a\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:6:5-8:41
+INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:6:5-8:41
 	android:targetSdkVersion
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:8:9-38
-		INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
-		INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:8:9-38
+		INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:7:9-35
-		INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
-		INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:7:9-35
+		INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:10:5-67
+ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:10:5-67
 	android:name
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:10:22-64
+		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:10:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:11:5-79
+ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:11:22-76
+		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:11:22-76
 application
-ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:13:5-26:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\4e674e63e179d913d5477d4fe19d2eaa\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\4e674e63e179d913d5477d4fe19d2eaa\AndroidManifest.xml:9:5-20
+ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:13:5-26:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\0a221d46ff7244b6c14799b9e868a53f\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Dylan\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\0a221d46ff7244b6c14799b9e868a53f\AndroidManifest.xml:9:5-20
 	android:label
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:15:9-41
+		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:15:9-41
 	android:icon
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:14:9-45
+		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:14:9-45
 	android:theme
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:16:9-40
+		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:16:9-40
 activity#edu.up.cs301.mahjong.MahjongMenuActivity
-ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:18:9-24:20
+ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:18:9-24:20
 	android:configChanges
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:19:13-83
+		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:19:13-83
 	android:name
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:18:19-74
+		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:18:19-74
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:20:13-23:29
+ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:20:13-23:29
 action#android.intent.action.MAIN
-ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:21:17-69
+ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:21:25-66
+		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:22:17-77
 	android:name
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from C:\Users\Dylan\Desktop\Object-Oriented Design\alpharelease\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:22:27-74

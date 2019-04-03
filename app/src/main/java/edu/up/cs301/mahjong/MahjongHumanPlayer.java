@@ -152,6 +152,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
         }
         if (i > 0) {
             slot1.setImageResource(state.getWall().getWall().get(0).getDrawable());
+            slot1.setAdjustViewBounds(true);
             if (i > 1) {
                 slot2.setImageResource(state.getWall().getWall().get(1).getDrawable());
                 if (i > 2) {

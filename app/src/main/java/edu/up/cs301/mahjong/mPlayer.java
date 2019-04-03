@@ -38,7 +38,6 @@ public class mPlayer {
         public void setDiscardHand(ArrayList<mTiles> newDHand){
             discardHand = newDHand;
         }
-
         public String getHandType() {
             return this.handType;
         }
@@ -66,7 +65,6 @@ public class mPlayer {
         public void setPosition(int newPosition) {
             position = newPosition;
         }
-
         public void addTiletoHand(mTiles in){
             hand.add(in);
         }

@@ -176,10 +176,10 @@ public class MahjongState extends GameState {
     public ArrayList<mTiles> initHand0() {
 
         for (int i = 0; i < 14; i++) {
-            this.gamePlayers.get(0).addTiletoHand(wall.getWall().get(i));
-            this.wall.getWall().remove(wall.getWall().get(i));
-            this.wall.setWall(wall.getWall());
-            this.gamePlayers.get(0).setHand(gamePlayers.get(0).getHand());
+            gamePlayers.get(0).addTiletoHand(wall.getWall().get(i));
+            wall.getWall().remove(wall.getWall().get(i));
+            wall.setWall(wall.getWall());
+            gamePlayers.get(0).setHand(gamePlayers.get(0).getHand());
         }
         return gamePlayers.get(0).getHand();
     }
