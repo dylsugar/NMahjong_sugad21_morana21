@@ -56,6 +56,8 @@ public class MahjongLocalGame extends LocalGame {
 		{
             //If there is no discard, do not allow actions besides discard
             if(gameState.getRecentDiscard() == null) return false;
+
+            gameState.drawFromWall(gameState.getWall().getWall().get(0), gameState.getTurn());
 		}
 		else if(action instanceof MahjongSelectAction)
 		{
@@ -77,7 +79,9 @@ public class MahjongLocalGame extends LocalGame {
 		}
 		else if(action instanceof MahjongDrawDiscardAction)
         {
-
+			gameState.getGamePlayers().get(((MahjongDrawDiscardAction) action).
+					getPlayerNum()).getHand().add(gameState.getRecentDiscard());
+			gameState.setRecentDiscard(null);
         }
 		return true;
 	}//makeMove
@@ -89,8 +93,8 @@ public class MahjongLocalGame extends LocalGame {
 	protected void sendUpdatedStateTo(GamePlayer p) {
 		// this is a perfect-information game, so we'll make a
 		// complete copy of the state to send to the player
-        MahjongState copyState = new MahjongState(gameState);
-        p.sendInfo(copyState);
+
+        p.sendInfo(gameState);
 
 
     }//sendUpdatedSate

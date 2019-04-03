@@ -5,8 +5,17 @@ import edu.up.cs301.game.actionMsg.GameAction;
 
 public class MahjongDrawDiscardAction extends GameAction {
 
-    public MahjongDrawDiscardAction (GamePlayer player)
+    private int playerNum;
+
+    public MahjongDrawDiscardAction (GamePlayer player, int pos)
+
     {
         super(player);
+        playerNum = pos;
+    }
+
+    public int getPlayerNum()
+    {
+        return playerNum;
     }
 }
