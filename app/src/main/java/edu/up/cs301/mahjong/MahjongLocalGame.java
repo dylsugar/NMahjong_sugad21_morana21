@@ -102,9 +102,11 @@ public class MahjongLocalGame extends LocalGame {
 	protected void sendUpdatedStateTo(GamePlayer p) {
 		// this is a perfect-information game, so we'll make a
 		// complete copy of the state to send to the player
-		p.sendInfo(gameState);
-		
-	}//sendUpdatedSate
+        MahjongState copyState = new PigGameState(pState);
+        player.sendInfo(copyState);
+
+
+    }//sendUpdatedSate
 	
 	/**
 	 * Check if the game is over. It is over, return a string that tells

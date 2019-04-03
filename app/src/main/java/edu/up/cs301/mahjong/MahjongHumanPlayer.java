@@ -2,6 +2,7 @@ package edu.up.cs301.mahjong;
 
 import edu.up.cs301.game.GameHumanPlayer;
 import edu.up.cs301.game.GameMainActivity;
+import edu.up.cs301.game.GamePlayer;
 import edu.up.cs301.game.R;
 import edu.up.cs301.game.actionMsg.GameAction;
 import edu.up.cs301.game.infoMsg.GameInfo;
@@ -176,45 +177,45 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
         @Override
         public void onClick(View button) {
 	        if(button == slot1){
-	            game.sendAction(new MahjongSelectAction());
+	            game.sendAction(new MahjongSelectAction(this,slot1.getDrawable()));
             }
             else if(button == slot2){
-                game.sendAction(new MahjongSelectAction());
+                game.sendAction(new MahjongSelectAction(this,slot2.getDrawable()));
             }
             else if(button == slot3){
-                game.sendAction(new MahjongSelectAction());
+                game.sendAction(new MahjongSelectAction(this,slot3.getDrawable()));
             }
             else if(button == slot4){
-                game.sendAction(new MahjongSelectAction());
+                game.sendAction(new MahjongSelectAction(this,slot4.getDrawable()));
             }
             else if(button == slot5){
-                game.sendAction(new MahjongSelectAction());
+                game.sendAction(new MahjongSelectAction(this,slot5.getDrawable()));
             }
             else if(button == slot6){
-                game.sendAction(new MahjongSelectAction());
+                game.sendAction(new MahjongSelectAction(this,slot6.getDrawable()));
             }
             else if(button == slot7){
-                game.sendAction(new MahjongSelectAction());
+                game.sendAction(new MahjongSelectAction(this,slot2.getDrawable()));
             }
             else if(button == slot8){
-                game.sendAction(new MahjongSelectAction());
+                game.sendAction(new MahjongSelectAction(this,slot2.getDrawable()));
             }
             else if(button == slot9){
-                game.sendAction(new MahjongSelectAction());
+                game.sendAction(new MahjongSelectAction(this,slot2.getDrawable()));
             }
             else if(button == slot10){
-                game.sendAction(new MahjongSelectAction());
+                game.sendAction(new MahjongSelectAction(this,slot2.getDrawable()));
             }
             else if(button == slot11){
-                game.sendAction(new MahjongSelectAction());
+                game.sendAction(new MahjongSelectAction(this,slot2.getDrawable()));
             }
             else if(button == slot12){
-                game.sendAction(new MahjongSelectAction());
+                game.sendAction(new MahjongSelectAction(this,slot2.getDrawable()));
             }
             else if(button == slot13){
-                game.sendAction(new MahjongSelectAction());
+                game.sendAction(new MahjongSelectAction(this,slot2.getDrawable()));
             }else if(button == wallDraw){
-                game.sendAction(new MahjongoDrawAction());
+                game.sendAction(new MahjongoDrawAction(this));
             }
 
 
