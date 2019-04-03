@@ -49,7 +49,7 @@ public class MahjongComputerPlayer1 extends GameComputerPlayer implements Tickab
             MahjongState temp = (MahjongState) info;
             if(temp.getRecentDiscard() != null)
             {
-                if(rand.nextInt(4) == 0)
+                if(rand.nextInt(3) == 0)
                 {
                     game.sendAction(new MahjongDrawDiscardAction(this, playerNum));
                     switch (rand.nextInt(14))
@@ -101,7 +101,7 @@ public class MahjongComputerPlayer1 extends GameComputerPlayer implements Tickab
                 }
 
             }
-            if(temp.getTurn() != playerNum) return;
+            if(!temp.currentTurn(temp.getGamePlayers().get(playerNum))) return;
 
             else
             {
@@ -152,6 +152,7 @@ public class MahjongComputerPlayer1 extends GameComputerPlayer implements Tickab
                         break;
 
                 }
+                temp.nextTurn(temp.getGamePlayers().get(playerNum));
             }
         }
 	}

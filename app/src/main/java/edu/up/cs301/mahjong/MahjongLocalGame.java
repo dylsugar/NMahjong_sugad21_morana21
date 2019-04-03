@@ -56,13 +56,16 @@ public class MahjongLocalGame extends LocalGame {
 		{
             //If there is no discard, do not allow actions besides discard
             if(gameState.getRecentDiscard() == null) return false;
-            if(gameState.getTurn() != ((MahjongoDrawAction) action).getPlayerNum())
+            /*if(!gameState.currentTurn(gameState.
+					getGamePlayers().get(((MahjongoDrawAction) action).getPlayerNum())))
             	return false;
+            	*/
             if(gameState.getGamePlayers().get(((MahjongoDrawAction) action).
 					getPlayerNum()).getHand().size() == 14)
             	return false;
 
             gameState.drawFromWall(gameState.getWall().getWall().get(0), gameState.getTurn());
+            
 		}
 		else if(action instanceof MahjongSelectAction)
 		{
@@ -78,9 +81,7 @@ public class MahjongLocalGame extends LocalGame {
 
 				gameState.setRecentDiscard(gameState.getGamePlayers().get(
 						((MahjongSelectAction) action).getPlayerNum()).getHand().get(tileToDiscard - 1));
-                gameState.discardTile(gameState.getGamePlayers().get(
-                        ((MahjongSelectAction) action).getPlayerNum()).getHand().get(tileToDiscard - 1),
-                        ((MahjongSelectAction) action).getPlayerNum());
+                gameState.getGamePlayers().get(((MahjongSelectAction) action).getPlayerNum()).getHand().remove(tileToDiscard-1);
             }
 
 

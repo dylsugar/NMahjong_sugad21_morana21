@@ -274,15 +274,15 @@ public class MahjongState extends GameState {
         be accessed and this new tile will be added into the array of X player and removed from
         the wall
          */
-        mPlayer newPlayer = this.gamePlayers.get(position);
-        if (!(currentTurn(newPlayer))) {
+
+        if (!(currentTurn(this.getGamePlayers().get(position)))) {
             return false;
         }
-        newPlayer.addTiletoHand(drawnTile);
+        this.getGamePlayers().get(position).addTiletoHand(drawnTile);
         wall.getWall().remove(drawnTile);
         setPlayerTiles(getPlayerTiles());
         setWall(getWall());
-        nextTurn(newPlayer);
+        nextTurn(this.getGamePlayers().get(position));
         return true;
     }
 

@@ -66,7 +66,7 @@ public class mTiles {
                     return R.drawable.bamboo1;
                 } else if (this.getSuit() == "Dots") {
                     return R.drawable.dot1;
-                } else if (this.getSuit() == "Character") {
+                } else if (this.getSuit() == "Characters") {
                     return R.drawable.character1;
                 }
                 break;
@@ -75,7 +75,7 @@ public class mTiles {
                     return R.drawable.bamboo2;
                 } else if (this.getSuit() == "Dots") {
                     return R.drawable.dot2;
-                } else if (this.getSuit() == "Character") {
+                } else if (this.getSuit() == "Characters") {
                     return R.drawable.character2;
                 }
                 break;
@@ -84,7 +84,7 @@ public class mTiles {
                     return R.drawable.bamboo3;
                 } else if (this.getSuit() == "Dots") {
                     return R.drawable.dot3;
-                } else if (this.getSuit() == "Character") {
+                } else if (this.getSuit() == "Characters") {
                     return R.drawable.character3;
                 }
                 break;
@@ -93,7 +93,7 @@ public class mTiles {
                     return R.drawable.bamboo4;
                 } else if (this.getSuit() == "Dots") {
                     return R.drawable.dot4;
-                } else if (this.getSuit() == "Character") {
+                } else if (this.getSuit() == "Characters") {
                     return R.drawable.character4;
                 }
                 break;
@@ -102,7 +102,7 @@ public class mTiles {
                     return R.drawable.bamboo5;
                 } else if (this.getSuit() == "Dots") {
                     return R.drawable.dot5;
-                } else if (this.getSuit() == "Character") {
+                } else if (this.getSuit() == "Characters") {
                     return R.drawable.character5;
                 }
                 break;
@@ -111,7 +111,7 @@ public class mTiles {
                     return R.drawable.bamboo6;
                 } else if (this.getSuit() == "Dots") {
                     return R.drawable.dot6;
-                } else if (this.getSuit() == "Character") {
+                } else if (this.getSuit() == "Characters") {
                     return R.drawable.character6;
                 }
                 break;
@@ -120,7 +120,7 @@ public class mTiles {
                     return R.drawable.bamboo7;
                 } else if (this.getSuit() == "Dots") {
                     return R.drawable.dot7;
-                } else if (this.getSuit() == "Character") {
+                } else if (this.getSuit() == "Characters") {
                     return R.drawable.character7;
                 }
                 break;
@@ -129,7 +129,7 @@ public class mTiles {
                     return R.drawable.bamboo8;
                 } else if (this.getSuit() == "Dots") {
                     return R.drawable.dot6;
-                } else if (this.getSuit() == "Character") {
+                } else if (this.getSuit() == "Characters") {
                     return R.drawable.character6;
                 }
                 break;
@@ -138,7 +138,7 @@ public class mTiles {
                     return R.drawable.bamboo7;
                 } else if (this.getSuit() == "Dots") {
                     return R.drawable.dot7;
-                } else if (this.getSuit() == "Character") {
+                } else if (this.getSuit() == "Characters") {
                     return R.drawable.character7;
                 }
                 break;
