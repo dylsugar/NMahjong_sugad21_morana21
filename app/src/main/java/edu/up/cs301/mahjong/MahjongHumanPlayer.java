@@ -2,6 +2,7 @@ package edu.up.cs301.mahjong;
 
 import edu.up.cs301.game.GameHumanPlayer;
 import edu.up.cs301.game.GameMainActivity;
+import edu.up.cs301.game.GamePlayer;
 import edu.up.cs301.game.R;
 import edu.up.cs301.game.actionMsg.GameAction;
 import edu.up.cs301.game.infoMsg.GameInfo;
@@ -70,6 +71,11 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 		super(name);
 	}
 
+	public int getPosition()
+	{
+		return position;
+	}
+
 	/**
 	 * Returns the GUI's top view object
 	 * 
@@ -79,8 +85,6 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 	public View getTopView() {
 		return myActivity.findViewById(R.id.top_layer);
 	}
-	
-
 
 	/**
 	 * this method gets called when the user clicks the '+' or '-' button. It
@@ -121,7 +125,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 		}
 		else if( button == slot8)
 		{
-			game.sendAction(new MahjongSelectAction(this, , getPosition()));
+			game.sendAction(new MahjongSelectAction(this, 8, getPosition()));
 		}
 		else if( button == slot9)
 		{
