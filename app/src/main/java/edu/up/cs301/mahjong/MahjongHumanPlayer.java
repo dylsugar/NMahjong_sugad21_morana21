@@ -59,8 +59,8 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
     private ImageButton slot13;
     private ImageButton slot14;
     private ImageButton wallDraw;
-	private ImageButton ibutton;
-	
+	private ImageButton discardDraw;
+
 	/**
 	 * constructor
 	 * @param name
@@ -78,7 +78,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 
 	/**
 	 * Returns the GUI's top view object
-	 * 
+	 *
 	 * @return
 	 * 		the top object in the GUI's view heirarchy
 	 */
@@ -89,7 +89,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 	/**
 	 * this method gets called when the user clicks the '+' or '-' button. It
 	 * creates a new MahjongoDrawAction to return to the parent activity.
-	 * 
+	 *
 	 * @param button
 	 * 		the button that was clicked
 	 */
@@ -160,7 +160,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 
 	/**
 	 * callback method when we get a message (e.g., from the game)
-	 * 
+	 *
 	 * @param info
 	 * 		the message
 	 */
@@ -170,8 +170,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
             MahjongState temp = (MahjongState) info;
 
             if (playerNum == 0) {
-                temp.setPlayerTiles(temp.getGamePlayers().get(0).getHand());
-                temp.mahjongCheck(temp.getGamePlayers().get(0).getHand());
+
 
             } else if (playerNum == 1) {
 
@@ -180,7 +179,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
             } else if (playerNum == 3) {
 
             }
-            int i = state.getGamePlayers().get(playerNum).getHand().size();
+            int i = temp.getGamePlayers().get(playerNum).getHand().size();
             if (i > 1) {
                 slot1.setImageResource(state.getGamePlayers().get(playerNum).getHand().get(0).getDrawable());
                 if (i > 2) {
@@ -225,21 +224,55 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
             }
         }
     }
-	
+
 	/**
 	 * callback method--our game has been chosen/rechosen to be the GUI,
 	 * called from the GUI thread
-	 * 
+	 *
 	 * @param activity
 	 * 		the activity under which we are running
 	 */
 	public void setAsGui(GameMainActivity activity) {
-		
+
 		// remember the activity
 		myActivity = activity;
-		
+
 	    // Load the layout resource for our GUI
 		activity.setContentView(R.layout.play_screen);
+
+		this.slot1 =(ImageButton)activity.findViewById(R.id.slot1);
+		this.slot2 =(ImageButton)activity.findViewById(R.id.slot2);
+		this.slot3 =(ImageButton)activity.findViewById(R.id.slot3);
+		this.slot4 =(ImageButton)activity.findViewById(R.id.slot4);
+		this.slot5 =(ImageButton)activity.findViewById(R.id.slot5);
+		this.slot6 =(ImageButton)activity.findViewById(R.id.slot6);
+		this.slot7 =(ImageButton)activity.findViewById(R.id.slot7);
+		this.slot8 =(ImageButton)activity.findViewById(R.id.slot8);
+		this.slot9 =(ImageButton)activity.findViewById(R.id.slot9);
+		this.slot10 =(ImageButton)activity.findViewById(R.id.slot10);
+		this.slot11 =(ImageButton)activity.findViewById(R.id.slot11);
+		this.slot12 =(ImageButton)activity.findViewById(R.id.slot12);
+		this.slot13 =(ImageButton)activity.findViewById(R.id.slot13);
+		this.slot14 =(ImageButton)activity.findViewById(R.id.slot14);
+		this.wallDraw =(ImageButton)activity.findViewById(R.id.drawButton);
+		this.discardDraw =(ImageButton)activity.findViewById(R.id.discardDraw);
+
+		slot1.setOnClickListener(this);
+		slot2.setOnClickListener(this);
+		slot3.setOnClickListener(this);
+		slot4.setOnClickListener(this);
+		slot5.setOnClickListener(this);
+		slot6.setOnClickListener(this);
+		slot7.setOnClickListener(this);
+		slot8.setOnClickListener(this);
+		slot9.setOnClickListener(this);
+		slot10.setOnClickListener(this);
+		slot11.setOnClickListener(this);
+		slot12.setOnClickListener(this);
+		slot13.setOnClickListener(this);
+		slot14.setOnClickListener(this);
+		wallDraw.setOnClickListener(this);
+		discardDraw.setOnClickListener(this);
 
 	}
 

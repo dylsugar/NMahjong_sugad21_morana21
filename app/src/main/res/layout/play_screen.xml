@@ -23,7 +23,7 @@
         android:gravity="center">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/discardDraw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/plaintile" />
@@ -145,6 +145,15 @@
 
         <ImageButton
             android:id="@+id/slot13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:src="@drawable/plaintile" />
+
+        <ImageButton
+            android:id="@+id/slot14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
