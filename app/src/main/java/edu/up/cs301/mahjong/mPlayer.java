@@ -70,7 +70,6 @@ public class mPlayer {
         }
 
         public void removeTile(mTiles out){
-            hand = new ArrayList<mTiles>();
             hand.remove(out);
         }
 
