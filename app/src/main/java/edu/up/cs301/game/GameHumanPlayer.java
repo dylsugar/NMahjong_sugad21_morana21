@@ -11,6 +11,7 @@ import edu.up.cs301.game.infoMsg.TimerInfo;
 import edu.up.cs301.game.util.GameTimer;
 import edu.up.cs301.game.util.MessageBox;
 import edu.up.cs301.game.util.Tickable;
+import edu.up.cs301.mahjong.MahjongState;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -254,6 +255,7 @@ public abstract class GameHumanPlayer implements GamePlayer, Tickable {
 					game.sendAction(new MyNameIsAction(GameHumanPlayer.this, name));
 				}
 			}
+
 			else if (allPlayerNames == null) {
 				// here, the only thing we're looking for is a StartGameInfo object;
 				// ignore everything else
@@ -297,11 +299,15 @@ public abstract class GameHumanPlayer implements GamePlayer, Tickable {
 					receiveInfo(myInfo);
 				}
 			}
+
 			else {
 				// pass the state on to the subclass
 				receiveInfo(myInfo);
 			}
+
+
 		}
+
 	}
 	
 	/**

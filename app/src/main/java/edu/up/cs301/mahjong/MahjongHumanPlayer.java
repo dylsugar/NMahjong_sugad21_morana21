@@ -141,6 +141,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
             return;
         }
         state = (MahjongState) info;
+
         int i = state.getGamePlayers().get(playerNum).getHand().size();
         if(state.getRecentDiscard() != null)
         {

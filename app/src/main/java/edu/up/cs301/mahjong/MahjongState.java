@@ -178,7 +178,6 @@ public class MahjongState extends GameState {
         for (int i = 0; i < 14; i++) {
             gamePlayers.get(0).addTiletoHand(wall.getWall().get(i));
             wall.getWall().remove(wall.getWall().get(i));
-            wall.setWall(wall.getWall());
             gamePlayers.get(0).setHand(gamePlayers.get(0).getHand());
         }
         return gamePlayers.get(0).getHand();
@@ -188,7 +187,7 @@ public class MahjongState extends GameState {
         for (int j = 14; j < 27; j++) {
             gamePlayers.get(1).addTiletoHand(wall.getWall().get(j));
             wall.getWall().remove(wall.getWall().get(j));
-            wall.setWall(wall.getWall());
+
             gamePlayers.get(1).setHand(gamePlayers.get(1).getHand());
 
         }
@@ -200,7 +199,7 @@ public class MahjongState extends GameState {
         for (int k = 27; k < 40; k++) {
             gamePlayers.get(2).addTiletoHand(wall.getWall().get(k));
             wall.getWall().remove(wall.getWall().get(k));
-            wall.setWall(wall.getWall());
+
             gamePlayers.get(2).setHand(gamePlayers.get(2).getHand());
 
         }
@@ -211,7 +210,7 @@ public class MahjongState extends GameState {
         for (int l = 40; l < 53; l++) {
             gamePlayers.get(3).addTiletoHand(wall.getWall().get(l));
             wall.getWall().remove(wall.getWall().get(l));
-            wall.setWall(wall.getWall());
+
             gamePlayers.get(3).setHand(gamePlayers.get(3).getHand());
 
         }
@@ -281,7 +280,7 @@ public class MahjongState extends GameState {
         this.getGamePlayers().get(position).addTiletoHand(drawnTile);
         wall.getWall().remove(drawnTile);
         setPlayerTiles(getPlayerTiles());
-        setWall(getWall());
+
         nextTurn(this.getGamePlayers().get(position));
         return true;
     }
@@ -296,7 +295,6 @@ public class MahjongState extends GameState {
         if (!(currentTurn(this.gamePlayers.get(position)))) {
             return false;
         }
-
         this.gamePlayers.get(position).removeTile(discardTile);
         //newPlayer.setHand(newPlayer.getHand());
 

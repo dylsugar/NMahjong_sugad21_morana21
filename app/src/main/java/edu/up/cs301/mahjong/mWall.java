@@ -51,8 +51,12 @@ public class mWall {
         return wall;
     }
 
-    public void setWall(ArrayList<mTiles>in){
-        this.wall = in;
+    public void setWall(ArrayList<mTiles>in)
+    {
+        for(int i = 0; i < in.size(); i++)
+        {
+            wall.add(in.get(i));
+        }
     }
 
     public int size(){
