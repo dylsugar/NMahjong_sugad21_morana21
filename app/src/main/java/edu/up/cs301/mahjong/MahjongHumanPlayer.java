@@ -7,11 +7,16 @@ import edu.up.cs301.game.R;
 import edu.up.cs301.game.actionMsg.GameAction;
 import edu.up.cs301.game.infoMsg.GameInfo;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
 
@@ -30,7 +35,7 @@ import java.util.ArrayList;
  * @author Andrew M. Nuxoll
  * @version July 2013
  */
-public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListener {
+public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListener, AdapterView.OnItemSelectedListener {
 
     /* instance variables */
     private ArrayList<mTiles> hand;
@@ -61,6 +66,8 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
     private ImageButton slot14;
     private ImageButton wallDraw;
 	private ImageButton discardDraw;
+	private Spinner menuSpinner;
+    private String[] paths = {"Menu","How to play:","Settings","About","Save Game","Exit Game"};
 
 	/**
 	 * constructor
@@ -137,6 +144,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
      */
     @Override
     public void receiveInfo(GameInfo info) {
+
         if (!(info instanceof MahjongState)) {
             return;
         }
@@ -145,59 +153,58 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
         int i = state.getGamePlayers().get(playerNum).getHand().size();
         if(state.getRecentDiscard() != null)
         {
-            discardDraw.setImageResource(state.getRecentDiscard().getDrawable());
+            discardDraw.setBackgroundResource(state.getRecentDiscard().getDrawable());
         }
         else
         {
-            discardDraw.setImageResource(R.drawable.plaintile);
+            discardDraw.setBackgroundResource(R.drawable.plaintile);
         }
         if (i > 0) {
-            slot1.setImageResource(
-                    state.getGamePlayers().get(getPosition()).getHand().get(0).getDrawable());
+                    slot1.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(0).getDrawable());
             if (i > 1) {
-                slot2.setImageResource(
+                slot2.setBackgroundResource(
                         state.getGamePlayers().get(getPosition()).getHand().get(1).getDrawable());
                 if (i > 2) {
-                    slot3.setImageResource(
+                    slot3.setBackgroundResource(
                             state.getGamePlayers().get(getPosition()).getHand().get(2).getDrawable());
                     if (i > 3) {
-                        slot4.setImageResource(
+                        slot4.setBackgroundResource(
                                 state.getGamePlayers().get(getPosition()).getHand().get(3).getDrawable());
                         if (i > 4) {
-                            slot5.setImageResource(
+                            slot5.setBackgroundResource(
                                     state.getGamePlayers().get(getPosition()).getHand().get(4).getDrawable());
                             if (i > 5) {
-                                slot6.setImageResource(
+                                slot6.setBackgroundResource(
                                         state.getGamePlayers().get(getPosition()).getHand().get(5).getDrawable());
                                 if (i > 6) {
-                                    slot7.setImageResource(
+                                    slot7.setBackgroundResource(
                                             state.getGamePlayers().get(getPosition()).getHand().get(6).getDrawable());
                                     if (i > 7) {
-                                        slot8.setImageResource(
+                                        slot8.setBackgroundResource(
                                                 state.getGamePlayers().get(getPosition()).getHand().get(7).getDrawable());
                                         if (i > 8) {
-                                            slot9.setImageResource(
+                                            slot9.setBackgroundResource(
                                                     state.getGamePlayers().get(getPosition()).getHand().get(8).getDrawable());
                                             if (i > 9) {
-                                                slot10.setImageResource(
+                                                slot10.setBackgroundResource(
                                                         state.getGamePlayers().get(getPosition()).getHand().get(9).getDrawable());
                                                 if (i > 10) {
-                                                    slot11.setImageResource(
+                                                    slot11.setBackgroundResource(
                                                             state.getGamePlayers().get(getPosition()).getHand().get(10).getDrawable());
                                                     if (i > 11) {
-                                                        slot12.setImageResource(
+                                                        slot12.setBackgroundResource(
                                                                 state.getGamePlayers().get(getPosition()).getHand().get(11).getDrawable());
                                                         if (i > 12) {
-                                                            slot13.setImageResource(
+                                                            slot13.setBackgroundResource(
                                                                     state.getGamePlayers().get(getPosition()).getHand().get(12).getDrawable());
                                                             if (i > 13) {
-                                                                slot14.setImageResource(
+                                                                slot14.setBackgroundResource(
                                                                         state.getGamePlayers().get(getPosition()).getHand().get(13).getDrawable());
 
                                                             }
                                                             else
                                                             {
-                                                                slot14.setImageResource(R.drawable.plaintile);
+                                                                slot14.setBackgroundResource(R.drawable.plaintile);
                                                             }
                                                         }
                                                     }
@@ -212,6 +219,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
                 }
             }
         }
+
     }
 
 	/**
@@ -245,6 +253,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 		this.slot14 =(ImageButton)activity.findViewById(R.id.slot14);
 		this.wallDraw =(ImageButton)activity.findViewById(R.id.drawButton);
 		this.discardDraw =(ImageButton)activity.findViewById(R.id.discardDraw);
+        this.menuSpinner = activity.findViewById(R.id.menuSpin);
 
 		slot1.setOnClickListener(this);
 		slot2.setOnClickListener(this);
@@ -263,7 +272,49 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 		wallDraw.setOnClickListener(this);
 		discardDraw.setOnClickListener(this);
 
-	}
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(myActivity,android.R.layout.simple_spinner_dropdown_item,paths);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        menuSpinner.setAdapter(adapter);
+        menuSpinner.setOnItemSelectedListener(this);
+
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
+
+        switch (position) {
+            case 1:
+                // Whatever you want to happen when the first item gets selected
+                Intent intent = new Intent(this.myActivity, mahjongSpinner.class);
+                        v.getContext().startActivity(intent);
+                break;
+            case 2:
+                Intent intent1 = new Intent(this.myActivity, mahjongSpinner.class);
+                v.getContext().startActivity(intent1);
+                // Whatever you want to happen when the second item gets selected
+                break;
+            case 3:
+                // Whatever you want to happen when the thrid item gets selected
+                Intent intent2 = new Intent(this.myActivity, mahjongSpinner.class);
+                v.getContext().startActivity(intent2);
+                break;
+
+            case 4:
+                //save game function
+
+            case 5:
+                // terminate game
+
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+        // TODO Auto-generated method stub
+    }
+
+
 
 
     // class MahjongHumanPlayer

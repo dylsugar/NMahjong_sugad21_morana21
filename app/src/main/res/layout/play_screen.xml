@@ -10,164 +10,207 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="6"
+        android:layout_weight="9"
+        android:orientation="horizontal"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
         android:gravity="center_vertical"
         android:orientation="horizontal">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20" />
 
         <ImageButton
             android:id="@+id/drawButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="6"
+            android:layout_weight="1"
             android:adjustViewBounds="false"
-            android:cropToPadding="false"
-            android:src="@drawable/drawtile" />
+            android:background="@drawable/drawtile"
+            android:cropToPadding="false" />
+
+        <Spinner
+            android:id="@+id/menuSpin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:dropDownWidth="wrap_content"
+            android:spinnerMode="dropdown" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20" />
+
     </LinearLayout>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="9"
+        android:layout_weight="7"
         android:gravity="center">
 
         <ImageButton
             android:id="@+id/discardDraw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/plaintile" />
+            android:adjustViewBounds="true"
+            android:background="@drawable/plaintile"
+            android:scaleType="fitXY" />
+
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="9"
+        android:layout_weight="8"
         android:gravity="center">
 
         <ImageButton
             android:id="@+id/slot1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:cropToPadding="false"
-            android:src="@drawable/plaintile" />
+            android:background="@drawable/plaintile"
+            android:cropToPadding="true"
+            android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/slot2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:cropToPadding="false"
-            android:src="@drawable/plaintile" />
+            android:background="@drawable/plaintile"
+            android:cropToPadding="true"
+            android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/slot3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:cropToPadding="false"
-            android:src="@drawable/plaintile" />
+            android:background="@drawable/plaintile"
+            android:cropToPadding="true"
+            android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/slot4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@drawable/plaintile"
             android:cropToPadding="false"
-            android:src="@drawable/plaintile" />
+            android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/slot5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@drawable/plaintile"
             android:cropToPadding="false"
-            android:src="@drawable/plaintile" />
+            android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/slot6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@drawable/plaintile"
             android:cropToPadding="false"
-            android:src="@drawable/plaintile" />
+            android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/slot7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@drawable/plaintile"
             android:cropToPadding="false"
-            android:src="@drawable/plaintile" />
+            android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/slot8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@drawable/plaintile"
             android:cropToPadding="false"
-            android:src="@drawable/plaintile" />
+            android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/slot9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@drawable/plaintile"
             android:cropToPadding="false"
-            android:src="@drawable/plaintile" />
+            android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/slot10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@drawable/plaintile"
             android:cropToPadding="false"
-            android:src="@drawable/plaintile" />
+            android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/slot11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@drawable/plaintile"
             android:cropToPadding="false"
-            android:src="@drawable/plaintile" />
+            android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/slot12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@drawable/plaintile"
             android:cropToPadding="false"
-            android:src="@drawable/plaintile" />
+            android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/slot13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@drawable/plaintile"
             android:cropToPadding="false"
-            android:src="@drawable/plaintile" />
+            android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/slot14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@drawable/plaintile"
             android:cropToPadding="false"
-            android:src="@drawable/plaintile" />
+            android:scaleType="fitXY" />
 
     </TableRow>
+
 </LinearLayout>
