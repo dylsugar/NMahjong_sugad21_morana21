@@ -23,6 +23,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="edu.up.cs301.mahjong.mahjongSpinner"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"></activity>
+
     </application>
 
 </manifest>
