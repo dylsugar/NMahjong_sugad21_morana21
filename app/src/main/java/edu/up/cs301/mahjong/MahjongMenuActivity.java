@@ -50,10 +50,10 @@ public class MahjongMenuActivity extends GameMainActivity {
 		// a computer player type (player type nothertile)
 		playerTypes.add(new GamePlayerType("Computer Player (GUI)") {
 			public GamePlayer createPlayer(String name) {
-				return new MahjongComputerPlayer2(name);
+				return new MahjongComputerPlayer1(name);
 			}});
 		playerTypes.add(new GamePlayerType("Computer Player "){
-			public GamePlayer createPlayer(String name){return new MahjongComputerPlayer2(name);}
+			public GamePlayer createPlayer(String name){return new MahjongComputerPlayer1(name);}
 		});
 
 		// Create a game configuration class for Counter:

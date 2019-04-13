@@ -128,18 +128,18 @@ public class mTiles {
                 if (this.getSuit() == "Bamboo") {
                     return R.drawable.bamboo8;
                 } else if (this.getSuit() == "Dots") {
-                    return R.drawable.dot6;
+                    return R.drawable.dot8;
                 } else if (this.getSuit() == "Characters") {
-                    return R.drawable.character6;
+                    return R.drawable.character8;
                 }
                 break;
             case 9:
                 if (this.getSuit() == "Bamboo") {
-                    return R.drawable.bamboo7;
+                    return R.drawable.bamboo9;
                 } else if (this.getSuit() == "Dots") {
-                    return R.drawable.dot7;
+                    return R.drawable.dot9;
                 } else if (this.getSuit() == "Characters") {
-                    return R.drawable.character7;
+                    return R.drawable.character9;
                 }
                 break;
             default:
