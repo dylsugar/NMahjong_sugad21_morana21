@@ -53,7 +53,7 @@ public class MahjongMenuActivity extends GameMainActivity {
 				return new MahjongComputerPlayer1(name);
 			}});
 		playerTypes.add(new GamePlayerType("Computer Player "){
-			public GamePlayer createPlayer(String name){return new MahjongComputerPlayer1(name);}
+			public GamePlayer createPlayer(String name){return new MahjongComputerPlayer3(name);}
 		});
 
 		// Create a game configuration class for Counter:

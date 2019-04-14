@@ -1,5 +1,6 @@
 package edu.up.cs301.mahjong;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import edu.up.cs301.game.GameComputerPlayer;
@@ -16,6 +17,8 @@ import edu.up.cs301.game.util.Tickable;
  * @version September 2013
  */
 public class MahjongComputerPlayer3 extends GameComputerPlayer implements Tickable {
+
+    mTiles lastDiscarded = new mTiles(0, "placeholder");
 
     /**
      * Constructor for objects of class MahjongComputerPlayer1
@@ -44,117 +47,27 @@ public class MahjongComputerPlayer3 extends GameComputerPlayer implements Tickab
 		// depends totally on the timer and random numbers.
         if(info instanceof MahjongState) {
 
-
-
+            //need implement for drawDiscard decisions, looping send actions can crash
             MahjongState temp = (MahjongState) info;
-            if(temp.getTurn() != this.playerNum) return;
-            Random rand = new Random();
 
-            /*
-            if(temp.getRecentDiscard() != null)
+            if (temp.getTurn() == this.playerNum)
             {
-
-                if(rand.nextInt(4) == 0)
+                game.sendAction(new MahjongoDrawAction(this, playerNum));
+                for(int i = 0; i < temp.getGamePlayers().get(playerNum).getHand().size(); i++)
                 {
-
-                    game.sendAction(new MahjongDrawDiscardAction(this, playerNum));
-                    switch (rand.nextInt(14))
+                    if(temp.tileToDiscard(temp.getGamePlayers().get(playerNum).getHand()).getValue() ==
+                       temp.getGamePlayers().get(playerNum).getHand().get(i).getValue() &&
+                       temp.tileToDiscard(temp.getGamePlayers().get(playerNum).getHand()).getSuit() ==
+                       temp.getGamePlayers().get(playerNum).getHand().get(i).getSuit())
                     {
-                        case 0:
-                            game.sendAction(new MahjongSelectAction(this,1, playerNum));
-                            break;
-                        case 1:
-                            game.sendAction(new MahjongSelectAction(this,2, playerNum));
-                            break;
-                        case 2:
-                            game.sendAction(new MahjongSelectAction(this,3, playerNum));
-                            break;
-                        case 3:
-                            game.sendAction(new MahjongSelectAction(this,4, playerNum));
-                            break;
-                        case 4:
-                            game.sendAction(new MahjongSelectAction(this,5, playerNum));
-                            break;
-                        case 5:
-                            game.sendAction(new MahjongSelectAction(this,6, playerNum));
-                            break;
-                        case 6:
-                            game.sendAction(new MahjongSelectAction(this,7, playerNum));
-                            break;
-                        case 7:
-                            game.sendAction(new MahjongSelectAction(this,8, playerNum));
-                            break;
-                        case 8:
-                            game.sendAction(new MahjongSelectAction(this,9, playerNum));
-                            break;
-                        case 9:
-                            game.sendAction(new MahjongSelectAction(this,10, playerNum));
-                            break;
-                        case 10:
-                            game.sendAction(new MahjongSelectAction(this,11, playerNum));
-                            break;
-                        case 11:
-                            game.sendAction(new MahjongSelectAction(this,12, playerNum));
-                            break;
-                        case 12:
-                            game.sendAction(new MahjongSelectAction(this,13, playerNum));
-                            break;
-                        case 13:
-                            game.sendAction(new MahjongSelectAction(this,14, playerNum));
-                            break;
-
+                        lastDiscarded = temp.getGamePlayers().get(playerNum).getHand().get(i);
+                        game.sendAction(new MahjongSelectAction(this, i+1, playerNum));
+                        break;
                     }
                 }
-
-            }
-            if(temp.getTurn() != playerNum) return;
-*/
-            if (temp.getTurn() == this.playerNum) {
-                game.sendAction(new MahjongoDrawAction(this, playerNum));
-                switch (rand.nextInt(14)) {
-                    case 0:
-                        game.sendAction(new MahjongSelectAction(this, 1, playerNum));
-                        break;
-                    case 1:
-                        game.sendAction(new MahjongSelectAction(this, 2, playerNum));
-                        break;
-                    case 2:
-                        game.sendAction(new MahjongSelectAction(this, 3, playerNum));
-                        break;
-                    case 3:
-                        game.sendAction(new MahjongSelectAction(this, 4, playerNum));
-                        break;
-                    case 4:
-                        game.sendAction(new MahjongSelectAction(this, 5, playerNum));
-                        break;
-                    case 5:
-                        game.sendAction(new MahjongSelectAction(this, 6, playerNum));
-                        break;
-                    case 6:
-                        game.sendAction(new MahjongSelectAction(this, 7, playerNum));
-                        break;
-                    case 7:
-                        game.sendAction(new MahjongSelectAction(this, 8, playerNum));
-                        break;
-                    case 8:
-                        game.sendAction(new MahjongSelectAction(this, 9, playerNum));
-                        break;
-                    case 9:
-                        game.sendAction(new MahjongSelectAction(this, 10, playerNum));
-                        break;
-                    case 10:
-                        game.sendAction(new MahjongSelectAction(this, 11, playerNum));
-                        break;
-                    case 11:
-                        game.sendAction(new MahjongSelectAction(this, 12, playerNum));
-                        break;
-                    case 12:
-                        game.sendAction(new MahjongSelectAction(this, 13, playerNum));
-                        break;
-                    case 13:
-                        game.sendAction(new MahjongSelectAction(this, 14, playerNum));
-                        break;
-
+                if(temp.getGamePlayers().get(playerNum).getHand().size() == 14)
+                {
+                    game.sendAction(new MahjongSelectAction(this, 1, playerNum));
                 }
             }
         }

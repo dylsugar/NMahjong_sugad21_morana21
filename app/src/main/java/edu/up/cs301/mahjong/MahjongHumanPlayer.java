@@ -21,6 +21,8 @@ import android.widget.TextView;
 import android.view.View.OnClickListener;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 /**
  * A GUI of a counter-player. The GUI displays the current value of the counter,
@@ -149,6 +151,18 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
             return;
         }
         state = (MahjongState) info;
+
+        for(int i = 0; i < state.getGamePlayers().get(playerNum).getHand().size(); i++)
+        {
+            for(int j = i; j < state.getGamePlayers().get(playerNum).getHand().size(); j++)
+            {
+                if(state.getGamePlayers().get(playerNum).getHand().get(i).getSuit().charAt(0) >
+                   state.getGamePlayers().get(playerNum).getHand().get(j).getSuit().charAt(0))
+                {
+                    Collections.swap(state.getGamePlayers().get(playerNum).getHand(), i, j);
+                }
+            }
+        }
 
         int i = state.getGamePlayers().get(playerNum).getHand().size();
         if(state.getRecentDiscard() != null)

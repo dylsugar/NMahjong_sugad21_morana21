@@ -68,7 +68,7 @@ public class MahjongComputerPlayer2 extends MahjongComputerPlayer1 {
 		Log.i("computer player", "receiving");
 		
 		// if there is no game, ignore
-		if (game == null) {
+			if (game == null) {
 			return;
 		}
 		/*

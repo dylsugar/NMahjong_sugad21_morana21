@@ -105,7 +105,10 @@ public class MahjongLocalGame extends LocalGame {
 		}
 		else if(action instanceof MahjongDrawDiscardAction)
         {
+
         	if(gameState.getRecentDiscard() == null) return false;
+        	if(gameState.getGamePlayers().get(((MahjongDrawDiscardAction) action).
+                getPlayerNum()).getHand().size() > 13) return false;
 			gameState.getGamePlayers().get(((MahjongDrawDiscardAction) action).
 					getPlayerNum()).getHand().add(gameState.getRecentDiscard());
 			gameState.setRecentDiscard(null);
