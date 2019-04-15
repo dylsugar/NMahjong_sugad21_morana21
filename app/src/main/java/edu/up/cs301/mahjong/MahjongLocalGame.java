@@ -70,7 +70,7 @@ public class MahjongLocalGame extends LocalGame {
             	return false;
 
             gameState.drawFromWall(gameState.getWall().getWall().get(0), gameState.getTurn());
-            gameState.setLastTurn(gameState.getTurn());
+            gameState.setTurn(gameState.getTurn());
 		}
 		else if(action instanceof MahjongSelectAction)
 		{
@@ -112,6 +112,7 @@ public class MahjongLocalGame extends LocalGame {
 			gameState.getGamePlayers().get(((MahjongDrawDiscardAction) action).
 					getPlayerNum()).getHand().add(gameState.getRecentDiscard());
 			gameState.setRecentDiscard(null);
+			gameState.nextTurn(gameState.getGamePlayers().get(((MahjongDrawDiscardAction)action).getPlayerNum()));
         }
 		return true;
 	}//makeMove

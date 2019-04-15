@@ -8,7 +8,7 @@ public class mTiles {
 
     public mTiles(){
         value = 6;
-        suit = "hearts";
+        suit = "Bamboo";
     }
 
     public mTiles(int inValue, String inSuit){

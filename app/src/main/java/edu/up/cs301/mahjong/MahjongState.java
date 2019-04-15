@@ -280,10 +280,8 @@ public class MahjongState extends GameState {
             return false;
         }
         this.getGamePlayers().get(position).addTiletoHand(drawnTile);
-        wall.getWall().remove(drawnTile);
-        setPlayerTiles(getPlayerTiles());
-
-        //nextTurn(this.getGamePlayers().get(position));
+        //wall.getWall().remove(drawnTile);
+        nextTurn(this.getGamePlayers().get(position));
         return true;
     }
 
@@ -464,6 +462,7 @@ public class MahjongState extends GameState {
     public boolean checkSuit(ArrayList<mTiles> pHand)
     {
         ArrayList<mTiles> suitList = pHand;
+
         for(int i = 0; i < suitList.size(); i++)
         {
             for(int j = i; j < suitList.size(); j++)
@@ -486,6 +485,7 @@ public class MahjongState extends GameState {
             }
             temp = findLowestSet(suitList);
         }
+
 
         prevSize = -1;
         if(suitList.size() == 0) return true;

@@ -110,6 +110,7 @@ public class MahjongComputerPlayer1 extends GameComputerPlayer implements Tickab
             if(temp.getTurn() != playerNum) return;
 */
             if (temp.getTurn() == this.playerNum) {
+                sleep(1000);
                 game.sendAction(new MahjongoDrawAction(this, playerNum));
                 switch (rand.nextInt(14)) {
                     case 0:

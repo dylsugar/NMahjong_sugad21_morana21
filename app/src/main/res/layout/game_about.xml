@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/red"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About:"
+            android:textSize="70sp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Once the game was created, it gained popularity quickly, spreading outside of China's borders. Mahjong was likely first introduced to Westerners around the turn of the 20th century when people began playing it in British clubs in Shanghai [source: MahjongEd.com]. Around this time, other Asian countries, such as Japan and Korea, picked up the pastime.  An American named Joseph Babcock is believed responsible for bringing the game to the United States in 1920 after picking it up in China, where he worked for an oil company. The popularity of the game in the United States grew rapidly. Babcock published a set of rules (there were no official written rules in China at the time) and several companies, such as Milton Bradley and Parker Brothers, created game sets. The craze spread around the country but was most popular in New York City where the National Mah Jongg League was eventually created (the terms &quot;mahjong&quot; and &quot;mah jongg&quot; both refer to the same game).  As mahjong became more popular in the United States and around the world, its practice was discouraged in its birthplace of China. Chinese government officials only wanted elite citizens playing the game because they feared that peasants might develop their mental capacities through playing. After the Communist Revolution of the late 1940s, Chairman Mao outlawed mahjong, claiming it was a capitalist game because players would sometimes gamble on the outcome. Prohibition of the game in China was lifted in 1985, and it has rebounded in popularity.  One of the reasons mahjong is so popular in China is because of the symbolism in different elements of the game. Keep reading to find out more about the meanings behind the mahjong tiles, suits and sets."
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

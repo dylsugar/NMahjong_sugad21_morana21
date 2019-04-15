@@ -1,11 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_red_dark">
 
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="TextView" />
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="How to Play:"
+            android:textAllCaps="true"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Object of Game: Make combinations using same suit same value tiles. Use all tiles to win."
+            android:textSize="36sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1) 14 Tiles shown. Choose one to discard ( A tile that you think won't help you make a combination of pair, 3 of a kind, or four of a kind"
+            android:textSize="36sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2) After discarding, the left most tile should be an orange tile. This indicates that you must either pick up a discarded tile (Middle tile) or draw a tile (A player must always end turn with 14 tiles"
+            android:textSize="36sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3) Continue until Mahjong"
+            android:textSize="36sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
