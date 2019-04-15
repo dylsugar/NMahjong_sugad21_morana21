@@ -707,7 +707,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -901,40 +901,40 @@ public final class R {
     public static final int howToButton=0x7f060023;
     public static final int icon=0x7f060024;
     public static final int icon_group=0x7f060025;
-    public static final int info=0x7f060026;
-    public static final int infoButton=0x7f060027;
-    public static final int invisible=0x7f060028;
-    public static final int ipCodeLabel=0x7f060029;
-    public static final int italic=0x7f06002a;
-    public static final int left=0x7f06002b;
-    public static final int line1=0x7f06002c;
-    public static final int line3=0x7f06002d;
-    public static final int localGameTab=0x7f06002e;
-    public static final int localTabLayout=0x7f06002f;
-    public static final int media_actions=0x7f060030;
-    public static final int menu_settings=0x7f060031;
-    public static final int none=0x7f060032;
-    public static final int normal=0x7f060033;
-    public static final int notification_background=0x7f060034;
-    public static final int notification_main_column=0x7f060035;
-    public static final int notification_main_column_container=0x7f060036;
-    public static final int packed=0x7f060037;
-    public static final int parent=0x7f060038;
-    public static final int percent=0x7f060039;
-    public static final int playGameButton=0x7f06003a;
-    public static final int playerNameEditText=0x7f06003b;
-    public static final int playerNameHeadingText=0x7f06003c;
-    public static final int playerTypeHeadingText=0x7f06003d;
-    public static final int playerTypeSpinner=0x7f06003e;
-    public static final int remoteGameTab=0x7f06003f;
-    public static final int remoteIPCodeEditText=0x7f060040;
-    public static final int remoteNameEditText=0x7f060041;
-    public static final int remoteTabLayout=0x7f060042;
-    public static final int remote_player_spinner=0x7f060043;
-    public static final int right=0x7f060044;
-    public static final int right_icon=0x7f060045;
-    public static final int right_side=0x7f060046;
-    public static final int saveButton=0x7f060047;
+    public static final int imageView2=0x7f060026;
+    public static final int info=0x7f060027;
+    public static final int infoButton=0x7f060028;
+    public static final int invisible=0x7f060029;
+    public static final int ipCodeLabel=0x7f06002a;
+    public static final int italic=0x7f06002b;
+    public static final int left=0x7f06002c;
+    public static final int line1=0x7f06002d;
+    public static final int line3=0x7f06002e;
+    public static final int localGameTab=0x7f06002f;
+    public static final int localTabLayout=0x7f060030;
+    public static final int media_actions=0x7f060031;
+    public static final int menu_settings=0x7f060032;
+    public static final int none=0x7f060033;
+    public static final int normal=0x7f060034;
+    public static final int notification_background=0x7f060035;
+    public static final int notification_main_column=0x7f060036;
+    public static final int notification_main_column_container=0x7f060037;
+    public static final int packed=0x7f060038;
+    public static final int parent=0x7f060039;
+    public static final int percent=0x7f06003a;
+    public static final int playGameButton=0x7f06003b;
+    public static final int playerNameEditText=0x7f06003c;
+    public static final int playerNameHeadingText=0x7f06003d;
+    public static final int playerTypeHeadingText=0x7f06003e;
+    public static final int playerTypeSpinner=0x7f06003f;
+    public static final int remoteGameTab=0x7f060040;
+    public static final int remoteIPCodeEditText=0x7f060041;
+    public static final int remoteNameEditText=0x7f060042;
+    public static final int remoteTabLayout=0x7f060043;
+    public static final int remote_player_spinner=0x7f060044;
+    public static final int right=0x7f060045;
+    public static final int right_icon=0x7f060046;
+    public static final int right_side=0x7f060047;
     public static final int saveConfigButton=0x7f060048;
     public static final int seekBar=0x7f060049;
     public static final int seekBar2=0x7f06004a;
@@ -1023,6 +1023,7 @@ public final class R {
   }
   public static final class raw {
     public static final int backgroundsong=0x7f0b0000;
+    public static final int celebrate=0x7f0b0001;
   }
   public static final class string {
     public static final int add_player=0x7f0c0000;
@@ -2072,7 +2073,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
