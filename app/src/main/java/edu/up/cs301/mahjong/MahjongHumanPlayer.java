@@ -78,7 +78,6 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
     private ImageButton howTo;
     private ImageButton settings;
     private ImageButton info;
-    private ImageButton save;
     private ImageButton exit;
 
     /**
@@ -157,9 +156,6 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
         }else if(button == info) {
             Intent intent2 = new Intent(this.myActivity, MahjongAbout.class);
             button.getContext().startActivity(intent2);
-
-        }else if(button == save) {
-
         }else if(button == exit) {
             System.exit(0);
         }else{
@@ -277,6 +273,13 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
         mediaPlayer = MediaPlayer.create(activity.getApplicationContext(), R.raw.backgroundsong);
         mediaPlayer.start();
 
+        if(state.mahjongCheck(state.getGamePlayers().get(state.getTurn()).getHand())){
+            mediaPlayer.stop();
+            mediaPlayer = MediaPlayer.create(activity.getApplicationContext(),R.raw.celebrate);
+            mediaPlayer.start();
+
+        }
+
         this.slot1 = (ImageButton) activity.findViewById(R.id.slot1);
         this.slot2 = (ImageButton) activity.findViewById(R.id.slot2);
         this.slot3 = (ImageButton) activity.findViewById(R.id.slot3);
@@ -296,7 +299,6 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
         this.howTo = (ImageButton)activity.findViewById(R.id.howToButton);
         this.settings = (ImageButton)activity.findViewById(R.id.settingButton);
         this.info = (ImageButton)activity.findViewById(R.id.infoButton);
-        this.save = (ImageButton)activity.findViewById(R.id.saveButton);
         this.exit = (ImageButton)activity.findViewById(R.id.exitButton);
 
         slot1.setOnClickListener(this);
@@ -318,7 +320,6 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
         howTo.setOnClickListener(this);
         settings.setOnClickListener(this);
         info.setOnClickListener(this);
-        save.setOnClickListener(this);
         exit.setOnClickListener(this);
     }
 

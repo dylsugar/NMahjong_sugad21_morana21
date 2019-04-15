@@ -54,66 +54,66 @@ public class MahjongLocalGame extends LocalGame {
 
 		if(action instanceof MahjongoDrawAction)
 		{
-            if(gameState.getWall().getWall().size() < 3)
-            {
-                gameState.getWall().setWall(gameState.getDiscardTiles());
-                gameState.getDiscardTiles().clear();
-            }
-            //If there is no discard, do not allow actions besides discard
-            if(gameState.getRecentDiscard() == null) return false;
+			if(gameState.getWall().getWall().size() < 3)
+			{
+				gameState.getWall().setWall(gameState.getDiscardTiles());
+				gameState.getDiscardTiles().clear();
+			}
+			//If there is no discard, do not allow actions besides discard
+			if(gameState.getRecentDiscard() == null) return false;
             /*if(!gameState.currentTurn(gameState.
 					getGamePlayers().get(((MahjongoDrawAction) action).getPlayerNum())))
             	return false;
             	*/
-            if(gameState.getGamePlayers().get(((MahjongoDrawAction) action).
+			if(gameState.getGamePlayers().get(((MahjongoDrawAction) action).
 					getPlayerNum()).getHand().size() == 14)
-            	return false;
+				return false;
 
-            gameState.drawFromWall(gameState.getWall().getWall().get(0), gameState.getTurn());
-            gameState.setLastTurn(((MahjongoDrawAction) action).getPlayerNum());
+			gameState.drawFromWall(gameState.getWall().getWall().get(0), gameState.getTurn());
+			gameState.setLastTurn(((MahjongoDrawAction) action).getPlayerNum());
 		}
 		else if(action instanceof MahjongSelectAction)
 		{
 
-		    //Checks to see if the player has enough tiles to discard one
-            if(gameState.getGamePlayers().get(((MahjongSelectAction) action).getPlayerNum()).getHand().size() < 14)
-            {
+			//Checks to see if the player has enough tiles to discard one
+			if(gameState.getGamePlayers().get(((MahjongSelectAction) action).getPlayerNum()).getHand().size() < 14)
+			{
 
-            }
-            //If the players hand is of size 14, allow them to discard the one they selected
-            else {
-                int tileToDiscard = ((MahjongSelectAction) action).getTile();
+			}
+			//If the players hand is of size 14, allow them to discard the one they selected
+			else {
+				int tileToDiscard = ((MahjongSelectAction) action).getTile();
 
 
-                if(gameState.getRecentDiscard() != null)
-                {
+				if(gameState.getRecentDiscard() != null)
+				{
 					gameState.getDiscardTiles().add(gameState.getRecentDiscard());
 
 				}
 				gameState.setRecentDiscard(gameState.getGamePlayers().get(
 						((MahjongSelectAction) action).getPlayerNum()).getHand().get(tileToDiscard - 1));
 
-                gameState.getGamePlayers().get(((MahjongSelectAction) action).getPlayerNum()).getHand().remove(tileToDiscard-1);
+				gameState.getGamePlayers().get(((MahjongSelectAction) action).getPlayerNum()).getHand().remove(tileToDiscard-1);
 				if(gameState.getLastTurn() == gameState.getTurn())
 				{
 					gameState.nextTurn(gameState.getGamePlayers().get(((MahjongSelectAction) action).getPlayerNum()));
 				}
-            }
+			}
 
 
 
 		}
 		else if(action instanceof MahjongDrawDiscardAction)
-        {
+		{
 
-        	if(gameState.getRecentDiscard() == null) return false;
-        	if(gameState.getGamePlayers().get(((MahjongDrawDiscardAction) action).
-                getPlayerNum()).getHand().size() > 13) return false;
+			if(gameState.getRecentDiscard() == null) return false;
+			if(gameState.getGamePlayers().get(((MahjongDrawDiscardAction) action).
+					getPlayerNum()).getHand().size() > 13) return false;
 			gameState.getGamePlayers().get(((MahjongDrawDiscardAction) action).
 					getPlayerNum()).getHand().add(gameState.getRecentDiscard());
 			gameState.setRecentDiscard(null);
 			gameState.nextTurn(gameState.getGamePlayers().get(((MahjongDrawDiscardAction)action).getPlayerNum()));
-        }
+		}
 		return true;
 	}//makeMove
 	
@@ -142,6 +142,7 @@ public class MahjongLocalGame extends LocalGame {
 	protected String checkIfGameOver() {
 		if(gameState.mahjongCheck(gameState.getGamePlayers().get(0).getHand()))
 		{
+
 			return "Player " + playerNames[0] + " has won!";
 		}
 		else if(gameState.mahjongCheck(gameState.getGamePlayers().get(1).getHand()))

@@ -31,26 +31,29 @@
             android:orientation="horizontal">
 
             <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                tools:layout_editor_absoluteX="901dp" />
 
             <ImageButton
                 android:id="@+id/drawButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:adjustViewBounds="false"
                 android:background="@drawable/drawtile"
                 android:cropToPadding="true"
-                android:scaleType="centerInside" />
+                android:scaleType="centerInside"
+                tools:layout_editor_absoluteX="892dp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="917dp">
 
                 <ImageButton
                     android:id="@+id/howToButton"
@@ -64,17 +67,20 @@
                     android:layout_height="wrap_content"
                     android:src="@android:drawable/ic_menu_manage" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="914dp">
+
                 <ImageButton
                     android:id="@+id/infoButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@android:drawable/ic_menu_info_details" />
-
-                <ImageButton
-                    android:id="@+id/saveButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@android:drawable/ic_menu_save" />
 
                 <ImageButton
                     android:id="@+id/exitButton"
@@ -85,18 +91,20 @@
 
             <ImageButton
                 android:id="@+id/discardDraw"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:background="@drawable/plaintile"
                 android:cropToPadding="true"
-                android:scaleType="centerInside" />
+                android:scaleType="centerInside"
+                tools:layout_editor_absoluteX="921dp" />
 
             <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                tools:layout_editor_absoluteX="960dp" />
 
         </LinearLayout>
 
@@ -104,7 +112,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".7"
-            android:orientation="horizontal"/>
+            android:orientation="horizontal" >
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/appcover" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

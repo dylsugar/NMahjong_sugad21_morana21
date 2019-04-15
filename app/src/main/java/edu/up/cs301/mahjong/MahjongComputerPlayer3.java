@@ -71,5 +71,6 @@ public class MahjongComputerPlayer3 extends GameComputerPlayer implements Tickab
                 }
             }
         }
+
 	}
 }

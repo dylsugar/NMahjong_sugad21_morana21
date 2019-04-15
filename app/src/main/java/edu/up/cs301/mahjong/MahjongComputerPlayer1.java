@@ -156,8 +156,8 @@ public class MahjongComputerPlayer1 extends GameComputerPlayer implements Tickab
                         game.sendAction(new MahjongSelectAction(this, 14, playerNum));
                         break;
 
-                }
-            }
+                } }
         }
+
 	}
 }
