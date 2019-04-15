@@ -158,11 +158,12 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
             button.getContext().startActivity(intent2);
         }else if(button == exit) {
             System.exit(0);
-        }else{
-
-            Toast.makeText(button.getContext().getApplicationContext(), "Invalid Move",
-                    Toast.LENGTH_SHORT).show();
         }
+        //else{
+
+           // Toast.makeText(button.getContext().getApplicationContext(), "Invalid Move",
+            //        Toast.LENGTH_SHORT).show();
+       // }
 
 
     }// onClick
@@ -270,15 +271,9 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
 
         // Load the layout resource for our GUI
         activity.setContentView(R.layout.play_screen);
-        mediaPlayer = MediaPlayer.create(activity.getApplicationContext(), R.raw.backgroundsong);
+        mediaPlayer = MediaPlayer.create(activity.getApplicationContext(), R.raw.celebrate);
         mediaPlayer.start();
 
-        if(state.mahjongCheck(state.getGamePlayers().get(state.getTurn()).getHand())){
-            mediaPlayer.stop();
-            mediaPlayer = MediaPlayer.create(activity.getApplicationContext(),R.raw.celebrate);
-            mediaPlayer.start();
-
-        }
 
         this.slot1 = (ImageButton) activity.findViewById(R.id.slot1);
         this.slot2 = (ImageButton) activity.findViewById(R.id.slot2);

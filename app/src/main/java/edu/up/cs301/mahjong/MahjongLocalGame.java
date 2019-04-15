@@ -1,8 +1,12 @@
 package edu.up.cs301.mahjong;
 
+import edu.up.cs301.game.GameMainActivity;
 import edu.up.cs301.game.GamePlayer;
 import edu.up.cs301.game.LocalGame;
+import edu.up.cs301.game.R;
 import edu.up.cs301.game.actionMsg.GameAction;
+
+import android.media.MediaPlayer;
 import android.util.Log;
 
 /**
@@ -25,6 +29,8 @@ public class MahjongLocalGame extends LocalGame {
 
 	// the game's state
 	private MahjongState gameState;
+	private MediaPlayer mediaPlayer;
+	private GameMainActivity activity;
 	
 	/**
 	 * can this player move
@@ -140,21 +146,29 @@ public class MahjongLocalGame extends LocalGame {
 	 */
 	@Override
 	protected String checkIfGameOver() {
+
 		if(gameState.mahjongCheck(gameState.getGamePlayers().get(0).getHand()))
 		{
-
+		//	mediaPlayer = MediaPlayer.create(activity.getApplicationContext(), R.raw.celebrate);
+		//	mediaPlayer.start();
 			return "Player " + playerNames[0] + " has won!";
 		}
 		else if(gameState.mahjongCheck(gameState.getGamePlayers().get(1).getHand()))
 		{
+		//	mediaPlayer = MediaPlayer.create(activity.getApplicationContext(), R.raw.celebrate);
+		//	mediaPlayer.start();
 			return "Player " + playerNames[1] + " has won!";
 		}
 		else if(gameState.mahjongCheck(gameState.getGamePlayers().get(2).getHand()))
 		{
+		//	mediaPlayer = MediaPlayer.create(activity.getApplicationContext(), R.raw.celebrate);
+		//	mediaPlayer.start();
 			return "Player " + playerNames[2] + " has won!";
 		}
 		else if(gameState.mahjongCheck(gameState.getGamePlayers().get(3).getHand()))
 		{
+		//	mediaPlayer = MediaPlayer.create(activity.getApplicationContext(), R.raw.celebrate);
+		//	mediaPlayer.start();
 			return "Player " + playerNames[3] + " has won!";
 		}
 		return null;
