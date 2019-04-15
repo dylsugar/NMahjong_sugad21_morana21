@@ -203,7 +203,8 @@ public abstract class GameHumanPlayer implements GamePlayer, Tickable {
 	 */
 	public void sendInfo(GameInfo info) {
 		// wait until handler is there
-		while (myHandler == null) Thread.yield();
+		while (myHandler == null)
+			Thread.yield();
 
 		// post message to the handler
 		Log.d("sendInfo", "about to post");
@@ -234,7 +235,7 @@ public abstract class GameHumanPlayer implements GamePlayer, Tickable {
 		}
 		
 		// the run method, which is run in the main GUI thread
-		public void run() {
+		synchronized public void run() {
 			
 			// if the game is over, just tell the activity that the game is over
 			if (gameOver) {
@@ -287,6 +288,7 @@ public abstract class GameHumanPlayer implements GamePlayer, Tickable {
 				// set our instance variable, to indicate the game as over
 				gameOver = true;
 			}
+			/*
 			else if (myInfo instanceof TimerInfo) {
 				// if we have a timer-tick, and it's our timer object,
 				// directly invoke the subclass method; otherwise, pass
@@ -299,10 +301,11 @@ public abstract class GameHumanPlayer implements GamePlayer, Tickable {
 					receiveInfo(myInfo);
 				}
 			}
+			*/
 
 			else {
 				// pass the state on to the subclass
-				receiveInfo(myInfo);
+				 receiveInfo(myInfo);
 			}
 
 

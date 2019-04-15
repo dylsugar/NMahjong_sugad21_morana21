@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-27:12
-INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-27:12
-INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-27:12
-INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-27:12
+ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-31:12
+INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-31:12
+INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-31:12
+INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-31:12
 MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\f75214f91b87424cfe232a4b449100b4\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\4e674e63e179d913d5477d4fe19d2eaa\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\38ff0d75ffe96eff6e1072f291339743\AndroidManifest.xml:17:1-22:12
@@ -15,9 +15,9 @@ MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Smokeburned\.gradle\
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\c662ab212005123e9caaefc61733db8f\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\e9541465850ce6a8b111cc69d8fe2d77\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\4b75b3d3658ca5d79a654b6bbca070cf\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-27:12
-INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-27:12
-INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-27:12
+INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-31:12
+INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-31:12
+INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:1:1-31:12
 	package
 		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:2:5-32
 		INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml
@@ -41,7 +41,7 @@ ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:7:5-79
 	android:name
 		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:7:22-76
 application
-ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:9:5-25:19
+ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:9:5-29:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\4e674e63e179d913d5477d4fe19d2eaa\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Smokeburned\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\4e674e63e179d913d5477d4fe19d2eaa\AndroidManifest.xml:9:5-20
 	android:label
@@ -51,27 +51,41 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Sm
 	android:theme
 		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:12:9-40
 activity#edu.up.cs301.mahjong.MahjongMenuActivity
-ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:14:9-20:20
+ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:14:9-21:20
+	android:screenOrientation
+		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:16:13-50
 	android:configChanges
 		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:15:13-83
 	android:name
 		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:14:19-74
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:16:13-19:29
+ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:17:13-20:29
 action#android.intent.action.MAIN
-ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:17:17-69
+ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:17:25-66
+		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:18:17-77
+ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:18:27-74
+		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:19:27-74
 activity#edu.up.cs301.mahjong.mahjongSpinner
-ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:22:9-23:95
+ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:23:9-24:95
 	android:configChanges
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:23:13-83
+		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:24:13-83
 	android:name
-		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:22:19-69
+		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:23:19-69
+activity#edu.up.cs301.mahjong.MahjongAbout
+ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:25:9-26:95
+	android:configChanges
+		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:26:13-83
+	android:name
+		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:25:19-67
+activity#edu.up.cs301.mahjong.mahjongSetting
+ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:27:9-28:95
+	android:configChanges
+		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:28:13-83
+	android:name
+		ADDED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml:27:19-69
 uses-sdk
 INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\NMahjong_sugad21_morana21\app\src\main\AndroidManifest.xml

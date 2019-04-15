@@ -70,7 +70,7 @@ public class MahjongLocalGame extends LocalGame {
             	return false;
 
             gameState.drawFromWall(gameState.getWall().getWall().get(0), gameState.getTurn());
-            gameState.setTurn(gameState.getTurn());
+            gameState.setLastTurn(((MahjongoDrawAction) action).getPlayerNum());
 		}
 		else if(action instanceof MahjongSelectAction)
 		{

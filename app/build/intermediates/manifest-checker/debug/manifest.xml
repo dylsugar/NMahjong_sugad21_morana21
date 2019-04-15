@@ -19,7 +19,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="edu.up.cs301.mahjong.MahjongMenuActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" >
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,6 +29,12 @@
         </activity>
         <activity
             android:name="edu.up.cs301.mahjong.mahjongSpinner"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="edu.up.cs301.mahjong.MahjongAbout"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="edu.up.cs301.mahjong.mahjongSetting"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
 
         <provider

@@ -242,6 +242,10 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
                                                                 slot14.setBackgroundResource(
                                                                         state.getGamePlayers().get(getPosition()).getHand().get(13).getDrawable());
                                                             }
+                                                            else
+                                                            {
+                                                                slot14.setBackgroundResource(R.drawable.plaintile);
+                                                            }
                                                         }
                                                     }
                                                 }

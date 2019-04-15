@@ -280,8 +280,8 @@ public class MahjongState extends GameState {
             return false;
         }
         this.getGamePlayers().get(position).addTiletoHand(drawnTile);
-        //wall.getWall().remove(drawnTile);
-        nextTurn(this.getGamePlayers().get(position));
+        wall.getWall().remove(drawnTile);
+
         return true;
     }
 
