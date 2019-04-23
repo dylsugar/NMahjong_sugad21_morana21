@@ -1,13 +1,14 @@
 package edu.up.cs301.mahjong;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 
 import edu.up.cs301.game.infoMsg.GameState;
 
 
-public class MahjongState extends GameState {
+public class MahjongState extends GameState implements Serializable {
 
     private ArrayList<mPlayer> gamePlayers;
     private mWall wall;

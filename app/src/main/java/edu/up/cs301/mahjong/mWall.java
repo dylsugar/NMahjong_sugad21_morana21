@@ -1,9 +1,10 @@
 package edu.up.cs301.mahjong;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class mWall {
+public class mWall implements Serializable {
 
     private ArrayList<mTiles> wall;
 

@@ -1,8 +1,10 @@
 package edu.up.cs301.mahjong;
 
+import java.io.Serializable;
+
 import edu.up.cs301.game.R;
 
-public class mTiles {
+public class mTiles implements Serializable {
     private int value;
     private String suit;
 

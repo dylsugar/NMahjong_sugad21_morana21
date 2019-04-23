@@ -1,8 +1,9 @@
 package edu.up.cs301.mahjong;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class mPlayer {
+public class mPlayer implements Serializable {
 
         private int position;
         private ArrayList<mTiles> hand;

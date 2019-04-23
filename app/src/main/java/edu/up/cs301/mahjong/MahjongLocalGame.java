@@ -145,7 +145,7 @@ public class MahjongLocalGame extends LocalGame {
 	 * 		game is not over
 	 */
 	@Override
-	protected String checkIfGameOver() {
+	synchronized protected String checkIfGameOver() {
 
 		if(gameState.mahjongCheck(gameState.getGamePlayers().get(0).getHand()))
 		{

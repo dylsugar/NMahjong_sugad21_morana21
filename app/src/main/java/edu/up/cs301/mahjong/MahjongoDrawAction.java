@@ -1,5 +1,7 @@
 package edu.up.cs301.mahjong;
 
+import java.io.Serializable;
+
 import edu.up.cs301.game.GamePlayer;
 import edu.up.cs301.game.actionMsg.GameAction;
 
@@ -11,7 +13,7 @@ import edu.up.cs301.game.actionMsg.GameAction;
  * @author Andrew M. Nuxoll
  * @version September 2012
  */
-public class MahjongoDrawAction extends GameAction {
+public class MahjongoDrawAction extends GameAction implements Serializable {
 	
 	// to satisfy the serializable interface
 	private static final long serialVersionUID = 28062013L;
