@@ -67,83 +67,83 @@ public class mTiles implements Serializable {
     public int getDrawable() {
         switch (this.getFace()) {
             case 1:
-                if (this.getSuit() == "Bamboo") {
+                if (this.getSuit().equals("Bamboo")) {
                     return R.drawable.bamboo1;
-                } else if (this.getSuit() == "Dots") {
+                } else if (this.getSuit().equals("Dots")) {
                     return R.drawable.dot1;
-                } else if (this.getSuit() == "Characters") {
+                } else if (this.getSuit().equals("Characters")) {
                     return R.drawable.character1;
                 }
                 break;
             case 2:
-                if (this.getSuit() == "Bamboo") {
+                if (this.getSuit().equals("Bamboo")) {
                     return R.drawable.bamboo2;
-                } else if (this.getSuit() == "Dots") {
+                } else if (this.getSuit().equals("Dots")) {
                     return R.drawable.dot2;
-                } else if (this.getSuit() == "Characters") {
+                } else if (this.getSuit().equals("Characters")) {
                     return R.drawable.character2;
                 }
                 break;
             case 3:
-                if (this.getSuit() == "Bamboo") {
+                if (this.getSuit().equals("Bamboo")) {
                     return R.drawable.bamboo3;
-                } else if (this.getSuit() == "Dots") {
+                } else if (this.getSuit().equals("Dots")) {
                     return R.drawable.dot3;
-                } else if (this.getSuit() == "Characters") {
+                } else if (this.getSuit().equals("Characters")) {
                     return R.drawable.character3;
                 }
                 break;
             case 4:
-                if (this.getSuit() == "Bamboo") {
+                if (this.getSuit().equals("Bamboo")) {
                     return R.drawable.bamboo4;
-                } else if (this.getSuit() == "Dots") {
+                } else if (this.getSuit().equals("Dots")) {
                     return R.drawable.dot4;
-                } else if (this.getSuit() == "Characters") {
+                } else if (this.getSuit().equals("Characters")) {
                     return R.drawable.character4;
                 }
                 break;
             case 5:
-                if (this.getSuit() == "Bamboo") {
+                if (this.getSuit().equals("Bamboo")) {
                     return R.drawable.bamboo5;
-                } else if (this.getSuit() == "Dots") {
+                } else if (this.getSuit().equals("Dots")) {
                     return R.drawable.dot5;
-                } else if (this.getSuit() == "Characters") {
+                } else if (this.getSuit().equals("Characters")) {
                     return R.drawable.character5;
                 }
                 break;
             case 6:
-                if (this.getSuit() == "Bamboo") {
+                if (this.getSuit().equals("Bamboo")) {
                     return R.drawable.bamboo6;
-                } else if (this.getSuit() == "Dots") {
+                } else if (this.getSuit().equals("Dots")) {
                     return R.drawable.dot6;
-                } else if (this.getSuit() == "Characters") {
+                } else if (this.getSuit().equals("Characters")) {
                     return R.drawable.character6;
                 }
                 break;
             case 7:
-                if (this.getSuit() == "Bamboo") {
+                if (this.getSuit().equals("Bamboo")) {
                     return R.drawable.bamboo7;
-                } else if (this.getSuit() == "Dots") {
+                } else if (this.getSuit().equals("Dots")) {
                     return R.drawable.dot7;
-                } else if (this.getSuit() == "Characters") {
+                } else if (this.getSuit().equals("Characters")) {
                     return R.drawable.character7;
                 }
                 break;
             case 8:
-                if (this.getSuit() == "Bamboo") {
+                if (this.getSuit().equals("Bamboo")) {
                     return R.drawable.bamboo8;
-                } else if (this.getSuit() == "Dots") {
+                } else if (this.getSuit().equals("Dots")) {
                     return R.drawable.dot8;
-                } else if (this.getSuit() == "Characters") {
+                } else if (this.getSuit().equals("Characters")) {
                     return R.drawable.character8;
                 }
                 break;
             case 9:
-                if (this.getSuit() == "Bamboo") {
+                if (this.getSuit().equals("Bamboo")) {
                     return R.drawable.bamboo9;
-                } else if (this.getSuit() == "Dots") {
+                } else if (this.getSuit().equals("Dots")) {
                     return R.drawable.dot9;
-                } else if (this.getSuit() == "Characters") {
+                } else if (this.getSuit().equals("Characters")) {
                     return R.drawable.character9;
                 }
                 break;

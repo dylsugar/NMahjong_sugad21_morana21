@@ -107,6 +107,7 @@ public class MahjongLocalGame extends LocalGame  implements Serializable {
 			}
 			//If the players hand is of size 14, allow them to discard the one they selected
 			else {
+				if(gameState.getLastTurn() == ((MahjongSelectAction) action).getPlayerNum());
 				int tileToDiscard = ((MahjongSelectAction) action).getTile();
 
 				//check if the tile picked up is not null
