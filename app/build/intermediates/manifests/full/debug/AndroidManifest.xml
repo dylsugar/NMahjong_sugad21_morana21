@@ -33,9 +33,6 @@
         <activity
             android:name="edu.up.cs301.mahjong.MahjongAbout"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
-        <activity
-            android:name="edu.up.cs301.mahjong.mahjongSetting"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
     </application>
 
 </manifest>

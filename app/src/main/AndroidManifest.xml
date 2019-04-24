@@ -24,8 +24,6 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"></activity>
         <activity android:name="edu.up.cs301.mahjong.MahjongAbout"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"></activity>
-        <activity android:name="edu.up.cs301.mahjong.mahjongSetting"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"></activity>
     </application>
 
 </manifest>

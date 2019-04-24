@@ -7,6 +7,13 @@ import java.io.Serializable;
 
 import edu.up.cs301.game.R;
 
+/**
+ * this is the About Menu activity for Mahjong
+ *
+ * @author Dylan Suga
+ * @author Anthony Moran
+ * @version April 2019
+ */
 public class MahjongAbout extends Activity implements Serializable {
 
     private static long serialVersionUID = 1850386927582L;

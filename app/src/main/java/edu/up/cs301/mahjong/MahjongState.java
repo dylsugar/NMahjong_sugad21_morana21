@@ -81,21 +81,19 @@ public class MahjongState extends GameState implements Serializable {
 
         super();
 
-        this.gamePlayers = new ArrayList<mPlayer> ();
+        this.gamePlayers = new ArrayList<mPlayer>();
         this.setRecentDiscard(in.getRecentDiscard());
-        this.discardTiles = new ArrayList<mTiles> ();
+        this.discardTiles = new ArrayList<mTiles>();
         this.setTurn(in.getTurn());
         this.setLastTurn(in.getLastTurn());
         this.setWall(new mWall());
         this.getWall().getWall().clear();
 
-        for(int i = 0; i < in.getGamePlayers().size(); i++)
-        {
+        for (int i = 0; i < in.getGamePlayers().size(); i++) {
             this.getGamePlayers().add(new mPlayer());
             this.getGamePlayers().get(i).setPosition(in.getGamePlayers().get(i).getPosition());
 
-            for(int j = 0; j < in.getGamePlayers().get(i).getHand().size(); j++)
-            {
+            for (int j = 0; j < in.getGamePlayers().get(i).getHand().size(); j++) {
 
                 this.getGamePlayers().get(i).getHand().add(new mTiles(
                         in.getGamePlayers().get(i).getHand().get(j).getValue(),
@@ -103,156 +101,26 @@ public class MahjongState extends GameState implements Serializable {
             }
         }
 
-        for(int i = 0; i < in.getDiscardTiles().size(); i++)
-        {
+        for (int i = 0; i < in.getDiscardTiles().size(); i++) {
             this.getDiscardTiles().add(new mTiles(
                     in.getDiscardTiles().get(i).getValue(),
                     in.getDiscardTiles().get(i).getSuit()));
         }
 
-        for(int i = 0; i < in.getWall().getWall().size(); i++)
-        {
+        for (int i = 0; i < in.getWall().getWall().size(); i++) {
             this.getWall().getWall().add(new mTiles(
                     in.getWall().getWall().get(i).getValue(),
                     in.getWall().getWall().get(i).getSuit()));
 
         }
-
-        /*
-        mPlayer EastPlayer = new mPlayer(0, new ArrayList<mTiles>(in.getGamePlayers().get(0).getHand()));
-        mPlayer NorthPlayer = new mPlayer(1, new ArrayList<mTiles>(in.getGamePlayers().get(1).getHand()));
-        mPlayer WestPlayer = new mPlayer(2, new ArrayList<mTiles>(in.getGamePlayers().get(2).getHand()));
-        mPlayer SouthPlayer = new mPlayer(3, new ArrayList<mTiles>(in.getGamePlayers().get(3).getHand()));
-
-        /*
-        initialized players are added to the gamePlayers arrayList
-         */
-        /*
-        in.gamePlayers.add(EastPlayer);
-        in.gamePlayers.add(NorthPlayer);
-        in.gamePlayers.add(WestPlayer);
-        in.gamePlayers.add(SouthPlayer);
-
-        /*
-        each player is set with a hand is initialized
-        using separate methods of initHand#. We tried to
-        do nested for-loops for the the hand initialization,
-        but errors were given.
-         */
-        //EastPlayer.setHand(in.initHand0());
-        //NorthPlayer.setHand(in.initHand1());
-        //WestPlayer.setHand(in.initHand2());
-        //SouthPlayer.setHand(in.initHand3());
-
-/*
-        for(int i = 0; i < in.getWall().size(); i++){
-            mTiles tSource = in.wall.getWall().get(i);
-            mTiles newTile = new mTiles(tSource.getValue(),tSource.getSuit());
-            in.getWall().getWall().add(newTile);
-        }
-
-
-
-
-        this.discardTiles = new ArrayList<mTiles> (in.discardTiles);
-        this.turn = in.turn;
-        this.lastTurn = in.lastTurn;
-        this.recentDiscard = new mTiles(in.recentDiscard.getValue(),in.recentDiscard.getSuit());
-        */
-
-        /*
-        players are initialized
-        constructor is called and initialized with their
-        position and empty array list of tiles
-        */
-        //EastPlayer = new mPlayer(0, new ArrayList<mTiles>());
-        //NorthPlayer = new mPlayer(1, new ArrayList<mTiles>());
-        //WestPlayer = new mPlayer(2, new ArrayList<mTiles>());
-        //SouthPlayer = new mPlayer(3, new ArrayList<mTiles>());
-
-        /*
-        initialized players are added to the gamePlayers arrayList
-         */
-        //in.gamePlayers.add(EastPlayer);
-        //in.gamePlayers.add(NorthPlayer);
-        //in.gamePlayers.add(WestPlayer);
-        //in.gamePlayers.add(SouthPlayer);
-
-        /*
-        each player is set with a hand is initialized
-        using separate methods of initHand#. We tried to
-        do nested for-loops for the the hand initialization,
-        but errors were given.
-         */
-        //EastPlayer.setHand(in.initHand0());
-        //NorthPlayer.setHand(in.initHand1());
-        //WestPlayer.setHand(in.initHand2());
-        //SouthPlayer.setHand(in.initHand3());
     }
 
-    /*
-    public void initTiles() {
-        wall = new mWall();
-        for (int i = 0; i < 9; i++) {
-            //Bamboo suit 4 of one value made at a time 1-9 (mTiles[0-31])
-            wall.add(4 * i, new mTiles(i + 1, "Bamboo"));
-            wall.add(4 * i + 1, new mTiles(i + 1, "Bamboo"));
-            wall.add(4 * i + 2, new mTiles(i + 1, "Bamboo"));
-            wall.add(4 * i + 3, new mTiles(i + 1, "Bamboo"));
-            //Characters suit 4 of one value made at a time 1-9 (mTiles[36-71])
-        }
-        for (int i = 0; i < 9; i++) {
-            wall.add(4 * i + 36, new mTiles(i + 1, "Characters"));
-            wall.add(4 * i + 37, new mTiles(i + 1, "Characters"));
-            wall.add(4 * i + 38, new mTiles(i + 1, "Characters"));
-            wall.add(4 * i + 39, new mTiles(i + 1, "Characters"));
-        }
-        for (int i = 0; i < 9; i++) {
-            //Dots suit 4 of one value made at a time 1-9 (mTiles[72-107])
-            wall.add(4 * i + 72, new mTiles(i + 1, "Dots"));
-            wall.add(4 * i + 73, new mTiles(i + 1, "Dots"));
-            wall.add(4 * i + 74, new mTiles(i + 1, "Dots"));
-            wall.add(4 * i + 75, new mTiles(i + 1, "Dots"));
-        }
-        //initialized the first 108 tiles, 4 of each tile of each suit
-
-
-        //Values of wind : 0 - west, 1 - south, 2 - east, 3 - north
-        //Winds suit 4 of one wind made on each loop (mTiles[108-123])
-        for (int j = 0; j < 4; j++) {
-            wall.add(4 * j + 108, new mTiles(j + 1, "Winds"));
-            wall.add(4 * j + 109, new mTiles(j + 1, "Winds"));
-            wall.add(4 * j + 110, new mTiles(j + 1, "Winds"));
-            wall.add(4 * j + 111, new mTiles(j + 1, "Winds"));
-        }
-        for (int j = 0; j < 4; j++) {
-            if (j != 3) {
-                //value of dragon : 0 - red dragon, 1 - green dragon, 2 - white dragon
-                //Dragons suit 4 of one dragon made on each loop (mTiles[124-135])
-                wall.add(4 * j + 124, new mTiles(j + 1, "Dragon"));
-                wall.add(4 * j + 125, new mTiles(j + 1, "Dragon"));
-                wall.add(4 * j + 126, new mTiles(j + 1, "Dragon"));
-                wall.add(4 * j + 127, new mTiles(j + 1, "Dragon"));
-            }
-        }
-
-        for (int j = 0; j < 4; j++) {
-            //Flower and season tiles one of each value and suit made (mTiles[136-143])
-            wall.add(j + 136, new mTiles(j + 1, "Flower"));
-            wall.add(j + 140, new mTiles(j + 1, "Season"));
-        }
-        */
-
-        /*
-        External Citation:
-        Problem: Shuffling and randomizing the Wall
-        Source: https://www.geeksforgeeks.org/collections-shuffle-java-examples/
-        Solution: use Collection.shuffle(object);
-         /
-        Collections.shuffle(wall);
-    }
-    */
-
+    /**
+     * Initializes the hand of the first player and return
+     * the array created.
+     *
+     * Accesses the first 14 tiles
+     */
     public ArrayList<mTiles> initHand0() {
 
         for (int i = 0; i < 14; i++) {
@@ -263,6 +131,12 @@ public class MahjongState extends GameState implements Serializable {
         return gamePlayers.get(0).getHand();
     }
 
+    /**
+     * Initializes the hand of the first player and return
+     * the array created.
+     *
+     * Accesses the next 13 tiles
+     */
     public ArrayList<mTiles> initHand1() {
         for (int j = 14; j < 27; j++) {
             gamePlayers.get(1).addTiletoHand(wall.getWall().get(j));
@@ -275,6 +149,12 @@ public class MahjongState extends GameState implements Serializable {
     }
 
 
+    /**
+     * Initializes the hand of the first player and return
+     * the array created.
+     *
+     * Accesses the next 13 tiles
+     */
     public ArrayList<mTiles> initHand2() {
         for (int k = 27; k < 40; k++) {
             gamePlayers.get(2).addTiletoHand(wall.getWall().get(k));
@@ -286,6 +166,13 @@ public class MahjongState extends GameState implements Serializable {
         return gamePlayers.get(2).getHand();
     }
 
+
+    /**
+     * Initializes the hand of the first player and return
+     * the array created.
+     *
+     * Accesses the next 13 tiles
+     */
     public ArrayList<mTiles> initHand3() {
         for (int l = 40; l < 53; l++) {
             gamePlayers.get(3).addTiletoHand(wall.getWall().get(l));
@@ -331,10 +218,6 @@ public class MahjongState extends GameState implements Serializable {
         this.wall = inWall;
     }
 
-    public void setPlayerTiles(ArrayList<mTiles> inPTiles) {
-        this.playerTiles = inPTiles;
-    }
-
     public void setLastTurn(int lTurn) { this.lastTurn = lTurn; }
 
     public void setTurn(int inTurn) {
@@ -345,12 +228,16 @@ public class MahjongState extends GameState implements Serializable {
         this.recentDiscard = inMTile;
     }
 
+    /**
+     * if the image of the draw tile is selected, then a tile from the wall array will
+     * be accessed and this new tile will be added into the array of X player and removed from
+     * he wall
+     *
+     * @param drawnTile
+     * @param position
+     * @return
+     */
     public boolean drawFromWall(mTiles drawnTile, int position) {
-        /*
-        if the image of the draw tile is selected, then a tile from the wall array will
-        be accessed and this new tile will be added into the array of X player and removed from
-        the wall
-         */
 
         if (!(currentTurn(this.getGamePlayers().get(position)))) {
             return false;
@@ -362,23 +249,6 @@ public class MahjongState extends GameState implements Serializable {
         return true;
     }
 
-    public boolean discardTile(mTiles discardTile, int position) {
-        /*
-        If user selects on tile of own collection during turn, then the tile is
-        set to the most recently discarded card and is available for other players
-        to take in order of clockwise.
-         */
-        mPlayer newPlayer = this.gamePlayers.get(position);
-        if (!(currentTurn(this.gamePlayers.get(position)))) {
-            return false;
-        }
-        this.gamePlayers.get(position).removeTile(discardTile);
-        //newPlayer.setHand(newPlayer.getHand());
-        nextTurn(this.getGamePlayers().get(position));
-        return true;
-    }
-
-
     public boolean currentTurn(mPlayer cTurn) {
         if (getTurn() == cTurn.getPosition()) {
             return true;
@@ -386,6 +256,11 @@ public class MahjongState extends GameState implements Serializable {
         return false;
     }
 
+    /**
+     *
+     * @param pTurn
+     * @return
+     */
     public boolean nextTurn(mPlayer pTurn) {
         /*
         Once current player is done, this method is called in order to move to next player
@@ -415,7 +290,11 @@ public class MahjongState extends GameState implements Serializable {
         return false;
     }
 
-
+    /**
+     *
+     * @param pHand
+     * @return
+     */
     public boolean mahjongCheck(ArrayList<mTiles> pHand)
     {
         if(pHand.size() == 13) return false;
@@ -458,6 +337,13 @@ public class MahjongState extends GameState implements Serializable {
     Source: StackOverflow
     Solution: use Collection.swap(object, index1, index2);
     */
+
+    /**
+     * Organizes a hand by suit
+     *
+     * @param pHand
+     * @return
+     */
     public boolean checkSuit(ArrayList<mTiles> pHand)
     {
         ArrayList<mTiles> suitList = pHand;
@@ -504,48 +390,14 @@ public class MahjongState extends GameState implements Serializable {
         return false;
     }
 
-    public ArrayList<Integer> findLargestSet(ArrayList<mTiles> suitList)
-    {
-        //Create var to hold index of current high val of set
-        int prevValInd = 0;
-        //Create arraylist to hold all indexes of tiles part of set
-        ArrayList<Integer> indexes = new ArrayList<Integer>();
 
-        if(suitList.size() == 0) return indexes;
-
-        //Create var to hold the current highest val of set
-        int prevVal = suitList.get(0).getValue();
-
-        //Iterate through all of the tiles
-        for(int i = 0; i < suitList.size() - 1; i++)
-        {
-            prevVal = suitList.get(i).getValue();
-            prevValInd = i;
-            //If i th card val is equal to prevVal+1 then add the index
-            //where prevVal was found to the arraylist
-            if(suitList.get(i+1).getValue() == prevVal + 1 && suitList.get(i).getValue() == prevVal)
-            {
-                indexes.add(prevValInd);
-            }
-            else if(indexes.size() <= 2)
-            {
-                indexes.clear();
-            }
-            else if(prevVal == suitList.get(i-1).getValue()+1)
-            {
-                indexes.add(i);
-
-            }
-        }
-        if(prevVal + 1 == suitList.get(suitList.size()-1).getValue())
-        {
-            indexes.add(suitList.size()-1);
-        }
-
-        //largest set must be at least 3 tiles long
-        return indexes;
-    }
-
+    /**
+     * Finds the lowest matching value of a
+     * given suit.
+     *
+     * @param suitList
+     * @return ArrayList of Integer
+     */
     public ArrayList<Integer> findLowestMatching(ArrayList<mTiles> suitList) {
         ArrayList<Integer> indexes = new ArrayList<Integer>();
 
@@ -612,6 +464,14 @@ public class MahjongState extends GameState implements Serializable {
         return indexes;
     }
 
+    /**
+     * Iterates through and sorts the
+     * particular suit and checks what the
+     * lowest set is
+     *
+     * @param suitList
+     * @return ArrayList of Integers
+     */
     public ArrayList<Integer> findLowestSet(ArrayList<mTiles> suitList)
     {
         ArrayList<Integer> indexes = new ArrayList<>();
@@ -651,39 +511,17 @@ public class MahjongState extends GameState implements Serializable {
         return indexes;
     }
 
-    public ArrayList<mTiles> findPreferredTiles(ArrayList<mTiles> pHand)
-    {
-        ArrayList<mTiles> viableTiles = new ArrayList<> ();
 
-        for(int i = 0; i < pHand.size(); i++)
-        {
-            mTiles temp = new mTiles(pHand.get(i).getValue(), pHand.get(i).getSuit());
-            if(!viableTiles.contains(temp))
-            {
-                viableTiles.add(temp);
-            }
-
-            if(temp.getValue() > 1)
-            {
-                if(!viableTiles.contains(
-                        new mTiles(pHand.get(i).getValue()-1,pHand.get(i).getSuit())))
-                {
-                    viableTiles.add(new mTiles(pHand.get(i).getValue()-1,pHand.get(i).getSuit()));
-                }
-            }
-            if(temp.getValue() < 9)
-            {
-                if(!viableTiles.contains(
-                        new mTiles(pHand.get(i).getValue()+1,pHand.get(i).getSuit())))
-                {
-                    viableTiles.add(new mTiles(pHand.get(i).getValue()+1,pHand.get(i).getSuit()));
-                }
-            }
-        }
-
-        return viableTiles;
-    }
-
+    /**
+     * Determines which tile to discard. adds tile
+     * to hand and calls on method that will
+     * sort through the lowest set and check
+     * if there is a tile that doesn't make
+     * a set.
+     *
+     * @param pHand
+     * @return mTiles
+     */
     public mTiles tileToDiscard(ArrayList<mTiles> pHand)
     {
         int prevSize = -1;
@@ -723,6 +561,16 @@ public class MahjongState extends GameState implements Serializable {
         return null;
     }
 
+
+    /**
+     *
+     * In a particular suit, checks the list
+     * of tiles in the array and swaps if tile doesn't
+     * have matching suit
+     *
+     * @param suitList
+     * @return mTiles
+     */
     public mTiles findBadTile(ArrayList<mTiles> suitList)
     {
         for(int i = 0; i < suitList.size(); i++)
@@ -765,6 +613,49 @@ public class MahjongState extends GameState implements Serializable {
         if(suitList.size() == 0) return null;
         return suitList.get(0);
     }
+
+    public ArrayList<Integer> findLargestSet(ArrayList<mTiles> suitList)
+    {
+        //Create var to hold index of current high val of set
+        int prevValInd = 0;
+        //Create arraylist to hold all indexes of tiles part of set
+        ArrayList<Integer> indexes = new ArrayList<Integer>();
+
+        if(suitList.size() == 0) return indexes;
+
+        //Create var to hold the current highest val of set
+        int prevVal = suitList.get(0).getValue();
+
+        //Iterate through all of the tiles
+        for(int i = 0; i < suitList.size() - 1; i++)
+        {
+            prevVal = suitList.get(i).getValue();
+            prevValInd = i;
+            //If i th card val is equal to prevVal+1 then add the index
+            //where prevVal was found to the arraylist
+            if(suitList.get(i+1).getValue() == prevVal + 1 && suitList.get(i).getValue() == prevVal)
+            {
+                indexes.add(prevValInd);
+            }
+            else if(indexes.size() <= 2)
+            {
+                indexes.clear();
+            }
+            else if(prevVal == suitList.get(i-1).getValue()+1)
+            {
+                indexes.add(i);
+
+            }
+        }
+        if(prevVal + 1 == suitList.get(suitList.size()-1).getValue())
+        {
+            indexes.add(suitList.size()-1);
+        }
+
+        //largest set must be at least 3 tiles long
+        return indexes;
+    }
+
 
 }
 

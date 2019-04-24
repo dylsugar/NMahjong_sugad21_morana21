@@ -58,10 +58,16 @@ public class MahjongLocalGame extends LocalGame  implements Serializable {
 
 	/**
 	 * The only type of GameAction that should be sent is MahjongoDrawAction
+	 *
 	 */
 	@Override
 	protected boolean makeMove(GameAction action) {
 
+		/*
+		If the move is draw from wall, then if the wall
+		has less than 3 tiles, the previously discarded tiles
+		will be put back into the wall so we never run out
+		 */
 		if(action instanceof MahjongoDrawAction)
 		{
 			if(gameState.getWall().getWall().size() < 3)
@@ -97,13 +103,13 @@ public class MahjongLocalGame extends LocalGame  implements Serializable {
 			//Checks to see if the player has enough tiles to discard one
 			if(gameState.getGamePlayers().get(((MahjongSelectAction) action).getPlayerNum()).getHand().size() < 14)
 			{
-
+				//Do Nothing
 			}
 			//If the players hand is of size 14, allow them to discard the one they selected
 			else {
 				int tileToDiscard = ((MahjongSelectAction) action).getTile();
 
-
+				//check if the tile picked up is not null
 				if(gameState.getRecentDiscard() != null)
 				{
 					gameState.getDiscardTiles().add(gameState.getRecentDiscard());
@@ -117,12 +123,16 @@ public class MahjongLocalGame extends LocalGame  implements Serializable {
 					gameState.nextTurn(gameState.getGamePlayers().get(((MahjongSelectAction) action).getPlayerNum()));
 
 			}
-
-
-
 		}
 		else if(action instanceof MahjongDrawDiscardAction)
 		{
+			/*
+			Checks to see if the most recent discard is not null
+			if it is, then it checks if the player has only 13 tiles
+			if it is, it adds that tile to player X's hand.
+			and sets the most recent discard to nothing as it is gone
+			then it sets the next turn +1
+			 */
 
 			if(gameState.getRecentDiscard() == null) return false;
 			if(gameState.getGamePlayers().get(((MahjongDrawDiscardAction) action).

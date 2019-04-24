@@ -9,13 +9,11 @@ import edu.up.cs301.game.infoMsg.GameInfo;
 import edu.up.cs301.game.util.Tickable;
 
 /**
- * A computer-version of a counter-player.  Since this is such a simple game,
- * it just sends "+" and "-" commands with equal probability, at an average
- * rate of one per second. 
- * 
- * @author Steven R. Vegdahl
- * @author Andrew M. Nuxoll
- * @version September 2013
+ * This is the smart AI
+ *
+ * @author Dylan Suga
+ * @author Anthony Moran
+ * @version April 2019
  */
 public class MahjongComputerPlayer3 extends GameComputerPlayer implements Tickable, Serializable {
     private static final long serialVersionUID = 91093039201944L;
@@ -42,6 +40,10 @@ public class MahjongComputerPlayer3 extends GameComputerPlayer implements Tickab
      * 
      * @param info
      * 		the information (presumably containing the game's state)
+     *
+     *
+     * 	The Smart AI basically checks if the discarded tile matches one of
+     * 	the tiles in the Smart AI's hand. If it does, then it draws that tile
      */
 	@Override
 	protected void receiveInfo(GameInfo info) {

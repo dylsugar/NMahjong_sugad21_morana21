@@ -6,15 +6,15 @@ import java.util.Random;
 import edu.up.cs301.game.GameComputerPlayer;
 import edu.up.cs301.game.infoMsg.GameInfo;
 import edu.up.cs301.game.util.Tickable;
-    
+
 /**
- * A computer-version of a counter-player.  Since this is such a simple game,
- * it just sends "+" and "-" commands with equal probability, at an average
- * rate of one per second. 
- * 
- * @author Steven R. Vegdahl
- * @author Andrew M. Nuxoll
- * @version September 2013
+ * This is the Dumb AI player for Mahjong. The Dumb AI
+ * basically commits to random moves given different
+ * scenarios
+ *
+ * @author Dylan Suga
+ * @author Anthony Moran
+ * @version April 2019
  */
 public class MahjongComputerPlayer1 extends GameComputerPlayer implements Tickable, Serializable {
     private static final long serialVersionUID = 91093039820323L;

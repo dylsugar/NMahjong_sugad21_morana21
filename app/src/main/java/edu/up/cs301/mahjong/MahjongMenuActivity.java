@@ -10,11 +10,11 @@ import edu.up.cs301.game.config.GameConfig;
 import edu.up.cs301.game.config.GamePlayerType;
 
 /**
- * this is the primary activity for Counter game
+ * this is the Main Menu activity for Mahjong
  * 
- * @author Andrew M. Nuxoll
- * @author Steven R. Vegdahl
- * @version July 2013
+ * @author Dylan Suga
+ * @author Anthony Moran
+ * @version April 2019
  */
 public class MahjongMenuActivity extends GameMainActivity {
 	private static final long serialVersionUID = 912783039201923L;

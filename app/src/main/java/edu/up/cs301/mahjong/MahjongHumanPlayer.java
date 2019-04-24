@@ -30,17 +30,13 @@ import java.util.Collection;
 import java.util.Collections;
 
 /**
- * A GUI of a counter-player. The GUI displays the current value of the counter,
- * and allows the human player to press the '+' and '-' buttons in order to
- * send moves to the game.
- * <p>
- * Just for fun, the GUI is implemented so that if the player presses either button
- * when the counter-value is zero, the screen flashes briefly, with the flash-color
- * being dependent on whether the player is player 0 or player 1.
+ *This is the Mahjong Human player class and represents
+ * all the action and possible moves that the user can
+ * make.
  *
- * @author Steven R. Vegdahl
- * @author Andrew M. Nuxoll
- * @version July 2013
+ * @author Anthony Moran
+ * @author Dylan Suga
+ * @version April 2019
  */
 public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListener, Serializable {
 
@@ -50,17 +46,11 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
     private int position;
     MediaPlayer mediaPlayer;
 
-
-    // The TextView the displays the current counter value
-    private TextView counterValueTextView;
-
     // the most recent game state, as given to us by the MahjongLocalGame
     private MahjongState state;
 
     // the android activity that we are running
     private GameMainActivity myActivity;
-    private GameMainActivity myActivity1;
-    private GameMainActivity myActivity2;
     private ImageButton slot1;
     private ImageButton slot2;
     private ImageButton slot3;
@@ -78,7 +68,6 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
     private ImageButton wallDraw;
     private ImageButton discardDraw;
     private ImageButton howTo;
-    private ImageButton settings;
     private ImageButton info;
     private ImageButton exit;
 
@@ -151,23 +140,12 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
             Intent intent0 = new Intent(this.myActivity, mahjongSpinner.class);
             button.getContext().startActivity(intent0);
 
-        } else if (button == settings) {
-            Intent intent1 = new Intent(this.myActivity, mahjongSetting.class);
-            button.getContext().startActivity(intent1);
-
         } else if (button == info) {
             Intent intent2 = new Intent(this.myActivity, MahjongAbout.class);
             button.getContext().startActivity(intent2);
         } else if (button == exit) {
             System.exit(0);
         }
-        //else{
-
-        // Toast.makeText(button.getContext().getApplicationContext(), "Invalid Move",
-        //        Toast.LENGTH_SHORT).show();
-        // }
-
-
     }// onClick
 
     /**
@@ -229,68 +207,24 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
                 slot14.setBackgroundResource(R.drawable.plaintile);
                 break;
         }
-        /*
-        if (i > 0) {
-            slot1.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(0).getDrawable());
-            if (i > 1) {
-                slot2.setBackgroundResource(
-                        state.getGamePlayers().get(getPosition()).getHand().get(1).getDrawable());
-                if (i > 2) {
-                    slot3.setBackgroundResource(
-                            state.getGamePlayers().get(getPosition()).getHand().get(2).getDrawable());
-                    if (i > 3) {
-                        slot4.setBackgroundResource(
-                                state.getGamePlayers().get(getPosition()).getHand().get(3).getDrawable());
-                        if (i > 4) {
-                            slot5.setBackgroundResource(
-                                    state.getGamePlayers().get(getPosition()).getHand().get(4).getDrawable());
-                            if (i > 5) {
-                                slot6.setBackgroundResource(
-                                        state.getGamePlayers().get(getPosition()).getHand().get(5).getDrawable());
-                                if (i > 6) {
-                                    slot7.setBackgroundResource(
-                                            state.getGamePlayers().get(getPosition()).getHand().get(6).getDrawable());
-                                    if (i > 7) {
-                                        slot8.setBackgroundResource(
-                                                state.getGamePlayers().get(getPosition()).getHand().get(7).getDrawable());
-                                        if (i > 8) {
-                                            slot9.setBackgroundResource(
-                                                    state.getGamePlayers().get(getPosition()).getHand().get(8).getDrawable());
-                                            if (i > 9) {
-                                                slot10.setBackgroundResource(
-                                                        state.getGamePlayers().get(getPosition()).getHand().get(9).getDrawable());
-                                                if (i > 10) {
-                                                    slot11.setBackgroundResource(
-                                                            state.getGamePlayers().get(getPosition()).getHand().get(10).getDrawable());
-                                                    if (i > 11) {
-                                                        slot12.setBackgroundResource(
-                                                                state.getGamePlayers().get(getPosition()).getHand().get(11).getDrawable());
-                                                        if (i > 12) {
-                                                            slot13.setBackgroundResource(
-                                                                    state.getGamePlayers().get(getPosition()).getHand().get(12).getDrawable());
-                                                            if (i > 13) {
-                                                                slot14.setBackgroundResource(
-                                                                        state.getGamePlayers().get(getPosition()).getHand().get(13).getDrawable());
-                                                            }
-                                                            else
-                                                            {
-                                                                slot14.setBackgroundResource(R.drawable.plaintile);
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            */
+        slot1.invalidate();
+        slot2.invalidate();
+        slot3.invalidate();
+        slot4.invalidate();
+        slot5.invalidate();
+        slot6.invalidate();
+        slot7.invalidate();
+        slot8.invalidate();
+        slot9.invalidate();
+        slot10.invalidate();
+        slot11.invalidate();
+        slot12.invalidate();
+        slot13.invalidate();
+        slot14.invalidate();
 
-}
+
+
+    }
 
 
     /**
@@ -327,7 +261,6 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
         this.wallDraw = (ImageButton) activity.findViewById(R.id.drawButton);
         this.discardDraw = (ImageButton) activity.findViewById(R.id.discardDraw);
         this.howTo = (ImageButton)activity.findViewById(R.id.howToButton);
-        this.settings = (ImageButton)activity.findViewById(R.id.settingButton);
         this.info = (ImageButton)activity.findViewById(R.id.infoButton);
         this.exit = (ImageButton)activity.findViewById(R.id.exitButton);
 
@@ -348,7 +281,6 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
         wallDraw.setOnClickListener(this);
         discardDraw.setOnClickListener(this);
         howTo.setOnClickListener(this);
-        settings.setOnClickListener(this);
         info.setOnClickListener(this);
         exit.setOnClickListener(this);
 
