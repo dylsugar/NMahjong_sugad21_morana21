@@ -6,10 +6,14 @@ import java.util.Collections;
 
 public class mWall implements Serializable {
 
+    //the wall initialized with an empty array
     private ArrayList<mTiles> wall;
+
 
     public mWall() {
 
+        //tiles are added to the wall along with their value and suit, up to 107 tiles
+        //tiles are also shuffled inside the wall
         wall = new ArrayList<mTiles>();
         for (int i = 0; i < 9; i++) {
             //Bamboo suit 4 of one value made at a time 1-9 (mTiles[0-31])
@@ -34,6 +38,7 @@ public class mWall implements Serializable {
         }
         Collections.shuffle(wall);
         }
+
 
         public mWall(mWall in)
         {
@@ -70,7 +75,7 @@ public class mWall implements Serializable {
 
 }
 
-//initialized the first 108 tiles, 4 of each tile of each suit
+
 
 
 //Values of wind : 0 - west, 1 - south, 2 - east, 3 - north

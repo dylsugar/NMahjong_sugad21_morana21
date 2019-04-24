@@ -9,6 +9,9 @@ import edu.up.cs301.game.R;
 
 public class MahjongAbout extends Activity implements Serializable {
 
+    private static long serialVersionUID = 1850386927582L;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

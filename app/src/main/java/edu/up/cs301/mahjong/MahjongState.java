@@ -9,6 +9,11 @@ import edu.up.cs301.game.infoMsg.GameState;
 
 
 public class MahjongState extends GameState implements Serializable {
+    /*
+    Instant variables for the GameState.
+    Players, wall, tiles of each player,
+    discard tiles, the most recently discarded tile declared
+     */
 
     private ArrayList<mPlayer> gamePlayers;
     private mWall wall;
@@ -28,29 +33,34 @@ public class MahjongState extends GameState implements Serializable {
         lastTurn =0;
         recentDiscard = null;
 
-
+        /*
+        players are initialized
+        constructor is called and initialized with their
+        position and empty array list of tiles
+        */
         mPlayer EastPlayer = new mPlayer(0, new ArrayList<mTiles>());
         mPlayer NorthPlayer = new mPlayer(1, new ArrayList<mTiles>());
         mPlayer WestPlayer = new mPlayer(2, new ArrayList<mTiles>());
         mPlayer SouthPlayer = new mPlayer(3, new ArrayList<mTiles>());
 
+        /*
+        initialized players are added to the gamePlayers arrayList
+         */
         gamePlayers.add(EastPlayer);
         gamePlayers.add(NorthPlayer);
         gamePlayers.add(WestPlayer);
         gamePlayers.add(SouthPlayer);
 
-
+        /*
+        each player is set with a hand is initialized
+        using separate methods of initHand#. We tried to
+        do nested for-loops for the the hand initialization,
+        but errors were given.
+         */
         EastPlayer.setHand(initHand0());
-
-        NorthPlayer.setHand(
-
-        initHand1());
-        WestPlayer.setHand(
-
-        initHand2());
-        SouthPlayer.setHand(
-
-        initHand3());
+        NorthPlayer.setHand(initHand1());
+        WestPlayer.setHand(initHand2());
+        SouthPlayer.setHand(initHand3());
 
 
     }
@@ -67,49 +77,72 @@ public class MahjongState extends GameState implements Serializable {
      */
     public MahjongState(MahjongState in) {
 
-        gamePlayers = new ArrayList<mPlayer>();
-        for (int i = 0; i < in.gamePlayers.size(); i++) {
-            gamePlayers.add(new mPlayer(i, in.gamePlayers.get(i).getHand()));
-        }
+        mPlayer EastPlayer = new mPlayer(0, new ArrayList<mTiles>());
+        mPlayer NorthPlayer = new mPlayer(1, new ArrayList<mTiles>());
+        mPlayer WestPlayer = new mPlayer(2, new ArrayList<mTiles>());
+        mPlayer SouthPlayer = new mPlayer(3, new ArrayList<mTiles>());
 
+        /*
+        initialized players are added to the gamePlayers arrayList
+         */
+        in.gamePlayers.add(EastPlayer);
+        in.gamePlayers.add(NorthPlayer);
+        in.gamePlayers.add(WestPlayer);
+        in.gamePlayers.add(SouthPlayer);
 
-        wall = new mWall(in.getWall());
-
-        for (int m = 0; m < in.getWall().size(); m++) {
-            wall.getWall().add(new mTiles (
-                    in.wall.getWall().get(m).getValue(),
-                    in.wall.getWall().get(m).getSuit()));
-        }
-
-        playerTiles = new ArrayList<mTiles>();
-
-
-        discardTiles = new ArrayList<mTiles>();
-        for (int l = 0; l < in.getDiscardTiles().size(); l++) {
-            discardTiles.add(new mTiles(in.discardTiles.get(l).getValue(),
-                    in.discardTiles.get(l).getSuit()));
-        }
-
-        mPlayer EastPlayer = new mPlayer(0, in.playerTiles);
-        mPlayer NorthPlayer = new mPlayer(1, in.playerTiles);
-        mPlayer WestPlayer = new mPlayer(2, in.playerTiles);
-        mPlayer SouthPlayer = new mPlayer(3, in.playerTiles);
-
-        in.gamePlayers.set(0, EastPlayer);
-        in.gamePlayers.set(1, NorthPlayer);
-        in.gamePlayers.set(2, WestPlayer);
-        in.gamePlayers.set(3, SouthPlayer);
-
-        in.initHand0();
+        /*
+        each player is set with a hand is initialized
+        using separate methods of initHand#. We tried to
+        do nested for-loops for the the hand initialization,
+        but errors were given.
+         */
+        EastPlayer.setHand(in.initHand0());
         NorthPlayer.setHand(in.initHand1());
         WestPlayer.setHand(in.initHand2());
         SouthPlayer.setHand(in.initHand3());
 
 
-        turn = in.getTurn();
-        lastTurn = in.getLastTurn();
-        recentDiscard = new mTiles(in.getRecentDiscard().getValue(),
-                in.getRecentDiscard().getSuit());
+        for(int i = 0; i < in.getWall().size(); i++){
+            mTiles tSource = in.wall.getWall().get(i);
+            mTiles newTile = new mTiles(tSource.getValue(),tSource.getSuit());
+            in.getWall().getWall().add(newTile);
+        }
+
+
+
+        this.discardTiles = in.discardTiles;
+        this.turn = in.turn;
+        this.lastTurn = in.lastTurn;
+        this.recentDiscard = in.recentDiscard;
+
+        /*
+        players are initialized
+        constructor is called and initialized with their
+        position and empty array list of tiles
+        */
+        EastPlayer = new mPlayer(0, new ArrayList<mTiles>());
+        NorthPlayer = new mPlayer(1, new ArrayList<mTiles>());
+        WestPlayer = new mPlayer(2, new ArrayList<mTiles>());
+        SouthPlayer = new mPlayer(3, new ArrayList<mTiles>());
+
+        /*
+        initialized players are added to the gamePlayers arrayList
+         */
+        in.gamePlayers.add( EastPlayer);
+        in.gamePlayers.add(NorthPlayer);
+        in.gamePlayers.add(WestPlayer);
+        in.gamePlayers.add(SouthPlayer);
+
+        /*
+        each player is set with a hand is initialized
+        using separate methods of initHand#. We tried to
+        do nested for-loops for the the hand initialization,
+        but errors were given.
+         */
+        EastPlayer.setHand(in.initHand0());
+        NorthPlayer.setHand(in.initHand1());
+        WestPlayer.setHand(in.initHand2());
+        SouthPlayer.setHand(in.initHand3());
     }
 
     /*
@@ -257,10 +290,6 @@ public class MahjongState extends GameState implements Serializable {
         this.playerTiles = inPTiles;
     }
 
-    public void setDiscardTiles(mTiles inDTiles) {
-        getDiscardTiles().add(inDTiles);
-    }
-
     public void setLastTurn(int lTurn) { this.lastTurn = lTurn; }
 
     public void setTurn(int inTurn) {
@@ -303,25 +332,6 @@ public class MahjongState extends GameState implements Serializable {
         return true;
     }
 
-    /*
-    if a user just discarded a card, then anyone can pick up the card just discarded
-    and choose to discard it or keep it
-     */
-    public boolean drawDiscardTile(mTiles drawDTile, int position) {
-        mPlayer newPlayer = this.gamePlayers.get(position);
-        if (discardTile(recentDiscard, getLastTurn())) {
-            for (int i = 0; i <= gamePlayers.size(); i++) {
-                if (newPlayer.getPosition() != gamePlayers.get(i).getPosition()) {
-                    playerTiles.add(drawDTile);
-                    getDiscardTiles().remove(drawDTile);
-                    setRecentDiscard(null);
-                    setPlayerTiles(getPlayerTiles());
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
 
     public boolean currentTurn(mPlayer cTurn) {
         if (getTurn() == cTurn.getPosition()) {
@@ -355,69 +365,6 @@ public class MahjongState extends GameState implements Serializable {
         return false;
     }
 
-
-    /*
-    All Methods below will be implemented during Alpha Release and will check during hands of
-    each player and check winning conditions
-     */
-    public void handCheck(ArrayList<mTiles> pHand) {
-        /*
-        Checks hand of currentTurnPlayer and if there is a mahjong, then gameOver method is
-        called. But if player picked up a discarded tile and completes a set, that is not mahjong.
-        Toast appears for 5 seconds showing the current set completed.(One can only get mahjong if
-        one draw from wall or discarded tile.
-         */
-    }
-
-    public boolean gameOver() {
-        /*
-        Returns T/F if a player has mahjong and ends game
-         */
-        return true;
-    }
-
-    public boolean pungSet(ArrayList<mTiles> pHand) {
-        /*
-        returns true if there is a pung in a players hand
-         */
-        return true;
-    }
-
-    public boolean kongSet(ArrayList<mTiles> pHand) {
-        /*
-        returns true if there is a kong in a players hand
-         */
-        return true;
-    }
-
-    public boolean quintSet(ArrayList<mTiles> pHand) {
-        /*
-        returns true if there is a quint
-         */
-        return true;
-    }
-
-    public boolean sextetSet(ArrayList<mTiles> pHand) {
-        /*
-        returns true if sextet
-         */
-        return true;
-    }
-
-    public boolean pairSet(ArrayList<mTiles> pHand) {
-        /*
-        returns true if pair in hand
-         */
-        return true;
-    }
-
-    public boolean winningHands(ArrayList<mTiles> pHand) {
-        /*
-        This method will check the current players hand once picked up a discarded tile
-        or wall tile to see all the different combinations of winning hands. So
-         */
-        return true;
-    }
 
     public boolean mahjongCheck(ArrayList<mTiles> pHand)
     {

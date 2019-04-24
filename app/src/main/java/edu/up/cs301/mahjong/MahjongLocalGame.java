@@ -131,7 +131,7 @@ public class MahjongLocalGame extends LocalGame {
 		// this is a perfect-information game, so we'll make a
 		// complete copy of the state to send to the player
 
-        p.sendInfo(gameState);
+        p.sendInfo(new MahjongState(gameState));
 
 
     }//sendUpdatedSate

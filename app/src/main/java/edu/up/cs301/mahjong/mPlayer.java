@@ -5,6 +5,9 @@ import java.util.ArrayList;
 
 public class mPlayer implements Serializable {
 
+        /*
+        Instant variables that define a player
+         */
         private int position;
         private ArrayList<mTiles> hand;
         private String handType;
@@ -12,6 +15,9 @@ public class mPlayer implements Serializable {
         private ArrayList<mTiles> discardHand;
 
 
+        /*
+        constructor for a player, each player is initially defaulted with this.
+         */
         public mPlayer(int inPosition, ArrayList<mTiles> ownTiles) {
 
             position = inPosition;
@@ -22,54 +28,36 @@ public class mPlayer implements Serializable {
 
         }
 
+        //returns player X's position (0-3)
         public int getPosition() {
             return this.position;
         }
 
+        /*
+        returns player X's hand as an array
+         */
         public ArrayList<mTiles> getHand() {
 
             return this.hand;
         }
 
-
-        public ArrayList<mTiles> getDiscardHand(){
-            return this.discardHand;
-        }
-
-        public void setDiscardHand(ArrayList<mTiles> newDHand){
-            discardHand = newDHand;
-        }
-        public String getHandType() {
-            return this.handType;
-        }
-
-        public int getScore() {
-            return this.score;
-        }
-
-        public void incrementScore() {
-            score++;
-        }
-
-        public void setScore(int newScore) {
-            score = newScore;
-        }
-
+        /*
+        takes in a players hand and sets it to the current hand for GameState
+         */
         public void setHand(ArrayList<mTiles> currentHand) {
             hand = currentHand;
         }
 
-        public void setHandType(String newHands) {
-            handType = newHands;
-        }
-
-        public void setPosition(int newPosition) {
-            position = newPosition;
-        }
+        /*
+        adds a single tile to a players hand
+         */
         public void addTiletoHand(mTiles in){
             hand.add(in);
         }
 
+        /*
+        removes a tile from the players hand.
+         */
         public void removeTile(mTiles out){
 
             hand.remove(out);

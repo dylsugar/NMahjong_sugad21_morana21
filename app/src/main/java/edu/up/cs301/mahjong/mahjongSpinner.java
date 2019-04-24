@@ -14,6 +14,10 @@ public class mahjongSpinner extends Activity implements Serializable {
     private static long serialVersionUID = 1293786127936L;
 
 
+    /*
+    initializes the game_spinner xml and sets it to the current content
+    view if this class is called
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -16,7 +16,7 @@ import edu.up.cs301.game.config.GamePlayerType;
  * @author Steven R. Vegdahl
  * @version July 2013
  */
-public class MahjongMenuActivity extends GameMainActivity implements Serializable {
+public class MahjongMenuActivity extends GameMainActivity {
 	
 	// the port number that this game will use when playing over the network
 	private static final int PORT_NUMBER = 2234;
