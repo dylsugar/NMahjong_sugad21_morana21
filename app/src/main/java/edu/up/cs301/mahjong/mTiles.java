@@ -5,6 +5,9 @@ import java.io.Serializable;
 import edu.up.cs301.game.R;
 
 public class mTiles implements Serializable {
+
+    private static final long serialVersionUID = 91093039202323L;
+
     private int value;
     private String suit;
 

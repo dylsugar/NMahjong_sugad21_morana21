@@ -9,6 +9,8 @@ import edu.up.cs301.game.infoMsg.GameState;
 
 
 public class MahjongState extends GameState implements Serializable {
+
+    private static final long serialVersionUID = 9100119201923L;
     /*
     Instant variables for the GameState.
     Players, wall, tiles of each player,
@@ -80,15 +82,17 @@ public class MahjongState extends GameState implements Serializable {
         super();
 
         this.gamePlayers = new ArrayList<mPlayer> ();
-        this.setRecentDiscard(null);
+        this.setRecentDiscard(in.getRecentDiscard());
         this.discardTiles = new ArrayList<mTiles> ();
-        this.setTurn(0);
+        this.setTurn(in.getTurn());
+        this.setLastTurn(in.getLastTurn());
         this.setWall(new mWall());
         this.getWall().getWall().clear();
 
         for(int i = 0; i < in.getGamePlayers().size(); i++)
         {
             this.getGamePlayers().add(new mPlayer());
+            this.getGamePlayers().get(i).setPosition(in.getGamePlayers().get(i).getPosition());
 
             for(int j = 0; j < in.getGamePlayers().get(i).getHand().size(); j++)
             {
@@ -354,6 +358,7 @@ public class MahjongState extends GameState implements Serializable {
         this.getGamePlayers().get(position).addTiletoHand(drawnTile);
         wall.getWall().remove(drawnTile);
 
+
         return true;
     }
 
@@ -390,15 +395,19 @@ public class MahjongState extends GameState implements Serializable {
             switch (pTurn.getPosition()) {
                 case 0:
                     setTurn(1);
+                    //setLastTurn(0);
                     break;
                 case 1:
                     setTurn(2);
+                    //setLastTurn(1);
                     break;
                 case 2:
                     setTurn(3);
+                    //setLastTurn(2);
                     break;
                 case 3:
                     setTurn(0);
+                    //setLastTurn(3);
                     break;
             }
             return true;

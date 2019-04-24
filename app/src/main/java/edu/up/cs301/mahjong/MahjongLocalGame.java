@@ -9,6 +9,9 @@ import edu.up.cs301.game.actionMsg.GameAction;
 import android.media.MediaPlayer;
 import android.util.Log;
 
+import java.io.Serializable;
+import java.util.Collections;
+
 /**
  * A class that represents the state of a game. In our counter game, the only
  * relevant piece of information is the value of the game's counter. The
@@ -18,8 +21,9 @@ import android.util.Log;
  * @author Andrew M. Nuxoll
  * @version July 2013
  */
-public class MahjongLocalGame extends LocalGame {
+public class MahjongLocalGame extends LocalGame  implements Serializable {
 
+	private static final long serialVersionUID = 82393039201923L;
 	// When a counter game is played, any number of players. The first player
 	// is trying to get the counter value to TARGET_MAGNITUDE; the second player,
 	// if present, is trying to get the counter to -TARGET_MAGNITUDE. The
@@ -71,11 +75,20 @@ public class MahjongLocalGame extends LocalGame {
 					getGamePlayers().get(((MahjongoDrawAction) action).getPlayerNum())))
             	return false;
             	*/
+            if(gameState.getTurn() != ((MahjongoDrawAction) action).getPlayerNum()) return false;
 			if(gameState.getGamePlayers().get(((MahjongoDrawAction) action).
 					getPlayerNum()).getHand().size() == 14)
 				return false;
 
 			gameState.drawFromWall(gameState.getWall().getWall().get(0), gameState.getTurn());
+			for (int i = 0; i < gameState.getGamePlayers().get(((MahjongoDrawAction) action).getPlayerNum()).getHand().size(); i++) {
+				for (int j = i; j < gameState.getGamePlayers().get(((MahjongoDrawAction) action).getPlayerNum()).getHand().size(); j++) {
+					if (gameState.getGamePlayers().get(((MahjongoDrawAction) action).getPlayerNum()).getHand().get(i).getSuit().charAt(0) >
+							gameState.getGamePlayers().get(((MahjongoDrawAction) action).getPlayerNum()).getHand().get(j).getSuit().charAt(0)) {
+						Collections.swap(gameState.getGamePlayers().get(((MahjongoDrawAction) action).getPlayerNum()).getHand(), i, j);
+					}
+				}
+			}
 			gameState.setLastTurn(((MahjongoDrawAction) action).getPlayerNum());
 		}
 		else if(action instanceof MahjongSelectAction)
@@ -100,10 +113,9 @@ public class MahjongLocalGame extends LocalGame {
 						((MahjongSelectAction) action).getPlayerNum()).getHand().get(tileToDiscard - 1));
 
 				gameState.getGamePlayers().get(((MahjongSelectAction) action).getPlayerNum()).getHand().remove(tileToDiscard-1);
-				if(gameState.getLastTurn() == gameState.getTurn())
-				{
+
 					gameState.nextTurn(gameState.getGamePlayers().get(((MahjongSelectAction) action).getPlayerNum()));
-				}
+
 			}
 
 

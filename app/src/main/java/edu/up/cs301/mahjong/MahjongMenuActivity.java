@@ -17,6 +17,7 @@ import edu.up.cs301.game.config.GamePlayerType;
  * @version July 2013
  */
 public class MahjongMenuActivity extends GameMainActivity {
+	private static final long serialVersionUID = 912783039201923L;
 	
 	// the port number that this game will use when playing over the network
 	private static final int PORT_NUMBER = 2234;
@@ -43,17 +44,17 @@ public class MahjongMenuActivity extends GameMainActivity {
 			}});
 		
 		// a computer player type (player type 1)
-		playerTypes.add(new GamePlayerType("Computer Player") {
+		playerTypes.add(new GamePlayerType("Computer Dumb") {
 			public GamePlayer createPlayer(String name) {
 				return new MahjongComputerPlayer1(name);
 			}});
 
 		// a computer player type (player type nothertile)
-		playerTypes.add(new GamePlayerType("Computer Player (GUI)") {
+		playerTypes.add(new GamePlayerType("Computer Dumb ") {
 			public GamePlayer createPlayer(String name) {
 				return new MahjongComputerPlayer1(name);
 			}});
-		playerTypes.add(new GamePlayerType("Computer Player "){
+		playerTypes.add(new GamePlayerType("Computer Player Smart"){
 			public GamePlayer createPlayer(String name){return new MahjongComputerPlayer3(name);}
 		});
 

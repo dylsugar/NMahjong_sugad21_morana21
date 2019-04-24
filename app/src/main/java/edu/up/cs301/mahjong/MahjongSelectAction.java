@@ -6,6 +6,7 @@ import edu.up.cs301.game.GamePlayer;
 import edu.up.cs301.game.actionMsg.GameAction;
 
 public class MahjongSelectAction extends GameAction implements Serializable {
+    private static final long serialVersionUID = 91093032211923L;
     /*instant variables for a select action initialized*/
 
     private int tile;

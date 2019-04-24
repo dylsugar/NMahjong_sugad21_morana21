@@ -1,5 +1,6 @@
 package edu.up.cs301.mahjong;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -16,7 +17,8 @@ import edu.up.cs301.game.util.Tickable;
  * @author Andrew M. Nuxoll
  * @version September 2013
  */
-public class MahjongComputerPlayer3 extends GameComputerPlayer implements Tickable {
+public class MahjongComputerPlayer3 extends GameComputerPlayer implements Tickable, Serializable {
+    private static final long serialVersionUID = 91093039201944L;
 
     mTiles lastDiscarded = new mTiles(0, "placeholder");
 
@@ -49,22 +51,27 @@ public class MahjongComputerPlayer3 extends GameComputerPlayer implements Tickab
 
             //need implement for drawDiscard decisions, looping send actions can crash
             MahjongState temp = (MahjongState) info;
-            sleep(2000);
-            if (temp.getTurn() == this.playerNum)
+
+            if (temp.getTurn() == this.playerNum &&
+            temp.getGamePlayers().get(playerNum).getHand().size() != 14                 )
             {
                 game.sendAction(new MahjongoDrawAction(this, playerNum));
-                for(int i = 0; i < temp.getGamePlayers().get(playerNum).getHand().size(); i++)
-                {
-                    if(temp.tileToDiscard(temp.getGamePlayers().get(playerNum).getHand()).getValue() ==
-                       temp.getGamePlayers().get(playerNum).getHand().get(i).getValue() &&
-                       temp.tileToDiscard(temp.getGamePlayers().get(playerNum).getHand()).getSuit() ==
-                       temp.getGamePlayers().get(playerNum).getHand().get(i).getSuit())
+            }
+            else if(temp.getLastTurn() == playerNum)
+            {
+                sleep(3000);
+                    for (int i = 0; i < temp.getGamePlayers().get(playerNum).getHand().size(); i++)
                     {
-                        lastDiscarded = temp.getGamePlayers().get(playerNum).getHand().get(i);
-                        game.sendAction(new MahjongSelectAction(this, i+1, playerNum));
-                        break;
+                        if (temp.tileToDiscard(temp.getGamePlayers().get(playerNum).getHand()).getValue() ==
+                                temp.getGamePlayers().get(playerNum).getHand().get(i).getValue() &&
+                                temp.tileToDiscard(temp.getGamePlayers().get(playerNum).getHand()).getSuit() ==
+                                        temp.getGamePlayers().get(playerNum).getHand().get(i).getSuit()) {
+                            lastDiscarded = temp.getGamePlayers().get(playerNum).getHand().get(i);
+                            game.sendAction(new MahjongSelectAction(this, i + 1, playerNum));
+                            break;
+                        }
                     }
-                }
+
                 if(temp.getGamePlayers().get(playerNum).getHand().size() == 14)
                 {
                     game.sendAction(new MahjongSelectAction(this, 1, playerNum));

@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 public class mPlayer implements Serializable {
 
+    private static final long serialVersionUID = 91267039201923L;
+
         /*
         Instant variables that define a player
          */
@@ -36,6 +38,8 @@ public class mPlayer implements Serializable {
         public int getPosition() {
             return this.position;
         }
+
+        public void setPosition(int p) { position = p; }
 
         /*
         returns player X's hand as an array

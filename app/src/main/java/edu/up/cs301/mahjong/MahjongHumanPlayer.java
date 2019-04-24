@@ -24,6 +24,7 @@ import android.widget.TextView;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -41,8 +42,9 @@ import java.util.Collections;
  * @author Andrew M. Nuxoll
  * @version July 2013
  */
-public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListener {
+public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListener, Serializable {
 
+    private static final long serialVersionUID = 9214039201923L;
     /* instance variables */
     private ArrayList<mTiles> hand;
     private int position;
@@ -181,14 +183,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
         }
         state = (MahjongState) info;
 
-        for (int i = 0; i < state.getGamePlayers().get(playerNum).getHand().size(); i++) {
-            for (int j = i; j < state.getGamePlayers().get(playerNum).getHand().size(); j++) {
-                if (state.getGamePlayers().get(playerNum).getHand().get(i).getSuit().charAt(0) >
-                        state.getGamePlayers().get(playerNum).getHand().get(j).getSuit().charAt(0)) {
-                    Collections.swap(state.getGamePlayers().get(playerNum).getHand(), i, j);
-                }
-            }
-        }
+
 
         int i = state.getGamePlayers().get(playerNum).getHand().size();
         if (state.getRecentDiscard() != null) {
@@ -197,27 +192,42 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
         } else {
             discardDraw.setBackgroundResource(R.drawable.plaintile);
         }
-        boolean fte = false;
+
         switch (i) {
             case 14:
-                slot14.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(13).getDrawable());
-                fte = true;
-                i--;
+
+                slot1.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(0).getDrawable());
+                slot2.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(1).getDrawable());
+                slot3.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(2).getDrawable());
+                slot4.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(3).getDrawable());
+                slot5.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(4).getDrawable());
+                slot6.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(5).getDrawable());
+                slot7.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(6).getDrawable());
+                slot8.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(7).getDrawable());
+                slot9.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(8).getDrawable());
+                slot10.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(9).getDrawable());
+                slot11.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(10).getDrawable());
+                slot12.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(11).getDrawable());
+                slot13.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(12).getDrawable());
+                slot14.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(13).getDrawable());
+                break;
+
             case 13:
-                slot1.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(0).getDrawable());
-                slot2.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(1).getDrawable());
-                slot3.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(2).getDrawable());
-                slot4.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(3).getDrawable());
-                slot5.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(4).getDrawable());
-                slot6.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(5).getDrawable());
-                slot7.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(6).getDrawable());
-                slot8.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(7).getDrawable());
-                slot9.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(8).getDrawable());
-                slot10.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(9).getDrawable());
-                slot11.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(10).getDrawable());
-                slot12.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(11).getDrawable());
-                slot13.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(12).getDrawable());
-                if(fte == false) slot14.setBackgroundResource(R.drawable.plaintile);
+                slot1.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(0).getDrawable());
+                slot2.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(1).getDrawable());
+                slot3.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(2).getDrawable());
+                slot4.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(3).getDrawable());
+                slot5.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(4).getDrawable());
+                slot6.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(5).getDrawable());
+                slot7.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(6).getDrawable());
+                slot8.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(7).getDrawable());
+                slot9.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(8).getDrawable());
+                slot10.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(9).getDrawable());
+                slot11.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(10).getDrawable());
+                slot12.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(11).getDrawable());
+                slot13.setBackgroundResource(state.getGamePlayers().get(playerNum).getHand().get(12).getDrawable());
+                slot14.setBackgroundResource(R.drawable.plaintile);
+                break;
         }
         /*
         if (i > 0) {

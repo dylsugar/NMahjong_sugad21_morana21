@@ -6,6 +6,7 @@ import java.util.Collections;
 
 public class mWall implements Serializable {
 
+    private static final long serialVersionUID = 91093039201923L;
     //the wall initialized with an empty array
     private ArrayList<mTiles> wall;
 
