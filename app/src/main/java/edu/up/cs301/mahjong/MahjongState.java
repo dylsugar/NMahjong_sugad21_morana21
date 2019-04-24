@@ -77,6 +77,44 @@ public class MahjongState extends GameState implements Serializable {
      */
     public MahjongState(MahjongState in) {
 
+        super();
+
+        this.gamePlayers = new ArrayList<mPlayer> ();
+        this.setRecentDiscard(null);
+        this.discardTiles = new ArrayList<mTiles> ();
+        this.setTurn(0);
+        this.setWall(new mWall());
+        this.getWall().getWall().clear();
+
+        for(int i = 0; i < in.getGamePlayers().size(); i++)
+        {
+            this.getGamePlayers().add(new mPlayer());
+
+            for(int j = 0; j < in.getGamePlayers().get(i).getHand().size(); j++)
+            {
+
+                this.getGamePlayers().get(i).getHand().add(new mTiles(
+                        in.getGamePlayers().get(i).getHand().get(j).getValue(),
+                        in.getGamePlayers().get(i).getHand().get(j).getSuit()));
+            }
+        }
+
+        for(int i = 0; i < in.getDiscardTiles().size(); i++)
+        {
+            this.getDiscardTiles().add(new mTiles(
+                    in.getDiscardTiles().get(i).getValue(),
+                    in.getDiscardTiles().get(i).getSuit()));
+        }
+
+        for(int i = 0; i < in.getWall().getWall().size(); i++)
+        {
+            this.getWall().getWall().add(new mTiles(
+                    in.getWall().getWall().get(i).getValue(),
+                    in.getWall().getWall().get(i).getSuit()));
+
+        }
+
+        /*
         mPlayer EastPlayer = new mPlayer(0, new ArrayList<mTiles>(in.getGamePlayers().get(0).getHand()));
         mPlayer NorthPlayer = new mPlayer(1, new ArrayList<mTiles>(in.getGamePlayers().get(1).getHand()));
         mPlayer WestPlayer = new mPlayer(2, new ArrayList<mTiles>(in.getGamePlayers().get(2).getHand()));
@@ -85,6 +123,7 @@ public class MahjongState extends GameState implements Serializable {
         /*
         initialized players are added to the gamePlayers arrayList
          */
+        /*
         in.gamePlayers.add(EastPlayer);
         in.gamePlayers.add(NorthPlayer);
         in.gamePlayers.add(WestPlayer);
@@ -101,7 +140,7 @@ public class MahjongState extends GameState implements Serializable {
         //WestPlayer.setHand(in.initHand2());
         //SouthPlayer.setHand(in.initHand3());
 
-
+/*
         for(int i = 0; i < in.getWall().size(); i++){
             mTiles tSource = in.wall.getWall().get(i);
             mTiles newTile = new mTiles(tSource.getValue(),tSource.getSuit());
@@ -110,10 +149,12 @@ public class MahjongState extends GameState implements Serializable {
 
 
 
+
         this.discardTiles = new ArrayList<mTiles> (in.discardTiles);
         this.turn = in.turn;
         this.lastTurn = in.lastTurn;
         this.recentDiscard = new mTiles(in.recentDiscard.getValue(),in.recentDiscard.getSuit());
+        */
 
         /*
         players are initialized
@@ -257,11 +298,11 @@ public class MahjongState extends GameState implements Serializable {
         return recentDiscard;
     }
 
-    public ArrayList<mPlayer> getGamePlayers() {
+    synchronized public ArrayList<mPlayer> getGamePlayers() {
         return gamePlayers;
     }
 
-    public mWall getWall() {
+    synchronized public mWall getWall() {
         return wall;
     }
 

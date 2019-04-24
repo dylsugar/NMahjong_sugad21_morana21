@@ -53,7 +53,7 @@ public class mWall implements Serializable {
 
 
 
-    public ArrayList<mTiles> getWall() {
+    synchronized public ArrayList<mTiles> getWall() {
         return wall;
     }
 

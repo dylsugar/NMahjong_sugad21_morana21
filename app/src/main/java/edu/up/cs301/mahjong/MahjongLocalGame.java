@@ -127,7 +127,7 @@ public class MahjongLocalGame extends LocalGame {
 	 * send the updated state to a given player
 	 */
 	@Override
-	protected void sendUpdatedStateTo(GamePlayer p) {
+	synchronized protected void sendUpdatedStateTo(GamePlayer p) {
 		// this is a perfect-information game, so we'll make a
 		// complete copy of the state to send to the player
 

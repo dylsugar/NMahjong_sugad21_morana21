@@ -341,7 +341,16 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
         settings.setOnClickListener(this);
         info.setOnClickListener(this);
         exit.setOnClickListener(this);
+
+
+        try{
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
+
+
 
 }
 

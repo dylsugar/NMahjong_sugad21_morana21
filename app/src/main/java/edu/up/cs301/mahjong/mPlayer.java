@@ -18,6 +18,10 @@ public class mPlayer implements Serializable {
         /*
         constructor for a player, each player is initially defaulted with this.
          */
+        public mPlayer()
+        {
+            hand = new ArrayList <mTiles> ();
+        }
         public mPlayer(int inPosition, ArrayList<mTiles> ownTiles) {
 
             position = inPosition;
