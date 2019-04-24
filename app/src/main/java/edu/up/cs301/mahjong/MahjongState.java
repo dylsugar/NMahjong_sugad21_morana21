@@ -69,7 +69,7 @@ public class MahjongState extends GameState implements Serializable {
 
         gamePlayers = new ArrayList<mPlayer>();
         for (int i = 0; i < in.gamePlayers.size(); i++) {
-            gamePlayers.add(in.gamePlayers.get(i));
+            gamePlayers.add(new mPlayer(i, in.gamePlayers.get(i).getHand()));
         }
 
 
@@ -86,9 +86,9 @@ public class MahjongState extends GameState implements Serializable {
 
         discardTiles = new ArrayList<mTiles>();
         for (int l = 0; l < in.getDiscardTiles().size(); l++) {
-            discardTiles.add(in.discardTiles.get(l));
+            discardTiles.add(new mTiles(in.discardTiles.get(l).getValue(),
+                    in.discardTiles.get(l).getSuit()));
         }
-
 
         mPlayer EastPlayer = new mPlayer(0, in.playerTiles);
         mPlayer NorthPlayer = new mPlayer(1, in.playerTiles);
@@ -108,7 +108,8 @@ public class MahjongState extends GameState implements Serializable {
 
         turn = in.getTurn();
         lastTurn = in.getLastTurn();
-        recentDiscard = in.getRecentDiscard();
+        recentDiscard = new mTiles(in.getRecentDiscard().getValue(),
+                in.getRecentDiscard().getSuit());
     }
 
     /*

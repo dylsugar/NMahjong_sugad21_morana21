@@ -197,7 +197,12 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
         } else {
             discardDraw.setBackgroundResource(R.drawable.plaintile);
         }
+        boolean fte = false;
         switch (i) {
+            case 14:
+                slot14.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(13).getDrawable());
+                fte = true;
+                i--;
             case 13:
                 slot1.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(0).getDrawable());
                 slot2.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(1).getDrawable());
@@ -212,8 +217,7 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
                 slot11.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(10).getDrawable());
                 slot12.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(11).getDrawable());
                 slot13.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(12).getDrawable());
-            case 14:
-                slot14.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(13).getDrawable());
+                if(fte == false) slot14.setBackgroundResource(R.drawable.plaintile);
         }
         /*
         if (i > 0) {
