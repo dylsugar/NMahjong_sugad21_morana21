@@ -49,7 +49,7 @@ public class MahjongComputerPlayer3 extends GameComputerPlayer implements Tickab
 
             //need implement for drawDiscard decisions, looping send actions can crash
             MahjongState temp = (MahjongState) info;
-
+            sleep(2000);
             if (temp.getTurn() == this.playerNum)
             {
                 game.sendAction(new MahjongoDrawAction(this, playerNum));

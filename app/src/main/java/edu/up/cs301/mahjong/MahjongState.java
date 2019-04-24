@@ -77,10 +77,10 @@ public class MahjongState extends GameState implements Serializable {
      */
     public MahjongState(MahjongState in) {
 
-        mPlayer EastPlayer = new mPlayer(0, new ArrayList<mTiles>());
-        mPlayer NorthPlayer = new mPlayer(1, new ArrayList<mTiles>());
-        mPlayer WestPlayer = new mPlayer(2, new ArrayList<mTiles>());
-        mPlayer SouthPlayer = new mPlayer(3, new ArrayList<mTiles>());
+        mPlayer EastPlayer = new mPlayer(0, new ArrayList<mTiles>(in.getGamePlayers().get(0).getHand()));
+        mPlayer NorthPlayer = new mPlayer(1, new ArrayList<mTiles>(in.getGamePlayers().get(1).getHand()));
+        mPlayer WestPlayer = new mPlayer(2, new ArrayList<mTiles>(in.getGamePlayers().get(2).getHand()));
+        mPlayer SouthPlayer = new mPlayer(3, new ArrayList<mTiles>(in.getGamePlayers().get(3).getHand()));
 
         /*
         initialized players are added to the gamePlayers arrayList
@@ -96,10 +96,10 @@ public class MahjongState extends GameState implements Serializable {
         do nested for-loops for the the hand initialization,
         but errors were given.
          */
-        EastPlayer.setHand(in.initHand0());
-        NorthPlayer.setHand(in.initHand1());
-        WestPlayer.setHand(in.initHand2());
-        SouthPlayer.setHand(in.initHand3());
+        //EastPlayer.setHand(in.initHand0());
+        //NorthPlayer.setHand(in.initHand1());
+        //WestPlayer.setHand(in.initHand2());
+        //SouthPlayer.setHand(in.initHand3());
 
 
         for(int i = 0; i < in.getWall().size(); i++){
@@ -110,28 +110,28 @@ public class MahjongState extends GameState implements Serializable {
 
 
 
-        this.discardTiles = in.discardTiles;
+        this.discardTiles = new ArrayList<mTiles> (in.discardTiles);
         this.turn = in.turn;
         this.lastTurn = in.lastTurn;
-        this.recentDiscard = in.recentDiscard;
+        this.recentDiscard = new mTiles(in.recentDiscard.getValue(),in.recentDiscard.getSuit());
 
         /*
         players are initialized
         constructor is called and initialized with their
         position and empty array list of tiles
         */
-        EastPlayer = new mPlayer(0, new ArrayList<mTiles>());
-        NorthPlayer = new mPlayer(1, new ArrayList<mTiles>());
-        WestPlayer = new mPlayer(2, new ArrayList<mTiles>());
-        SouthPlayer = new mPlayer(3, new ArrayList<mTiles>());
+        //EastPlayer = new mPlayer(0, new ArrayList<mTiles>());
+        //NorthPlayer = new mPlayer(1, new ArrayList<mTiles>());
+        //WestPlayer = new mPlayer(2, new ArrayList<mTiles>());
+        //SouthPlayer = new mPlayer(3, new ArrayList<mTiles>());
 
         /*
         initialized players are added to the gamePlayers arrayList
          */
-        in.gamePlayers.add( EastPlayer);
-        in.gamePlayers.add(NorthPlayer);
-        in.gamePlayers.add(WestPlayer);
-        in.gamePlayers.add(SouthPlayer);
+        //in.gamePlayers.add(EastPlayer);
+        //in.gamePlayers.add(NorthPlayer);
+        //in.gamePlayers.add(WestPlayer);
+        //in.gamePlayers.add(SouthPlayer);
 
         /*
         each player is set with a hand is initialized
@@ -139,10 +139,10 @@ public class MahjongState extends GameState implements Serializable {
         do nested for-loops for the the hand initialization,
         but errors were given.
          */
-        EastPlayer.setHand(in.initHand0());
-        NorthPlayer.setHand(in.initHand1());
-        WestPlayer.setHand(in.initHand2());
-        SouthPlayer.setHand(in.initHand3());
+        //EastPlayer.setHand(in.initHand0());
+        //NorthPlayer.setHand(in.initHand1());
+        //WestPlayer.setHand(in.initHand2());
+        //SouthPlayer.setHand(in.initHand3());
     }
 
     /*
