@@ -145,25 +145,25 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
             game.sendAction(new MahjongoDrawAction(this, getPosition()));
         } else if (button == discardDraw) {
             game.sendAction(new MahjongDrawDiscardAction(this, getPosition()));
-        } else if(button == howTo) {
+        } else if (button == howTo) {
             Intent intent0 = new Intent(this.myActivity, mahjongSpinner.class);
             button.getContext().startActivity(intent0);
 
-        }else if(button == settings) {
+        } else if (button == settings) {
             Intent intent1 = new Intent(this.myActivity, mahjongSetting.class);
             button.getContext().startActivity(intent1);
 
-        }else if(button == info) {
+        } else if (button == info) {
             Intent intent2 = new Intent(this.myActivity, MahjongAbout.class);
             button.getContext().startActivity(intent2);
-        }else if(button == exit) {
+        } else if (button == exit) {
             System.exit(0);
         }
         //else{
 
-           // Toast.makeText(button.getContext().getApplicationContext(), "Invalid Move",
-            //        Toast.LENGTH_SHORT).show();
-       // }
+        // Toast.makeText(button.getContext().getApplicationContext(), "Invalid Move",
+        //        Toast.LENGTH_SHORT).show();
+        // }
 
 
     }// onClick
@@ -197,6 +197,25 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
         } else {
             discardDraw.setBackgroundResource(R.drawable.plaintile);
         }
+        switch (i) {
+            case 13:
+                slot1.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(0).getDrawable());
+                slot2.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(1).getDrawable());
+                slot3.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(2).getDrawable());
+                slot4.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(3).getDrawable());
+                slot5.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(4).getDrawable());
+                slot6.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(5).getDrawable());
+                slot7.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(6).getDrawable());
+                slot8.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(7).getDrawable());
+                slot9.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(8).getDrawable());
+                slot10.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(9).getDrawable());
+                slot11.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(10).getDrawable());
+                slot12.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(11).getDrawable());
+                slot13.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(12).getDrawable());
+            case 14:
+                slot14.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(13).getDrawable());
+        }
+        /*
         if (i > 0) {
             slot1.setBackgroundResource(state.getGamePlayers().get(getPosition()).getHand().get(0).getDrawable());
             if (i > 1) {
@@ -255,8 +274,10 @@ public class MahjongHumanPlayer extends GameHumanPlayer implements OnClickListen
                     }
                 }
             }
-        }
-    }
+            */
+
+}
+
 
     /**
      * callback method--our game has been chosen/rechosen to be the GUI,
